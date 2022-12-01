@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 09d98736855cf6343bf3fb5a68787352
+  - enabled: 1
+    path: Assets/Scenes/Hysteria & Saleria/Tavern_Hysteria.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Hysteria & Saleria/Town_Saleria.unity
+    guid: 14199a5bf32234f4292e0cad721538f7
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBDungeon.unity
+    guid: 34b9c39086ceb9b4496dcce9edcdf9ea
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_1_Y.unity
+    guid: 27356980668067849ad2c1de55f24418
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_1_R.unity
+    guid: 3dfc7696f04812e44a7cb207239cf606
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_1_I.unity
+    guid: 121f84a4c2bbd284ba23800b18b2ed02
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_2_O.unity
+    guid: c6e721a196a4fc445beedd041c280787
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_TreasureRoom.unity
+    guid: 7c479c8c9b34b2a45a864e9e7c191c8d
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_3_Y.unity
+    guid: 6556b9a0b87c21140b8c1d58742f4144
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_4_G.unity
+    guid: 0e825807eeaf4bb42985fcdab5c6f810
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_5_B.unity
+    guid: e8a4c7322e49a8047a1383f73715affc
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_6_I.unity
+    guid: dfb0f6ee248abc94da2d0580b4f1746e
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_7_V.unity
+    guid: 34d1d24bcb9f91643833b8d927fa0979
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_7_R.unity
+    guid: 8f57c8f65a8c7254a9dfc0f7a9260bac
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBDCombatShade.unity
+    guid: e7a4b4df3d98579469ac95506619b6e3
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_TreasureRoomV2.unity
+    guid: 6714c6c2329c1a94c93391d0b3bcbb6c
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_6_O.unity
+    guid: 9f00bc527275a49498121736ea8eff9c
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_5_Safe.unity
+    guid: 03b4e0debfbf28548902b110414c86ee
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_4_V.unity
+    guid: bc30d53825770fe46a8fc15c52372316
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_3_V.unity
+    guid: 29221e0918ce8ae4ba969eecd24da301
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_3_B.unity
+    guid: 0c83baaee4970004d9988545cb31a412
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_2_I.unity
+    guid: f36e58227ea5b4643831ee144d46cec9
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBD_2_G.unity
+    guid: cdc4a60bb5e463e45a9ab9ddabd4be55
+  - enabled: 1
+    path: Assets/Scenes/Hysteria & Saleria/Tavern_Hysteria_F2.unity
+    guid: 367d27e7b752c2540a5b7838a77bc202
+  - enabled: 1
+    path: Assets/Scenes/Hysteria & Saleria/Tavern_HysteriaTut.unity
+    guid: 7acbf663836c19c4f81165b4202cab25
+  - enabled: 1
+    path: Assets/Scenes/Hysteria & Saleria/THysteria_F2_Perm.unity
+    guid: 823bdc89add92fa439a0238bc09b4eb5
+  - enabled: 1
+    path: Assets/Scenes/Hysteria & Saleria/TutBattle_THysteria.unity
+    guid: 058fc3c16a62b58489ed62a375969d63
+  - enabled: 1
+    path: Assets/Scenes/Hysteria & Saleria/DreamCombat.unity
+    guid: 444661a1ef96004429792fbc09769927
+  - enabled: 1
+    path: Assets/Scenes/TestingArea.unity
+    guid: f2d16a273813ca94ca5ffac7ea6519df
+  - enabled: 1
+    path: Assets/Scenes/Tunnel/Tunnel_Hue_Ent.unity
+    guid: 16a3ebff6b6a81b40aa035cdee71c088
+  - enabled: 1
+    path: Assets/Scenes/Hysteria & Saleria/Town_SaleriaV2.unity
+    guid: 5b7f797c714a3a4469452c204d6c1938
+  - enabled: 1
+    path: Assets/Scenes/Tunnel/Tunnel_Hue_Middle.unity
+    guid: 2e782ab7f1830c1409974786983d49ac
+  - enabled: 1
+    path: Assets/Scenes/Hue's Settlement/Hues_Settlement.unity
+    guid: aa36e2c34ccc24e489d4de5709afe2a2
+  - enabled: 1
+    path: Assets/Scenes/Hue's Settlement/C_TintCombat.unity
+    guid: 0fee1175cd3ee2c4999e3026821754da
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBDCombatGuardRage.unity
+    guid: 2f71779030ef0d442ac9bcc1908f8d64
+  - enabled: 1
+    path: Assets/Scenes/RainbowDung/RBDCombatGuard.unity
+    guid: cc8ca24adc96e184999b9dad804511df
+  m_configObjects: {}
