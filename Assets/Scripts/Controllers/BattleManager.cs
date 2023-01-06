@@ -35,6 +35,8 @@ public class BattleManager : MonoBehaviour
     public GameObject player;
     public Vector2 playerPosition;
     public VectorValue playerStorage;
+    public NPCManager npcManager;
+    public Encounter npcbattling;
 
     public BattleState state;
     // Start is called before the first frame update
@@ -257,8 +259,7 @@ public class BattleManager : MonoBehaviour
             yield return new WaitForSeconds(1.5f);
             dialogueText.text = "You've gained " + enemyUnit.exp + " EXP";
             yield return new WaitForSeconds(1.5f);
-            //Encounter.npcBattling.SetActive(false);
-            NPCManager.battling.SetActive(false);
+            Encounter.defeated = true;
             if (PlayerPrefs.GetInt("exp") + enemyUnit.exp >= PlayerPrefs.GetInt("exptolevel"))
             {
                 dialogueText.text = "You leveled to " + (PlayerPrefs.GetInt("playerlevel") + 1) + "!";

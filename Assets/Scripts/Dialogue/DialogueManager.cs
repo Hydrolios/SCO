@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     
     public GameObject shopUI;
     public GameObject lvlSys;
+    public GameObject npctoggle;
     public Player uiChecker;
     public LevelSys levelSys;
    

@@ -187,6 +187,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1766058144}
     - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
+      propertyPath: uiChecker
+      value: 
+      objectReference: {fileID: 1766058148}
+    - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
       propertyPath: dialogueBox
       value: 
       objectReference: {fileID: 1689845405}
@@ -3803,7 +3807,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894979, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: m_Name
-      value: RBDGuard_L
+      value: RBDGuard_L 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894979, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: player
@@ -3813,6 +3821,18 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1766058148}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.x
+      value: 411
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedScene
+      value: RBD_2_O
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2944bbf98ef780748887a169805821a2, type: 3}
 --- !u!1001 &1524562399
@@ -4203,7 +4223,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894979, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: m_Name
-      value: RBDGuard_L (1)
+      value: RBDGuard_L 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894979, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: player
@@ -4213,6 +4237,18 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1766058148}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.x
+      value: 411
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.y
+      value: 302
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedScene
+      value: RBD_2_O
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2944bbf98ef780748887a169805821a2, type: 3}
 --- !u!1 &1755633365

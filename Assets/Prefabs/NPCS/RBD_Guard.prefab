@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -897684929096501205, guid: 7fd2a2012f139ff4ab194df4ecd5152b, type: 3}
+  m_Sprite: {fileID: -7767637833215877918, guid: 41da6f56bab1f2147b1d53a9f7eb4f37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,5 +148,20 @@ MonoBehaviour:
     lines:
     - Welcome to Tavern Hysteria! Where you will get hysterical from joy!  P.S. Reading
       signs can provide valuable information!
+  dialogue2:
+    lines: []
+  dialogue3:
+    lines: []
+  hpbar: {fileID: 0}
+  mpbar: {fileID: 0}
+  playerRef: {fileID: 0}
   sceneToLoad: 
+  shopKeeper: 0
+  expgiver: 0
+  rbdreport: 0
+  elder: 0
+  soldier: 0
+  sleep: 0
   sceneChangeReq: 0
+  playerPosition: {x: 0, y: 0}
+  playerStorage: {fileID: 0}

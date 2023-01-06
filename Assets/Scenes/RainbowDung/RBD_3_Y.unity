@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894979, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: m_Name
-      value: RBDGuard_L
+      value: RBDGuard_L 3
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: player
@@ -186,6 +186,18 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1599574523}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.x
+      value: 411.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.y
+      value: 302
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedScene
+      value: RBD_3_Y
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2944bbf98ef780748887a169805821a2, type: 3}
 --- !u!1001 &264559843
@@ -265,6 +277,18 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1599574523}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: designatedPos.x
+      value: 414.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: designatedPos.y
+      value: 302
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: designatedScene
+      value: RBD_3_Y
+      objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170812, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -311,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170813, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: m_Name
-      value: RBDGuard_R (1)
+      value: RBDGuard_R 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
@@ -1608,7 +1632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894979, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: m_Name
-      value: RBDGuard_L (1)
+      value: RBDGuard_L 6
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: player
@@ -1618,6 +1642,18 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1599574523}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.x
+      value: 401.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.y
+      value: 302
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedScene
+      value: RBD_3_Y
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2944bbf98ef780748887a169805821a2, type: 3}
 --- !u!1 &1378625329
@@ -2248,6 +2284,18 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1599574523}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: designatedPos.x
+      value: 404.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: designatedPos.y
+      value: 299
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: designatedScene
+      value: RBD_3_Y
+      objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170812, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2294,7 +2342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170813, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: m_Name
-      value: RBDGuard_R
+      value: RBDGUARD_R 4
       objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170813, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: m_IsActive

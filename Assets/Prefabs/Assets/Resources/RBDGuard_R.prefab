@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -6265556533162781079, guid: 35f1aef77a408c44b96f9e43dc048c13, type: 3}
+  m_Sprite: {fileID: 7786319246099852319, guid: b4eef83568d97e646bfe60d626ece539, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,10 +127,11 @@ MonoBehaviour:
   dialogue:
     lines:
     - Halt! As a guard, I can not let you proceed any further!
-  player: {fileID: 0}
   triggered: {fileID: 1790489953981841031}
-  playerRef: {fileID: 0}
   sceneToLoad: RBDCombatGuard
+  objectID: 
+  designatedScene: 
+  designatedPos: {x: 0, y: 0}
 --- !u!61 &2974335892244809789
 BoxCollider2D:
   m_ObjectHideFlags: 0
