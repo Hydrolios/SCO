@@ -801,150 +801,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f77a769e521cea4191cf9ded311a8c4, type: 3}
---- !u!1 &746265462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 746265466}
-  - component: {fileID: 746265465}
-  - component: {fileID: 746265464}
-  - component: {fileID: 746265463}
-  m_Layer: 10
-  m_Name: Treasure Chest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &746265463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746265462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df59e29c0a2e8874e8277ea0046a79d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    lines:
-    - The chest is empty...
-    - Hold on... what's this? Someone left behind a letter?
-    - '"Meet me at Hue''s Settlement"'
-  dialogue2:
-    lines: []
-  dialogue3:
-    lines: []
-  hpbar: {fileID: 0}
-  mpbar: {fileID: 0}
-  playerRef: {fileID: 326934089}
-  sceneToLoad: 
-  shopKeeper: 0
-  expgiver: 0
-  rbdreport: 0
-  elder: 0
-  soldier: 0
-  sleep: 0
-  sceneChangeReq: 0
-  playerPosition: {x: 0, y: 0}
-  playerStorage: {fileID: 0}
---- !u!61 &746265464
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746265462}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.008773804, y: 0.07310486}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0003126, y: 1.0003126}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.50289917, y: 0.8537903}
-  m_EdgeRadius: 0
---- !u!212 &746265465
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746265462}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -6091003563140327466, guid: 3c10c3ae4b9084a4f99835992e53d66e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &746265466
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746265462}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 410.5, y: 307.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &806302492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4368,3 +4224,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
   m_PrefabInstance: {fileID: 2129128943}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3175135359615470532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3175135359148396722, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_Name
+      value: Treasure Chest G
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 326934089}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: dialogue.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: The chest is empty...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: dialogue.lines.Array.data[1]
+      value: Hold on... what's this? Someone left behind a letter?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: dialogue.lines.Array.data[2]
+      value: '"Meet me at Hue''s Settlement"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: dialogue.lines.Array.data[3]
+      value: '"Meet me at Hue''s Settlement"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: dialogue.lines.Array.data[4]
+      value: '"Meet me at Hue''s Settlement"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: dialogue.lines.Array.data[5]
+      value: '"Meet me at Hue''s Settlement"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 410.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 307.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}

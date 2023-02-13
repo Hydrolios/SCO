@@ -200,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: sceneChangeReq
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: playerPosition.x
@@ -211,8 +211,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
+      propertyPath: dialogue.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
-      value: Follow me, I'll lead you through the tunnel.
+      value: This area is not released yet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
+      propertyPath: dialogue.lines.Array.data[1]
+      value: Please wait for future updates!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be3ed0751821de64887cd77319efb821, type: 3}

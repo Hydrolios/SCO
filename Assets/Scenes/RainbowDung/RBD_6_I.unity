@@ -1150,6 +1150,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1618462150}
+    - target: {fileID: 4525695611226390769, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: saveload
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6078329605973782516, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
       propertyPath: m_Pivot.x
       value: 0

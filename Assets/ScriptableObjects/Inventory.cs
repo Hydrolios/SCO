@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     
     public bool Add(Items item)
     {
-        if (!item.isDefaultItem)
+        if (item == false)
         {
             if (items.Count >= inventorySpace)
             {
@@ -21,7 +21,7 @@ public class Inventory : MonoBehaviour
         }
         return true;
     }
-
+    
     public void Remove(Items item)
     {
         items.Remove(item);

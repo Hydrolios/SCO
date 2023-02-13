@@ -65,7 +65,8 @@ MonoBehaviour:
   lettersPerSecond: 60
   shopUI: {fileID: 0}
   lvlSys: {fileID: 8976509958335625626}
-  uiChecker: {fileID: 6046456739436440389, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
+  npctoggle: {fileID: 0}
+  uiChecker: {fileID: 0}
   levelSys: {fileID: 0}
   player: {fileID: 0}
   playerposition: {x: 0, y: 0}

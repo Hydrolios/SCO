@@ -7,8 +7,10 @@ public class InventoryMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject player;
     public GameObject InventoryMenuUI;
+    public GameObject useMenu;
+    public GameObject equipMenu;
     public Player playerRef; //player reference
-    private void Update()
+    private void Update() // this script is mainly for managing the opening/closing of the Inventory UI
     {
         playerRef = player.GetComponent<Player>();
         if (Input.GetKeyDown(KeyCode.I) && (playerRef.openedUIPause == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
@@ -54,5 +56,5 @@ public class InventoryMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-
+  
 }

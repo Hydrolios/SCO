@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public Player playerRef; // player reference
     public Vector2 playerposition;
+    
     private void Update()
     {
         playerRef = player.GetComponent<Player>();
@@ -61,7 +62,8 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.SetFloat("y", playerposition.y);
         PlayerPrefs.SetInt("savedHP", PlayerPrefs.GetInt("playerHPnow"));
         PlayerPrefs.SetInt("savedMP", PlayerPrefs.GetInt("playerMPnow"));
-
+        InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+        inventoryManager.SaveInventory();
         Debug.Log("Position x: " + PlayerPrefs.GetFloat("x") + " Position y: " + PlayerPrefs.GetFloat("y"));
         PlayerPrefs.Save();
 
@@ -76,6 +78,8 @@ public class PauseMenu : MonoBehaviour
             GameIsPaused = false;
             StartCoroutine(LoadNewScene(PlayerPrefs.GetInt("ActiveScene")));
             playerRef.loadGame = true;
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.LoadInventory();
             PlayerPrefs.SetInt("load", (playerRef.loadGame ? 1 : 0));
             Debug.Log("player reference of boolean load game: " + playerRef.loadGame);
             Time.timeScale = 1f;

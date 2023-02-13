@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6068316704170872730
 Transform:
   m_ObjectHideFlags: 0
@@ -155,6 +155,9 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  itemList: {fileID: 0}
+  item_id: 0
   sceneToLoad: RBDCombatGuardRage
   shopKeeper: 0
   expgiver: 0
@@ -162,6 +165,8 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  item: 0
+  itemopened: 0
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}

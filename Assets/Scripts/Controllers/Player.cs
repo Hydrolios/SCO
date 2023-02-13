@@ -53,10 +53,10 @@ public class Player : MonoBehaviour
         level = PlayerPrefs.GetInt("playerlevel");
         loadGame = PlayerPrefs.GetInt("load") != 0;
         newGameCheck = PlayerPrefs.GetInt("newgame") != 0;
-        Debug.Log("Load game boolean check: " + loadGame);
+        //Debug.Log("Load game boolean check: " + loadGame);
         if (newGameCheck) // New game check to put player in a fixed position at the first scene only for new game
         {
-            Debug.Log("Position was from a new game");
+            //Debug.Log("Position was from a new game");
             transform.position = new Vector2(-2.5f, -1.5f);
             newGameCheck = false;
             PlayerPrefs.SetInt("newgame", (newGameCheck ? 1 : 0));
@@ -66,11 +66,11 @@ public class Player : MonoBehaviour
         else if (loadGame == false)
         {
             transform.position = startingPosition.initialValue;
-            Debug.Log("Position was not from a load");
+            //Debug.Log("Position was not from a load");
         }   
         else
         {
-            Debug.Log("Position was from a load");
+            //Debug.Log("Position was from a load");
             xPos = PlayerPrefs.GetFloat("x");
             yPos = PlayerPrefs.GetFloat("y");
             currentHealth = PlayerPrefs.GetInt("savedHP");
@@ -97,7 +97,9 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C)) //debugger key for console
         {
+
             Debug.Log("Debug Log:");
+            TakeDamage(2);
             Debug.Log("player hp now:" + PlayerPrefs.GetInt("playerHPnow"));
             Debug.Log("player hp max:" + PlayerPrefs.GetInt("playerHPMax"));
             Debug.Log("player level:" + PlayerPrefs.GetInt("playerlevel"));
@@ -115,6 +117,20 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage) // code to reduce health points when a damage trigger occurs
     {
         currentHealth -= damage;
+        PlayerPrefs.SetInt("playerHPnow", currentHealth);
+        healthBar.SetHealth();
+    }
+
+    public void HealDamage(int damage) // code to heal health points for times like using a consumable from inventory
+    {
+        
+        currentHealth += damage;
+        if (currentHealth > PlayerPrefs.GetInt("playerHPMax"))
+        {
+            int placeholder;
+            placeholder = currentHealth - PlayerPrefs.GetInt("playerHPMax");
+            currentHealth -= placeholder;
+        }
         PlayerPrefs.SetInt("playerHPnow", currentHealth);
         healthBar.SetHealth();
     }

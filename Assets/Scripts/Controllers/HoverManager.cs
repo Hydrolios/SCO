@@ -26,7 +26,7 @@ public class HoverManager : MonoBehaviour
         onMouseHover -= ShowText;
         onMouseAway -= HideText;
     }
-    // Start is called before the first frame update
+   
     void Start()
     {
         HideText();
@@ -42,7 +42,7 @@ public class HoverManager : MonoBehaviour
         textWindow.transform.position = new Vector2(mousePos.x + textWindow.sizeDelta.x - 50, mousePos.y); // make sure text is not covering
     }
 
-    private void HideText()
+    private void HideText() 
     {
         Debug.Log("2");
         infoText.text = default;

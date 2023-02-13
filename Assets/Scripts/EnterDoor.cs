@@ -15,6 +15,11 @@ public class EnterDoor : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
+            
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.SaveInventoryScene(); 
+             
+
             playerStorage.initialValue = playerPosition;
             SceneManager.LoadScene(sceneToLoad);
 

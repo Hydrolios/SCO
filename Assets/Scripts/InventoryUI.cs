@@ -1,19 +1,31 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class InventoryUI : MonoBehaviour
+public class InventoryUI : MonoBehaviour//,IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [Header("UI")]
+    public Image image;
 
-    
-    // Start is called before the first frame update
-    void Start()
+    [HideInInspector] public Transform parentAfterDrag;
+    /*
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        
-        
+        image.raycastTarget = false;
+        parentAfterDrag = transform.parent;
+        transform.SetParent(transform.root);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDrag(PointerEventData eventData)
     {
-        
+        transform.position = Input.mousePosition;
     }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        image.raycastTarget = true;
+        transform.SetParent(parentAfterDrag);
+    }
+    */
+
 }
