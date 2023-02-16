@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608d9e0663e00134abc0047fde73658b, type: 3}
   m_Name: PotionItem
   m_EditorClassIdentifier: 
+  itemName: HP Potion
   type: 1
   actionType: 1
+  equipType: 4
   id: 0
   hp: 5
   range: {x: 5, y: 4}

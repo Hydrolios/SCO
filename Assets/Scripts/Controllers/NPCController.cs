@@ -29,14 +29,15 @@ public class NPCController : MonoBehaviour, Interactable
     public bool soldier;
     public bool sleep;
     public bool item;
+    public bool item_inf;
     public bool sceneChangeReq; // check if a scene change is required 
     public Vector2 playerPosition;
     public VectorValue playerStorage;
     public void Interact()
     {
         playerRef.StopSpeed();
-        if(elder)
-        {     
+        if (elder)
+        {
             if (PlayerPrefs.GetInt("rbdreport") != 0) //dialogue for reporting back to elder after shade is killed
             {
                 StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue3, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
@@ -46,7 +47,7 @@ public class NPCController : MonoBehaviour, Interactable
                 StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue2, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
                 rbdreport = true;
                 PlayerPrefs.SetInt("rbdreport", rbdreport ? 1 : 0);
-            } 
+            }
             else
             {
                 StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
@@ -58,7 +59,7 @@ public class NPCController : MonoBehaviour, Interactable
             {
                 playerStorage.initialValue = playerPosition;
                 StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
-                
+
                 Debug.Log("rbdreported");
             }
             else
@@ -67,15 +68,21 @@ public class NPCController : MonoBehaviour, Interactable
             }
 
         }
-        else if (item && PlayerPrefs.HasKey("ChestOpenedID"  + chest_id)) // if its an item and has key, it signifies it is opened
+        else if (item && PlayerPrefs.HasKey("ChestOpenedID" + chest_id)) // if its an item and has key, it signifies it is opened
         {
 
             StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue2, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
-            
+
         }
         else if (item)
         {
             PlayerPrefs.SetInt("ChestOpenedID" + chest_id, 1);
+            ReceiveItem(item_id);
+            StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
+
+        }
+        else if (item_inf)
+        {
             ReceiveItem(item_id);
             StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
 

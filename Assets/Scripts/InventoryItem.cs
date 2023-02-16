@@ -9,6 +9,7 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
     public Items item;
     public Image image;
     public Text countText;
+    public Text itemText;
     public GameObject useMenu;
     public GameObject equipMenu;
 
@@ -42,15 +43,20 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
 
     void HandleClick() // On click of an item in the inventory, decide whether it is a consumable or equipment
     {
-        InventoryItem itemInSlot = GetComponentInChildren<InventoryItem>(); // gets the component thats a child of the gameObject clicked?
+        InventoryItem itemInSlot = GetComponentInChildren<InventoryItem>(); // gets the component thats a child of the gameObject clicked
         Items item = itemInSlot.item; // this is the item in the designated inventory slot
+        
         if (item.type == ItemType.Equipment)
         {
+            itemText = equipMenu.GetComponentInChildren<Text>();
+            itemText.text = item.itemName;
             equipMenu.SetActive(true);
             equipMenu.transform.position = new Vector2(Input.mousePosition.x + 60, Input.mousePosition.y); //show display at mouse
         }
         else if (item.type == ItemType.Consumable)
         {
+            itemText = useMenu.GetComponentInChildren<Text>();
+            itemText.text = item.itemName;
             useMenu.SetActive(true);
             useMenu.transform.position = new Vector2(Input.mousePosition.x + 60, Input.mousePosition.y); //show display at mouse
         }

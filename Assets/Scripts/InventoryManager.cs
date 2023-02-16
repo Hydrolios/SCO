@@ -6,6 +6,10 @@ public class InventoryManager : MonoBehaviour
 {
     public int maxStack = 99;
     public InventorySlot[] inventorySlots;
+    public InventorySlot hatEquip;
+    public InventorySlot shirtEquip;
+    public InventorySlot pantsEquip;
+    public InventorySlot wepEquip;
     public GameObject inventoryItemPrefab;
     public ItemList itemList;
     public InventorySlot selectedSlot;
@@ -35,7 +39,6 @@ public class InventoryManager : MonoBehaviour
     }
     public bool AddItem(Items item) // Adds an item to the inventory but checks for a place to insert the item
     {
-        Debug.Log("three");
         for (int i = 0; i < inventorySlots.Length; i++) //finds the slot with same item to stack
         {
             InventorySlot slot = inventorySlots[i];
@@ -89,6 +92,7 @@ public class InventoryManager : MonoBehaviour
             }
 
         }
+        //need to remember to include the individual saving of the equipment slots, hatEquip...wepEquip
     }
 
     public void DeleteInv() // for testing functionality of cleaning out the inventory
@@ -242,5 +246,78 @@ public class InventoryManager : MonoBehaviour
 
     }
 
+    public void EquipItem() // equipping item and making sure to swap with already equipped item WIP
+    {
+        selectedItem.count--;
+        selectedItem.RefreshCount();
+        selectedItem.ItemUsed();
+        if(selectedItem.item.equipType == EquipmentType.Hat)
+        {
+            InventorySlot slot = hatEquip;
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>(); //checks if equip slot is occupied
+            if (itemInSlot == null)
+            {
+                SpawnNewItem(selectedItem.item, slot);
+            }
+            else
+            {
+                AddItem(itemInSlot.item);
+                Destroy(itemInSlot.item);
+                SpawnNewItem(selectedItem.item, slot);
+            }
+        }
+
+        else if (selectedItem.item.equipType == EquipmentType.Shirt)
+        {
+            InventorySlot slot = shirtEquip;
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>(); //checks if equip slot is occupied
+            if (itemInSlot == null)
+            {
+                SpawnNewItem(selectedItem.item, slot);
+            }
+            else
+            {
+                AddItem(itemInSlot.item);
+                Destroy(itemInSlot.item);
+                SpawnNewItem(selectedItem.item, slot);
+            }
+        }
+
+        else if (selectedItem.item.equipType == EquipmentType.Pants)
+        {
+            InventorySlot slot = pantsEquip;
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>(); //checks if equip slot is occupied
+            if(itemInSlot == null)
+            {
+                SpawnNewItem(selectedItem.item, slot);
+            }
+            else
+            {
+                AddItem(itemInSlot.item);
+                Destroy(itemInSlot.item);
+                SpawnNewItem(selectedItem.item, slot);
+            }
+
+        }
+
+        else if (selectedItem.item.equipType == EquipmentType.Weapon)
+        {
+            InventorySlot slot = wepEquip;
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>(); //checks if equip slot is occupied
+            if (itemInSlot == null)
+            {
+                SpawnNewItem(selectedItem.item, slot);
+            }
+            else
+            {
+                AddItem(itemInSlot.item);
+                Destroy(itemInSlot.item);
+                SpawnNewItem(selectedItem.item, slot);
+            }
+        }
+
+
+
+    }
 
 }
