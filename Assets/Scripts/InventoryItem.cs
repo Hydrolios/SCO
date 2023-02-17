@@ -12,6 +12,7 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
     public Text itemText;
     public GameObject useMenu;
     public GameObject equipMenu;
+    public GameObject unequip;
 
     private Button button;
 
@@ -21,6 +22,7 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
     {
         useMenu = GameObject.Find("ConsumableMenu");
         equipMenu = GameObject.Find("EquipMenu");
+        unequip = GameObject.Find("UnequipMenu");
         button = GetComponent<Button>();
         button.onClick.AddListener(HandleClick);
 
@@ -38,15 +40,25 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         {
             useMenu.transform.position = new Vector2(1000, 0);
             equipMenu.transform.position = new Vector2(1000, 0);
+            unequip.transform.position = new Vector2(1000, 0);
         }
     }
 
     void HandleClick() // On click of an item in the inventory, decide whether it is a consumable or equipment
     {
+        InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
+        InventorySlot inventorySlot = GetComponentInParent<InventorySlot>();
         InventoryItem itemInSlot = GetComponentInChildren<InventoryItem>(); // gets the component thats a child of the gameObject clicked
         Items item = itemInSlot.item; // this is the item in the designated inventory slot
-        
-        if (item.type == ItemType.Equipment)
+        InventorySlot slot = GetComponentInParent<InventorySlot>();
+        if (slot == inventoryManager.hatEquip || slot == inventoryManager.shirtEquip || slot == inventoryManager.pantsEquip || slot == inventoryManager.wepEquip) //checks if the selected slot is one of the equipment slots
+        {
+            itemText = unequip.GetComponentInChildren<Text>();
+            itemText.text = item.itemName;
+            unequip.SetActive(true);
+            unequip.transform.position = new Vector2(Input.mousePosition.x + 60, Input.mousePosition.y); //show display at mouse
+        }
+        else if (item.type == ItemType.Equipment)
         {
             itemText = equipMenu.GetComponentInChildren<Text>();
             itemText.text = item.itemName;
@@ -61,9 +73,8 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
             useMenu.transform.position = new Vector2(Input.mousePosition.x + 60, Input.mousePosition.y); //show display at mouse
         }
 
+
         // Sends the information about the selected slot to Inventory Manager
-        InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); 
-        InventorySlot inventorySlot = GetComponentInParent<InventorySlot>();
         inventoryManager.ClickedSlot(inventorySlot.gameObject);
     }
 
@@ -81,14 +92,16 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         {
             yield return null;
         }
-        equipMenu.transform.position = new Vector2(1000,0);
-        useMenu.transform.position = new Vector2(1000,0);
+        equipMenu.transform.position = new Vector2(1000, 0);
+        useMenu.transform.position = new Vector2(1000, 0);
+        unequip.transform.position = new Vector2(1000, 0);
 
     }
     public void ItemUsed() // method to immediately hide menu after using/equiping/discarding an item
     {
         equipMenu.transform.position = new Vector2(1000, 0);
         useMenu.transform.position = new Vector2(1000, 0);
+        unequip.transform.position = new Vector2(1000, 0);
 
     }
     public void InitializeItem(Items newItem) 

@@ -22,13 +22,7 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("one");
         LoadInventoryScene();
     }
-    /*
-    private void OnDestroy()
-    {
-        Debug.Log("two");
-        SaveInventoryScene();
-    }
-    */
+
     public void ClickedSlot(GameObject slot) // Gets the selected inventory slot that was clicked
     {
         selectedSlot = slot.GetComponent<InventorySlot>();
@@ -75,7 +69,8 @@ public class InventoryManager : MonoBehaviour
 
      public void SaveInventory() // saves inventory info by cycling through the inventory and saving item id + count
     {
-        for (int i = 0; i < inventorySlots.Length; i++) //wipes out the previously saved first
+
+        for (int i = 0; i < inventorySlots.Length; i++) //wipes out the previously saved first as different save may use different amounts of inv space
         {
             PlayerPrefs.DeleteKey("InventorySlot" + i + "ID");
             PlayerPrefs.DeleteKey("InventorySlot" + i + "Count");
@@ -92,6 +87,10 @@ public class InventoryManager : MonoBehaviour
             }
 
         }
+        PlayerPrefs.SetInt("InventorySlotA", hatEquip.GetComponentInChildren<InventoryItem>().item.id);
+        PlayerPrefs.SetInt("InventorySlotB", shirtEquip.GetComponentInChildren<InventoryItem>().item.id);
+        PlayerPrefs.SetInt("InventorySlotC", pantsEquip.GetComponentInChildren<InventoryItem>().item.id);
+        PlayerPrefs.SetInt("InventorySlotD", wepEquip.GetComponentInChildren<InventoryItem>().item.id);
         //need to remember to include the individual saving of the equipment slots, hatEquip...wepEquip
     }
 
@@ -124,13 +123,13 @@ public class InventoryManager : MonoBehaviour
                 
             }
         }
-
+        
         for (int i = 0; i < inventorySlots.Length; i++) // loads in the saved inventory with the playerprefs
         {
-
             int id = PlayerPrefs.GetInt("InventorySlot" + i + "ID");
             int count = PlayerPrefs.GetInt("InventorySlot" + i + "Count");
             Items item = null;
+
             for (int j = 0; j < itemList.items.Length; j++)
             {
                 if (itemList.items[j].id == id)
@@ -152,6 +151,32 @@ public class InventoryManager : MonoBehaviour
 
 
         }
+        LoadEquipped(PlayerPrefs.GetInt("InventorySlotA", -1), hatEquip);
+        LoadEquipped(PlayerPrefs.GetInt("InventorySlotB", -1), shirtEquip);
+        LoadEquipped(PlayerPrefs.GetInt("InventorySlotC", -1), pantsEquip);
+        LoadEquipped(PlayerPrefs.GetInt("InventorySlotD", -1), wepEquip);
+
+    }
+
+    public void LoadEquipped(int id, InventorySlot slot) // loads the data of equipped 
+    {
+        int itemid = id;
+        Items item = null;
+        for (int j = 0; j < itemList.items.Length; j++)
+        {
+            if (itemList.items[j].id == itemid)
+            {
+                item = itemList.items[j];
+            }
+            if (item != null)
+            {
+                break;
+            }
+        }
+        if (item != null)
+        {
+            SpawnNewItem(item, slot);
+        }
     }
     
     public void SaveInventoryScene() // saves inventory info by cycling through the inventory and saving item id + count
@@ -172,6 +197,10 @@ public class InventoryManager : MonoBehaviour
             }
 
         }
+        PlayerPrefs.SetInt("InventorySlotA", hatEquip.GetComponentInChildren<InventoryItem>().item.id);
+        PlayerPrefs.SetInt("InventorySlotB", shirtEquip.GetComponentInChildren<InventoryItem>().item.id);
+        PlayerPrefs.SetInt("InventorySlotC", pantsEquip.GetComponentInChildren<InventoryItem>().item.id);
+        PlayerPrefs.SetInt("InventorySlotD", wepEquip.GetComponentInChildren<InventoryItem>().item.id);
     }
 
     public void LoadInventoryScene() // loads inventory info for scene change
@@ -188,6 +217,7 @@ public class InventoryManager : MonoBehaviour
                 }
             }
         }
+        
         for (int i = 0; i < inventorySlots.Length; i++) // loads in the saved inventory with the playerprefs
         {
             int id = PlayerPrefs.GetInt("InventorySlotScene" + i + "ID", -1);
@@ -211,7 +241,10 @@ public class InventoryManager : MonoBehaviour
                 itemInSlot.count = count;
                 itemInSlot.RefreshCount();
             }
-
+            LoadEquipped(PlayerPrefs.GetInt("InventorySlotA", -1), hatEquip);
+            LoadEquipped(PlayerPrefs.GetInt("InventorySlotB", -1), shirtEquip);
+            LoadEquipped(PlayerPrefs.GetInt("InventorySlotC", -1), pantsEquip);
+            LoadEquipped(PlayerPrefs.GetInt("InventorySlotD", -1), wepEquip);
 
         }
     }
@@ -258,11 +291,12 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                Destroy(selectedItem.gameObject);
             }
             else
             {
                 AddItem(itemInSlot.item);
-                Destroy(itemInSlot.item);
+                Destroy(selectedItem.gameObject);
                 SpawnNewItem(selectedItem.item, slot);
             }
         }
@@ -274,11 +308,12 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                Destroy(selectedItem.gameObject);
             }
             else
             {
                 AddItem(itemInSlot.item);
-                Destroy(itemInSlot.item);
+                Destroy(selectedItem.gameObject);
                 SpawnNewItem(selectedItem.item, slot);
             }
         }
@@ -290,11 +325,12 @@ public class InventoryManager : MonoBehaviour
             if(itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                Destroy(selectedItem.gameObject);
             }
             else
             {
                 AddItem(itemInSlot.item);
-                Destroy(itemInSlot.item);
+                Destroy(selectedItem.gameObject);
                 SpawnNewItem(selectedItem.item, slot);
             }
 
@@ -307,16 +343,22 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                Destroy(selectedItem.gameObject);
             }
             else
             {
                 AddItem(itemInSlot.item);
-                Destroy(itemInSlot.item);
+                Destroy(selectedItem.gameObject);
                 SpawnNewItem(selectedItem.item, slot);
             }
         }
-
-
+    }
+    public void UnequipItem()
+    {
+        selectedItem.count--;
+        AddItem(selectedItem.item);
+        Destroy(selectedItem.gameObject);
+        selectedItem.ItemUsed();
 
     }
 
