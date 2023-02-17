@@ -19,8 +19,17 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("one");
-        LoadInventoryScene();
+        if(player.loadGame)
+        {
+            Debug.Log("1");
+            LoadInventory();
+        }    
+        else
+        {
+            Debug.Log("2");
+            LoadInventoryScene();
+        }
+        
     }
 
     public void ClickedSlot(GameObject slot) // Gets the selected inventory slot that was clicked
@@ -69,7 +78,10 @@ public class InventoryManager : MonoBehaviour
 
      public void SaveInventory() // saves inventory info by cycling through the inventory and saving item id + count
     {
-
+        PlayerPrefs.DeleteKey("InventorySlotA");
+        PlayerPrefs.DeleteKey("InventorySlotB");
+        PlayerPrefs.DeleteKey("InventorySlotC");
+        PlayerPrefs.DeleteKey("InventorySlotD");
         for (int i = 0; i < inventorySlots.Length; i++) //wipes out the previously saved first as different save may use different amounts of inv space
         {
             PlayerPrefs.DeleteKey("InventorySlot" + i + "ID");
@@ -80,18 +92,46 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = inventorySlots[i].GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null)
             {
-                Debug.Log("item was saved");
+                Debug.Log("one");
                 PlayerPrefs.SetInt("InventorySlot" + i + "ID", itemInSlot.item.id); 
                 PlayerPrefs.SetInt("InventorySlot" + i + "Count", itemInSlot.count);
                 
             }
 
         }
-        PlayerPrefs.SetInt("InventorySlotA", hatEquip.GetComponentInChildren<InventoryItem>().item.id);
-        PlayerPrefs.SetInt("InventorySlotB", shirtEquip.GetComponentInChildren<InventoryItem>().item.id);
-        PlayerPrefs.SetInt("InventorySlotC", pantsEquip.GetComponentInChildren<InventoryItem>().item.id);
-        PlayerPrefs.SetInt("InventorySlotD", wepEquip.GetComponentInChildren<InventoryItem>().item.id);
+
+        //PlayerPrefs.SetInt("InventorySlotA", hatEquip.GetComponentInChildren<InventoryItem>().item.id);
+        //PlayerPrefs.SetInt("InventorySlotB", shirtEquip.GetComponentInChildren<InventoryItem>().item.id);
+        //PlayerPrefs.SetInt("InventorySlotC", pantsEquip.GetComponentInChildren<InventoryItem>().item.id);
+        //PlayerPrefs.SetInt("InventorySlotD", wepEquip.GetComponentInChildren<InventoryItem>().item.id);
         //need to remember to include the individual saving of the equipment slots, hatEquip...wepEquip
+        InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
+        if (hatItem != null)
+        {
+            Debug.Log("A");
+            PlayerPrefs.SetInt("InventorySlotA", hatItem.item.id);
+        }
+
+        InventoryItem shirtItem = shirtEquip.GetComponentInChildren<InventoryItem>();
+        if (shirtItem != null)
+        {
+            Debug.Log("B");
+            PlayerPrefs.SetInt("InventorySlotB", shirtItem.item.id);
+        }
+
+        InventoryItem pantsItem = pantsEquip.GetComponentInChildren<InventoryItem>();
+        if (pantsItem != null)
+        {
+            Debug.Log("C");
+            PlayerPrefs.SetInt("InventorySlotC", pantsItem.item.id);
+        }
+
+        InventoryItem weaponItem = wepEquip.GetComponentInChildren<InventoryItem>();
+        if (weaponItem != null)
+        {
+            Debug.Log("D");
+            PlayerPrefs.SetInt("InventorySlotD", weaponItem.item.id);
+        }
     }
 
     public void DeleteInv() // for testing functionality of cleaning out the inventory
@@ -111,6 +151,7 @@ public class InventoryManager : MonoBehaviour
     
     public void LoadInventory() // loads inventory info for save/load
     {
+
         for (int i = 0; i < inventorySlots.Length; i++) // gets rid of any of the existing inventory to prevent duplication
         {
             InventoryItem itemInSlot = inventorySlots[i].GetComponentInChildren<InventoryItem>();
@@ -126,8 +167,8 @@ public class InventoryManager : MonoBehaviour
         
         for (int i = 0; i < inventorySlots.Length; i++) // loads in the saved inventory with the playerprefs
         {
-            int id = PlayerPrefs.GetInt("InventorySlot" + i + "ID");
-            int count = PlayerPrefs.GetInt("InventorySlot" + i + "Count");
+            int id = PlayerPrefs.GetInt("InventorySlot" + i + "ID", -1);
+            int count = PlayerPrefs.GetInt("InventorySlot" + i + "Count", 0);
             Items item = null;
 
             for (int j = 0; j < itemList.items.Length; j++)
@@ -151,10 +192,11 @@ public class InventoryManager : MonoBehaviour
 
 
         }
-        LoadEquipped(PlayerPrefs.GetInt("InventorySlotA", -1), hatEquip);
-        LoadEquipped(PlayerPrefs.GetInt("InventorySlotB", -1), shirtEquip);
-        LoadEquipped(PlayerPrefs.GetInt("InventorySlotC", -1), pantsEquip);
-        LoadEquipped(PlayerPrefs.GetInt("InventorySlotD", -1), wepEquip);
+        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotA", -1), hatEquip);
+        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotB", -1), shirtEquip);
+        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotC", -1), pantsEquip);
+        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotD", -1), wepEquip);
+        //not entirely sure if i even need this
 
     }
 
@@ -167,6 +209,7 @@ public class InventoryManager : MonoBehaviour
             if (itemList.items[j].id == itemid)
             {
                 item = itemList.items[j];
+                Debug.Log(itemid);
             }
             if (item != null)
             {
@@ -181,6 +224,10 @@ public class InventoryManager : MonoBehaviour
     
     public void SaveInventoryScene() // saves inventory info by cycling through the inventory and saving item id + count
     {
+        PlayerPrefs.DeleteKey("InventorySlotA");
+        PlayerPrefs.DeleteKey("InventorySlotB");
+        PlayerPrefs.DeleteKey("InventorySlotC");
+        PlayerPrefs.DeleteKey("InventorySlotD");
         for (int i = 0; i < inventorySlots.Length; i++) //wipes out the previously saved first
         {
             PlayerPrefs.DeleteKey("InventorySlotScene" + i + "ID");
@@ -197,17 +244,46 @@ public class InventoryManager : MonoBehaviour
             }
 
         }
-        PlayerPrefs.SetInt("InventorySlotA", hatEquip.GetComponentInChildren<InventoryItem>().item.id);
-        PlayerPrefs.SetInt("InventorySlotB", shirtEquip.GetComponentInChildren<InventoryItem>().item.id);
-        PlayerPrefs.SetInt("InventorySlotC", pantsEquip.GetComponentInChildren<InventoryItem>().item.id);
-        PlayerPrefs.SetInt("InventorySlotD", wepEquip.GetComponentInChildren<InventoryItem>().item.id);
+        //PlayerPrefs.SetInt("InventorySlotA", hatEquip.GetComponentInChildren<InventoryItem>().item.id);
+        //PlayerPrefs.SetInt("InventorySlotB", shirtEquip.GetComponentInChildren<InventoryItem>().item.id);
+        //PlayerPrefs.SetInt("InventorySlotC", pantsEquip.GetComponentInChildren<InventoryItem>().item.id);
+        //PlayerPrefs.SetInt("InventorySlotD", wepEquip.GetComponentInChildren<InventoryItem>().item.id);
+        
+        InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
+        if (hatItem != null)
+        {
+            Debug.Log("A");
+            PlayerPrefs.SetInt("InventorySlotA", hatItem.item.id);
+        }
+
+        InventoryItem shirtItem = shirtEquip.GetComponentInChildren<InventoryItem>();
+        if (shirtItem != null)
+        {
+            Debug.Log("B");
+            PlayerPrefs.SetInt("InventorySlotB", shirtItem.item.id);
+        }
+
+        InventoryItem pantsItem = pantsEquip.GetComponentInChildren<InventoryItem>();
+        if (pantsItem != null)
+        {
+            Debug.Log("C");
+            PlayerPrefs.SetInt("InventorySlotC", pantsItem.item.id);
+        }
+
+        InventoryItem weaponItem = wepEquip.GetComponentInChildren<InventoryItem>();
+        if (weaponItem != null)
+        {
+            Debug.Log("D");
+            PlayerPrefs.SetInt("InventorySlotD", weaponItem.item.id);
+        }
+        
     }
 
     public void LoadInventoryScene() // loads inventory info for scene change
     {
+
         for (int i = 0; i < inventorySlots.Length; i++) // gets rid of any of the existing inventory to prevent duplication
         {
-            Debug.Log(i);
             InventoryItem itemInSlot = inventorySlots[i].GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null)
             {
@@ -241,12 +317,12 @@ public class InventoryManager : MonoBehaviour
                 itemInSlot.count = count;
                 itemInSlot.RefreshCount();
             }
-            LoadEquipped(PlayerPrefs.GetInt("InventorySlotA", -1), hatEquip);
-            LoadEquipped(PlayerPrefs.GetInt("InventorySlotB", -1), shirtEquip);
-            LoadEquipped(PlayerPrefs.GetInt("InventorySlotC", -1), pantsEquip);
-            LoadEquipped(PlayerPrefs.GetInt("InventorySlotD", -1), wepEquip);
-
         }
+        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotA", -1), hatEquip);
+        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotB", -1), shirtEquip);
+        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotC", -1), pantsEquip);
+        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotD", -1), wepEquip);
+        // not entirely sure if i even need this
     }
 
     public void DiscardItem() // Discards one item
@@ -356,6 +432,7 @@ public class InventoryManager : MonoBehaviour
     public void UnequipItem()
     {
         selectedItem.count--;
+        selectedItem.RefreshCount();
         AddItem(selectedItem.item);
         Destroy(selectedItem.gameObject);
         selectedItem.ItemUsed();

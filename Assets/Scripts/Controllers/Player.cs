@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
         }   
         else
         {
-            //Debug.Log("Position was from a load");
+            Debug.Log("Position was from a load");
             xPos = PlayerPrefs.GetFloat("x");
             yPos = PlayerPrefs.GetFloat("y");
             currentHealth = PlayerPrefs.GetInt("savedHP");
