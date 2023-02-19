@@ -116,4 +116,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RainbowDung/RBDCombatGuard.unity
     guid: cc8ca24adc96e184999b9dad804511df
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 39618a6e49732f041ad16aa9a0f29bac
   m_configObjects: {}

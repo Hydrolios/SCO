@@ -3459,9 +3459,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: item
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: chest_id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: itemList
+      value: 
+      objectReference: {fileID: 1594785743}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1125671507}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 702299444}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: dialogue2.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: dialogue2.lines.Array.data[0]
+      value: Nothing is inside.
+      objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252971, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: m_RootOrder
       value: 8

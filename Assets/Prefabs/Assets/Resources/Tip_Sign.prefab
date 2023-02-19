@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2909686603482956095}
   - component: {fileID: 2909686603482956034}
   m_Layer: 10
-  m_Name: RBSign_Tip
+  m_Name: Tip_Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 9172797873454411186, guid: 3c10c3ae4b9084a4f99835992e53d66e, type: 3}
+  m_Sprite: {fileID: -3516599394842219977, guid: 89f678d84e779564ba50a64c1cec8175, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,6 +131,12 @@ MonoBehaviour:
     lines: []
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
+  playerRef: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  itemList: {fileID: 0}
+  item_id: 0
+  chest_id: 0
+  npc_id: 0
   sceneToLoad: 
   shopKeeper: 0
   expgiver: 0
@@ -138,6 +144,8 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  item: 0
+  item_inf: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
