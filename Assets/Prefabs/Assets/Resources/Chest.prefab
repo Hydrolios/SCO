@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9202215614624252969}
   m_Layer: 10
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,6 +135,8 @@ MonoBehaviour:
   inventoryManager: {fileID: 5861313048351347114, guid: 99760292e04d9874fb18c55dab4ac448, type: 3}
   itemList: {fileID: 7372655217861805402, guid: 6c7b1f69099616b46821b2c2bb5f4919, type: 3}
   item_id: 1
+  chest_id: 0
+  npc_id: 0
   sceneToLoad: 
   shopKeeper: 0
   expgiver: 0
@@ -143,6 +145,7 @@ MonoBehaviour:
   soldier: 0
   sleep: 0
   item: 1
+  item_inf: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}

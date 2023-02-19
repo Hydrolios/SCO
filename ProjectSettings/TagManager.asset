@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EquipMenu
   - ConsumableMenu
+  - Chest
   layers:
   - Default
   - TransparentFX

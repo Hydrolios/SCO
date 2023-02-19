@@ -11032,7 +11032,7 @@ MonoBehaviour:
   dialogue:
     lines:
     - Welcome to Tavern Hysteria!
-    - What can I get ya?
+    - Shop coming soon!
   dialogue2:
     lines: []
   dialogue3:
@@ -11046,9 +11046,9 @@ MonoBehaviour:
   chest_id: 0
   npc_id: 0
   sceneToLoad: 
-  shopKeeper: 1
+  shopKeeper: 0
   expgiver: 0
-  rbdreport: 1
+  rbdreport: 0
   elder: 0
   soldier: 0
   sleep: 0

@@ -112,8 +112,8 @@ public class NPCController : MonoBehaviour, Interactable
         {
             Debug.Log("item not added");
         }
-
-        
     }
+
+ 
 
 }
