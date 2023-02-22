@@ -149,7 +149,7 @@ MonoBehaviour:
   isPlayer: 0
   unitName: Elder
   unitLevel: 10
-  attack: 0
+  attack: 1
   damagedealt: 0
   minDmg: 0
   maxDmg: 0
@@ -163,4 +163,5 @@ MonoBehaviour:
   enx: 0
   sol: 0
   chr: 0
+  movetutorrage: 0
   raged: 0

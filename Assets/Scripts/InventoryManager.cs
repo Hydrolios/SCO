@@ -19,17 +19,26 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        if(player.loadGame)
+        if (player.loadGame)
         {
             Debug.Log("1");
             LoadInventory();
-        }    
+        }
         else
         {
             Debug.Log("2");
             LoadInventoryScene();
         }
-        
+
+        if(PlayerPrefs.HasKey("BattleReward"))
+        {
+            int reward = PlayerPrefs.GetInt("BattleReward");
+
+            AddItem(itemList.items[reward]);
+            PlayerPrefs.DeleteKey("BattleReward");
+        }
+
+
     }
 
     public void ClickedSlot(GameObject slot) // Gets the selected inventory slot that was clicked

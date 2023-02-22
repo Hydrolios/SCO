@@ -38,9 +38,9 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
     {
         if (!gameObject)
         {
-            useMenu.transform.position = new Vector2(1000, 0);
-            equipMenu.transform.position = new Vector2(1000, 0);
-            unequip.transform.position = new Vector2(1000, 0);
+            useMenu.transform.position = new Vector2(1500, 0);
+            equipMenu.transform.position = new Vector2(1500, 0);
+            unequip.transform.position = new Vector2(1500, 0);
         }
     }
 
@@ -92,16 +92,16 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         {
             yield return null;
         }
-        equipMenu.transform.position = new Vector2(1000, 0);
-        useMenu.transform.position = new Vector2(1000, 0);
-        unequip.transform.position = new Vector2(1000, 0);
+        equipMenu.transform.position = new Vector2(1500, 0);
+        useMenu.transform.position = new Vector2(1500, 0);
+        unequip.transform.position = new Vector2(1500, 0);
 
     }
     public void ItemUsed() // method to immediately hide menu after using/equiping/discarding an item
     {
-        equipMenu.transform.position = new Vector2(1000, 0);
-        useMenu.transform.position = new Vector2(1000, 0);
-        unequip.transform.position = new Vector2(1000, 0);
+        equipMenu.transform.position = new Vector2(1500, 0);
+        useMenu.transform.position = new Vector2(1500, 0);
+        unequip.transform.position = new Vector2(1500, 0);
 
     }
     public void InitializeItem(Items newItem) 

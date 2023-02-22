@@ -169,6 +169,7 @@ MonoBehaviour:
   sleep: 0
   item: 0
   item_inf: 0
+  item_battle: 0
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}

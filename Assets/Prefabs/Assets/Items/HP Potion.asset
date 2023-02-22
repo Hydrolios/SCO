@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 608d9e0663e00134abc0047fde73658b, type: 3}
-  m_Name: DaggerItem
+  m_Name: HP Potion
   m_EditorClassIdentifier: 
-  itemName: Rusty Dagger
-  type: 0
-  actionType: 0
-  equipType: 3
-  id: 1
-  hp: 0
+  itemName: HP Potion
+  type: 1
+  actionType: 1
+  equipType: 4
+  id: 0
+  hp: 5
   range: {x: 5, y: 4}
-  stackable: 0
-  image: {fileID: 21300000, guid: bcf80e07c3639724d9c6a84d8c55e551, type: 3}
+  stackable: 1
+  image: {fileID: 21300000, guid: d856eb03888ae4d4e96cbe6565142317, type: 3}

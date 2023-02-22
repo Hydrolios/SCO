@@ -25,6 +25,9 @@ public class BattleManager : MonoBehaviour
     UnitStats playerUnit;
     UnitStats enemyUnit;
 
+    public ItemList itemList;
+    public int item_id;
+
     public Text dialogueText;
     public string sceneToLoad;
     public bool tutorial;
@@ -113,6 +116,10 @@ public class BattleManager : MonoBehaviour
             return;
         AttackListUI.SetActive(false);
         StartCoroutine(PlayerBuffing());
+    }
+    public bool FirstVowel(char c)
+    {
+        return "aeiouAEIOU".IndexOf(c) != -1;
     }
 
     //player attack sequence
@@ -245,7 +252,7 @@ public class BattleManager : MonoBehaviour
                 PlayerPrefs.SetInt("shadeKilled", (eventChecker.shadeKilled ? 1 : 0));
                 
             }
-            else if (enemyUnit.movetutorrage)
+            else if (enemyUnit.movetutorrage) // set the variable of rage to true so user can use it and it will show
             {
                 dialogueText.text = "YOU DEFEATED ME!!!!!! I WILL TEACH YOU 'RAGE'";
                 yield return new WaitForSeconds(2.5f);
@@ -260,7 +267,15 @@ public class BattleManager : MonoBehaviour
             dialogueText.text = "You've gained " + enemyUnit.exp + " EXP";
             yield return new WaitForSeconds(1.5f);
             Encounter.defeated = true;
-            if (PlayerPrefs.GetInt("exp") + enemyUnit.exp >= PlayerPrefs.GetInt("exptolevel"))
+            if (PlayerPrefs.HasKey("BattleReward")) // text to display reward item
+            {
+                string itemName = itemList.items[PlayerPrefs.GetInt("BattleReward")].itemName;
+                string article = FirstVowel(itemName[0]) ? "an" : "a";
+                dialogueText.text = "You received " + article + " " + itemName + "!";
+                yield return new WaitForSeconds(1.5f);
+            }
+            
+            if (PlayerPrefs.GetInt("exp") + enemyUnit.exp >= PlayerPrefs.GetInt("exptolevel")) // text to display level up event
             {
                 dialogueText.text = "You leveled to " + (PlayerPrefs.GetInt("playerlevel") + 1) + "!";
                 yield return new WaitForSeconds(1.5f);
@@ -287,6 +302,7 @@ public class BattleManager : MonoBehaviour
         else if (state == BattleState.LOSE)
         {
             dialogueText.text = "You've been defeated!";
+            PlayerPrefs.DeleteKey("BattleReward");
             yield return new WaitForSeconds(1.5f);
             SceneManager.LoadScene("Menu");
             //loads main menu

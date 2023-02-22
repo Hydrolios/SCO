@@ -10,6 +10,8 @@ public class Encounter : MonoBehaviour
     public GameObject triggered;
     public string sceneToLoad;
     public static bool defeated;
+    public int item_id_low;
+    public int item_id_high;
     
     public string objectID;
     public string designatedScene;
@@ -59,8 +61,23 @@ public class Encounter : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.SaveInventoryScene();
+
             defeated = false;
             triggered.SetActive(true);
+            float itemChance = 0.5f;
+            float random = Random.value;
+            if(random < itemChance) //random chance to get items or not
+            {
+                PlayerPrefs.DeleteKey("BattleReward");
+            }
+            else if(item_id_low > -1)
+            {
+                int item_id = Random.Range(item_id_low, item_id_high); //will be used to decide item reward, list will be sorted by tiers eventually
+                PlayerPrefs.SetInt("BattleReward", item_id);
+            }
+            
             StartCoroutine(DialogueManager.Instance.ShowDialogueV3(dialogue, sceneToLoad, true));
             
             

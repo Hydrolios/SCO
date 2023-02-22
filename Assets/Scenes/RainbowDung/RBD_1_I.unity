@@ -1346,7 +1346,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: npc_id
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: chest_id

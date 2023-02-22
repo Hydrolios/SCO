@@ -179,6 +179,18 @@ PrefabInstance:
       value: RBDGuard_L 11
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: item_id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: item_id_low
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: item_id_high
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: designatedPos.x
       value: 406
       objectReference: {fileID: 0}
@@ -4371,6 +4383,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_low
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_high
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: designatedPos.x
       value: 409

@@ -187,6 +187,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1599574523}
     - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: item_id_low
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: item_id_high
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: designatedPos.x
       value: 411.5
       objectReference: {fileID: 0}
@@ -277,6 +285,14 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1599574523}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_low
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_high
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: designatedPos.x
       value: 414.5
@@ -2028,6 +2044,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1599574523}
     - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: item_id_low
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: item_id_high
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: designatedPos.x
       value: 401.5
       objectReference: {fileID: 0}
@@ -2885,6 +2909,14 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1599574523}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_low
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_high
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: designatedPos.x
       value: 404.5

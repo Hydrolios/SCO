@@ -2981,6 +2981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_Slot (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2045702844521100983, guid: a352bdcc89516694e991dcd34dc259ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d45f2461c7b002e4eae002c5bea74764, type: 3}
     - target: {fileID: 8159324561010748461, guid: a352bdcc89516694e991dcd34dc259ba, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3491,6 +3495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_Slot (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2045702844521100983, guid: a352bdcc89516694e991dcd34dc259ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d20450c94a8fdf41be0011f672d120b, type: 3}
     - target: {fileID: 8159324561010748461, guid: a352bdcc89516694e991dcd34dc259ba, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3899,6 +3907,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_Slot (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2045702844521100983, guid: a352bdcc89516694e991dcd34dc259ba, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045702844521100983, guid: a352bdcc89516694e991dcd34dc259ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 24247f487812dc34ab08324dc12cda1d, type: 3}
     - target: {fileID: 8159324561010748461, guid: a352bdcc89516694e991dcd34dc259ba, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4205,6 +4221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_Slot (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2045702844521100983, guid: a352bdcc89516694e991dcd34dc259ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e52ea005ca7cb524fba89113fa42ec8b, type: 3}
     - target: {fileID: 8159324561010748461, guid: a352bdcc89516694e991dcd34dc259ba, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

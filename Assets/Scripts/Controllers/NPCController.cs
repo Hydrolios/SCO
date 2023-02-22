@@ -16,8 +16,8 @@ public class NPCController : MonoBehaviour, Interactable
     //some stuff for the ability of giving item upon interaction (mainly for things like chest)
     public InventoryManager inventoryManager;
     public ItemList itemList;
-    public int item_id;
-    public int chest_id;
+    public int item_id; //item to be given or rewarded
+    public int chest_id; // each chest has a unique id
     public int npc_id;
 
     //bool conditions to seperate different instances for different uses
@@ -30,12 +30,20 @@ public class NPCController : MonoBehaviour, Interactable
     public bool sleep;
     public bool item;
     public bool item_inf;
+    public bool item_battle;
     public bool sceneChangeReq; // check if a scene change is required 
     public Vector2 playerPosition;
     public VectorValue playerStorage;
     public void Interact()
     {
         playerRef.StopSpeed();
+        if(item_battle)
+        {
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.SaveInventoryScene();
+            PlayerPrefs.SetInt("BattleReward", item_id);
+
+        }
         if (elder)
         {
             if (PlayerPrefs.GetInt("rbdreport") != 0) //dialogue for reporting back to elder after shade is killed
