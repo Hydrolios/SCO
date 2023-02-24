@@ -11,6 +11,7 @@ public class BattleManager : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
     public GameObject AttackListUI;
+    public GameObject ItemUI;
     public GameObject playerRageAnimation;
     public GameObject playerSlashAnimation;
     public GameObject playerEleRadAnimation;
@@ -96,6 +97,18 @@ public class BattleManager : MonoBehaviour
     {
         AttackListUI.SetActive(false);
     }
+
+    public void OnItemButton() //selecting "items" open up a list UI
+    {
+        ItemUI.SetActive(true);
+    }
+
+    public void ItemListReturn() // selecting back arrow closes list
+    {
+        ItemUI.SetActive(false);
+    }
+
+
     public void AttackSkill() // basic attack [slash]
     {
         if (state != BattleState.PLAYERTURN)
@@ -120,6 +133,11 @@ public class BattleManager : MonoBehaviour
     public bool FirstVowel(char c)
     {
         return "aeiouAEIOU".IndexOf(c) != -1;
+    }
+    // future attack implementation February
+    public void Attack1() // all attack is the same, but will hold different attack scriptableobject?
+    {
+
     }
 
     //player attack sequence

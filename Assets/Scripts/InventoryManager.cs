@@ -109,10 +109,6 @@ public class InventoryManager : MonoBehaviour
 
         }
 
-        //PlayerPrefs.SetInt("InventorySlotA", hatEquip.GetComponentInChildren<InventoryItem>().item.id);
-        //PlayerPrefs.SetInt("InventorySlotB", shirtEquip.GetComponentInChildren<InventoryItem>().item.id);
-        //PlayerPrefs.SetInt("InventorySlotC", pantsEquip.GetComponentInChildren<InventoryItem>().item.id);
-        //PlayerPrefs.SetInt("InventorySlotD", wepEquip.GetComponentInChildren<InventoryItem>().item.id);
         //need to remember to include the individual saving of the equipment slots, hatEquip...wepEquip
         InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
         if (hatItem != null)
@@ -201,11 +197,7 @@ public class InventoryManager : MonoBehaviour
 
 
         }
-        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotA", -1), hatEquip);
-        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotB", -1), shirtEquip);
-        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotC", -1), pantsEquip);
-        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotD", -1), wepEquip);
-        //not entirely sure if i even need this
+
 
     }
 
@@ -253,10 +245,7 @@ public class InventoryManager : MonoBehaviour
             }
 
         }
-        //PlayerPrefs.SetInt("InventorySlotA", hatEquip.GetComponentInChildren<InventoryItem>().item.id);
-        //PlayerPrefs.SetInt("InventorySlotB", shirtEquip.GetComponentInChildren<InventoryItem>().item.id);
-        //PlayerPrefs.SetInt("InventorySlotC", pantsEquip.GetComponentInChildren<InventoryItem>().item.id);
-        //PlayerPrefs.SetInt("InventorySlotD", wepEquip.GetComponentInChildren<InventoryItem>().item.id);
+
         
         InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
         if (hatItem != null)
@@ -327,11 +316,7 @@ public class InventoryManager : MonoBehaviour
                 itemInSlot.RefreshCount();
             }
         }
-        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotA", -1), hatEquip);
-        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotB", -1), shirtEquip);
-        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotC", -1), pantsEquip);
-        //LoadEquipped(PlayerPrefs.GetInt("InventorySlotD", -1), wepEquip);
-        // not entirely sure if i even need this
+
     }
 
     public void DiscardItem() // Discards one item

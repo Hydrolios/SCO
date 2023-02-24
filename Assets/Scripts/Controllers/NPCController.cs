@@ -61,7 +61,7 @@ public class NPCController : MonoBehaviour, Interactable
                 StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
             }
         }
-        else if (soldier)
+        else if (soldier) // special case for story progression, some soldiers require a check to unlock other dialogue options
         {
             if (rbdreport)
             {
@@ -82,7 +82,7 @@ public class NPCController : MonoBehaviour, Interactable
             StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue2, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
 
         }
-        else if (item)
+        else if (item) // for giving an item, it will set it so chest is opened as a prefab afterwards voiding any more rewards
         {
             PlayerPrefs.SetInt("ChestOpenedID" + chest_id, 1);
             ReceiveItem(item_id);

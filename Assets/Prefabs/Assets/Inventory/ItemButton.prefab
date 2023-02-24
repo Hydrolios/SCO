@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.4, y: -20.3}
+  m_AnchoredPosition: {x: 5.4, y: -28.3}
   m_SizeDelta: {x: 38.2722, y: 30}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!222 &6058255332335783299
@@ -116,7 +116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60, y: -60}
+  m_AnchoredPosition: {x: 60, y: -50}
   m_SizeDelta: {x: 120, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3792234328208102314
@@ -216,6 +216,8 @@ MonoBehaviour:
   item: {fileID: 0}
   image: {fileID: 0}
   countText: {fileID: 226907759881892660}
+  itemText: {fileID: 0}
   useMenu: {fileID: 0}
   equipMenu: {fileID: 0}
+  unequip: {fileID: 0}
   count: 1

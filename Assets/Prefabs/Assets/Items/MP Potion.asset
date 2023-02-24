@@ -10,20 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 608d9e0663e00134abc0047fde73658b, type: 3}
-  m_Name: Rusty Dagger
+  m_Name: MP Potion
   m_EditorClassIdentifier: 
-  itemName: Rusty Dagger
-  type: 0
-  actionType: 0
-  equipType: 3
-  id: 1
+  itemName: MP Potion
+  type: 1
+  actionType: 1
+  equipType: 4
+  id: 2
   hp: 0
-  mp: 0
-  att: 1
-  rad: 0
-  enx: 0
-  sol: 2
-  chr: 0
   range: {x: 5, y: 4}
-  stackable: 0
-  image: {fileID: 21300000, guid: a30c94797a6a4974589d399547cc89fd, type: 3}
+  stackable: 1
+  image: {fileID: 21300000, guid: 3f384f334b1b2f246be66bd2f4a14399, type: 3}
