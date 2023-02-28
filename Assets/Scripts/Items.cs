@@ -10,6 +10,7 @@ public class Items : ScriptableObject
     public ItemType type;
     public ActionType actionType;
     public EquipmentType equipType;
+    public ConsumableType consumeType;
     public int id;
     public int hp;
     public int mp;
@@ -30,6 +31,13 @@ public class Items : ScriptableObject
 public enum ItemName
 {
     itemName
+}
+
+public enum ConsumableType
+{
+    HP,
+    MP,
+    None
 }
 public enum ItemType
 {

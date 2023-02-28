@@ -135,9 +135,24 @@ public class BattleManager : MonoBehaviour
         return "aeiouAEIOU".IndexOf(c) != -1;
     }
     // future attack implementation February
-    public void Attack1() // all attack is the same, but will hold different attack scriptableobject?
-    {
 
+    public void UseItem() // uses the item selected
+    {
+        ItemUI.SetActive(false);
+        StartCoroutine(ItemUsed());
+
+    }
+
+    IEnumerator ItemUsed()
+    {
+        state = BattleState.ENEMYTURN;
+        playerUnit.HealDamage(PlayerPrefs.GetInt("combatItemEffect"));
+        playerHUD.SetHP(playerUnit.currentHP);
+        dialogueText.text = playerUnit.unitName + " used " + PlayerPrefs.GetString("combatItemName") + "!";
+        yield return new WaitForSeconds(2f);
+        PlayerPrefs.DeleteKey("combatItemEffect");
+        PlayerPrefs.DeleteKey("combatItemName");
+        StartCoroutine(EnemyTurn());
     }
 
     //player attack sequence

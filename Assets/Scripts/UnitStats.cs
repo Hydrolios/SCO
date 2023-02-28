@@ -79,6 +79,21 @@ public class UnitStats : MonoBehaviour
         else
             return false;
     }
+
+    public void HealDamage(int health) // method for healing from an item
+    {
+        if(currentHP + health <= maxHP)
+        {
+            currentHP += health;
+        }
+        else
+        {
+            currentHP = maxHP;
+        }
+        
+    }
+
+
     //rolls from a random range for damage given character stats
     public int AttackRoll(int dmg) // future: takes in power of attack (like in pokemon) * base attack by power in percent * stat that influences
     {
