@@ -33,6 +33,7 @@ public class CombatItem : MonoBehaviour
                     
                     item = itemList.items[j];
                     //Debug.Log(item.itemName + " " + count);
+                    Debug.Log("testt");
                 }
                 if (item != null)
                 {
