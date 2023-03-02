@@ -16,8 +16,15 @@ MonoBehaviour:
   type: 1
   actionType: 1
   equipType: 4
+  consumeType: 1
   id: 2
   hp: 0
+  mp: 5
+  att: 0
+  rad: 0
+  enx: 0
+  sol: 0
+  chr: 0
   range: {x: 5, y: 4}
   stackable: 1
   image: {fileID: 21300000, guid: 3f384f334b1b2f246be66bd2f4a14399, type: 3}

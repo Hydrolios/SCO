@@ -33,7 +33,6 @@ public class CombatItem : MonoBehaviour
                     
                     item = itemList.items[j];
                     //Debug.Log(item.itemName + " " + count);
-                    Debug.Log("testt");
                 }
                 if (item != null)
                 {
@@ -46,7 +45,7 @@ public class CombatItem : MonoBehaviour
                 GameObject buttonGO = Instantiate(itemButton, transform);
                 Text buttonText = buttonGO.GetComponentInChildren<Text>();
                 buttonText.text = item.name + " x" + count;
-                buttonGO.GetComponent<Button>().onClick.AddListener(() => UseItem(buttonGO, count, item, id)); // need to add this second part to another method, this should open an UI
+                buttonGO.GetComponent<Button>().onClick.AddListener(() => UseItem(buttonGO, count, item, i)); // need to add this second part to another method, this should open an UI
                 
 
             }
@@ -57,23 +56,28 @@ public class CombatItem : MonoBehaviour
 
     public void UseItem(GameObject buttonGO, int count, Items item, int id) //consumption of the item
     {
-        Debug.Log("UseItem ran");
-        StartCoroutine(UpdateButtonCount(buttonGO, count - 1, item));
-        if(item.consumeType == ConsumableType.HP) // checks what type of consumable it is, hp, mp, buff, etc
+        if(battleManager.state == BattleState.PLAYERTURN )
         {
-            PlayerPrefs.SetString("combatItemName", item.itemName);
-            PlayerPrefs.SetInt("combatItemEffect", item.hp);
-            battleManager.UseItem(); // will need one for UseItemHP
+            Debug.Log("UseItem ran");
+            Debug.Log(id);
+            StartCoroutine(UpdateButtonCount(buttonGO, count - 1, item));
+            if (item.consumeType == ConsumableType.HP) // checks what type of consumable it is, hp, mp, buff, etc
+            {
+                //PlayerPrefs.SetInt("InventorySlotScene" + id + "Count", count - 1);
+                PlayerPrefs.SetString("combatItemName", item.itemName);
+                PlayerPrefs.SetInt("combatItemEffect", item.hp);
+                battleManager.UseItem(); // will need one for UseItemHP
+            }
+            else if (item.consumeType == ConsumableType.MP)
+            {
+                //PlayerPrefs.SetInt("InventorySlotScene" + id + "Count", count - 1);
+                PlayerPrefs.SetString("combatItemName", item.itemName);
+                PlayerPrefs.SetInt("combatItemEffect", item.mp);
+                battleManager.UseItem();// will need one for UseItemMP
+            }
+
         }
-        else if (item.consumeType == ConsumableType.MP)
-        {
-            PlayerPrefs.SetString("combatItemName", item.itemName);
-            PlayerPrefs.SetInt("combatItemEffect", item.mp);
-            battleManager.UseItem();// will need one for UseItemMP
-        }
-        
-        
-        
+
     }
 
     public IEnumerator UpdateButtonCount(GameObject buttonGO, int newCount, Items item) //updates the item count and remove button if theres no more

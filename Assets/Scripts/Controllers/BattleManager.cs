@@ -138,6 +138,8 @@ public class BattleManager : MonoBehaviour
 
     public void UseItem() // uses the item selected
     {
+        if (state != BattleState.PLAYERTURN)
+            return;
         ItemUI.SetActive(false);
         StartCoroutine(ItemUsed());
 
@@ -145,6 +147,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator ItemUsed()
     {
+        Debug.Log("itembeingused!!");
         state = BattleState.ENEMYTURN;
         playerUnit.HealDamage(PlayerPrefs.GetInt("combatItemEffect"));
         playerHUD.SetHP(playerUnit.currentHP);

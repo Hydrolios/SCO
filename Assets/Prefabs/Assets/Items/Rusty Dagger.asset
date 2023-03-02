@@ -16,6 +16,7 @@ MonoBehaviour:
   type: 0
   actionType: 0
   equipType: 3
+  consumeType: 2
   id: 1
   hp: 0
   mp: 0
