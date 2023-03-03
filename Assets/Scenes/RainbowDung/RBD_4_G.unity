@@ -5708,6 +5708,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1485533310}
     - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: itemChance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: item_id_low
       value: 1
       objectReference: {fileID: 0}

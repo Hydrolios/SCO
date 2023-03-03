@@ -32,6 +32,9 @@ public class BattleManager : MonoBehaviour
     public Text dialogueText;
     public string sceneToLoad;
     public bool tutorial;
+    public int turncounter;
+    public int buffcounter;
+    public int itemcount;
 
     public BattleINFO playerHUD;
     public BattleINFO enemyHUD;
@@ -53,6 +56,8 @@ public class BattleManager : MonoBehaviour
     //Spawns the units onto the scene and sets the values for the HUD
     IEnumerator SetupBattle()
     {
+        turncounter = 0;
+        buffcounter = 0;
         playerClone = Instantiate(playerPrefab);
         playerUnit = playerClone.GetComponent<UnitStats>();
 
@@ -136,18 +141,29 @@ public class BattleManager : MonoBehaviour
     }
     // future attack implementation February
 
-    public void UseItem() // uses the item selected
+    public void UseItem(int ident) // uses the item selected
     {
         if (state != BattleState.PLAYERTURN)
             return;
         ItemUI.SetActive(false);
+        if(PlayerPrefs.HasKey("TempInventorySlotScene" + ident + "Count"))
+        {
+            PlayerPrefs.SetInt("TempInventorySlotScene" + ident + "Count", PlayerPrefs.GetInt("TempInventorySlotScene" + ident + "Count") - 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("TempInventorySlotScene" + ident + "ID", PlayerPrefs.GetInt("InventorySlotScene" + ident + "ID", -1));
+            PlayerPrefs.SetInt("TempInventorySlotScene" + ident + "Count", PlayerPrefs.GetInt("InventorySlotScene" + ident + "Count") - 1);
+        }
+
         StartCoroutine(ItemUsed());
 
     }
 
     IEnumerator ItemUsed()
     {
-        Debug.Log("itembeingused!!");
+        turncounter++;
+        //Debug.Log("itembeingused!!");
         state = BattleState.ENEMYTURN;
         playerUnit.HealDamage(PlayerPrefs.GetInt("combatItemEffect"));
         playerHUD.SetHP(playerUnit.currentHP);
@@ -161,6 +177,7 @@ public class BattleManager : MonoBehaviour
     //player attack sequence
     IEnumerator PlayerAttack() //basic attack
     {
+        turncounter++;
         //Damage enemy
         bool isDead = enemyUnit.DealDamage(playerUnit.attack, playerUnit.raged);
 
@@ -191,6 +208,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerAttackEleRad()
     {
+        turncounter++;
         //Damage enemy
         bool isDead = enemyUnit.DealDamage(playerUnit.attack * 3, playerUnit.raged);
 
@@ -223,7 +241,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerBuffing() // runs the animation and stat changes for the buff skill (currently rage)
     {
-
+        turncounter++;
         dialogueText.text = playerUnit.unitName + " is enraged for 3 turns!";
         playerClone.SetActive(false);// hides player UI 
         playerRageAnimation.SetActive(true); // shows rage animation
@@ -233,6 +251,7 @@ public class BattleManager : MonoBehaviour
         playerClone.SetActive(true);
         yield return new WaitForSeconds(0.45f);
         playerUnit.raged = true;
+        buffcounter = turncounter + 3; 
         StartCoroutine(EnemyTurn());
     }
 
@@ -246,9 +265,13 @@ public class BattleManager : MonoBehaviour
         
         playerHUD.SetHP(playerUnit.currentHP);
         PlayerPrefs.SetInt("playerHPnow", playerUnit.currentHP);
-        Debug.Log("player current HP: " + playerUnit.currentHP);
+        //Debug.Log("player current HP: " + playerUnit.currentHP);
         dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + " and deals " + playerUnit.damagedealt + " damage";
-
+        if(turncounter >= buffcounter && buffcounter != 0)
+        {
+            playerUnit.raged = false;
+            buffcounter = 0;
+        }
         yield return new WaitForSeconds(2f);
 
         if(isDead)
@@ -281,14 +304,25 @@ public class BattleManager : MonoBehaviour
 
         else if (state == BattleState.WIN)
         {
+            for(int i = 0; i <= 18; i++) // re updates the count of all inventory items after the battle is over
+            {
+                if(PlayerPrefs.HasKey("TempInventorySlotScene" + i + "ID"))
+                {
+                    PlayerPrefs.SetInt("InventorySlotScene" + i + "ID", PlayerPrefs.GetInt("TempInventorySlotScene" + i + "ID", -1));
+                    PlayerPrefs.SetInt("InventorySlotScene" + i + "Count", PlayerPrefs.GetInt("TempInventorySlotScene" + i + "Count", 0));
+                    PlayerPrefs.DeleteKey("TempInventorySlotScene" + i + "ID");
+                    PlayerPrefs.DeleteKey("TempInventorySlotScene" + i + "Count");
+                }    
+
+            }
+            
             if (enemyUnit.unitName == "Shade")
             {
-                Debug.Log("enemy name was Shade");
                 eventChecker.shadeKilled = true;
                 PlayerPrefs.SetInt("shadeKilled", (eventChecker.shadeKilled ? 1 : 0));
                 
             }
-            else if (enemyUnit.movetutorrage) // set the variable of rage to true so user can use it and it will show
+           if (enemyUnit.movetutorrage) // set the variable of rage to true so user can use it and it will show
             {
                 dialogueText.text = "YOU DEFEATED ME!!!!!! I WILL TEACH YOU 'RAGE'";
                 yield return new WaitForSeconds(2.5f);
@@ -297,7 +331,6 @@ public class BattleManager : MonoBehaviour
                 bool learnedrage = true;
                 PlayerPrefs.SetInt("learnedrage", (learnedrage ? 1 : 0));
             }
-            Debug.Log("enemy name was not Shade");
             dialogueText.text = "You've defeated " + enemyUnit.unitName + "!";
             yield return new WaitForSeconds(1.5f);
             dialogueText.text = "You've gained " + enemyUnit.exp + " EXP";

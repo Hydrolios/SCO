@@ -732,10 +732,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -268
       objectReference: {fileID: 0}
-    - target: {fileID: 1855189510, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -298
-      objectReference: {fileID: 0}
     - target: {fileID: 9106115791856435292, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -744,6 +740,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9106115791973468988, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: itemList
+      value: 
+      objectReference: {fileID: 1152736155}
+    - target: {fileID: 9106115791973468988, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: battleManager
+      value: 
+      objectReference: {fileID: 1684748263}
     - target: {fileID: 9106115792110839371, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -751,10 +755,6 @@ PrefabInstance:
     - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -268
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -298
       objectReference: {fileID: 0}
     - target: {fileID: 9106115792718493920, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_Pivot.x
@@ -882,26 +882,3 @@ PrefabInstance:
       objectReference: {fileID: 1684748263}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
---- !u!1 &9106115791973468987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1075719723, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-  m_PrefabInstance: {fileID: 9106115791973468986}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9106115791973468988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9106115791973468987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 023ce4942632de341ac7c2a182a57305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemList: {fileID: 1152736155}
-  inventorySlots: []
-  itemButton: {fileID: 3884487575684666521, guid: 60765e738420fe84584dcfeb46d1b520, type: 3}
-  battleManager: {fileID: 1684748263}
-  id: 0
-  count: 0

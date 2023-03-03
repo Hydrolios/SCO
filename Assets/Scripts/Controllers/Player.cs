@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Player executes");
         ResumeSpeed();
         boxCollider = GetComponent<BoxCollider2D>();
         healthPool = PlayerPrefs.GetInt("playerHPMax");
@@ -66,6 +67,8 @@ public class Player : MonoBehaviour
         else if (loadGame == false)
         {
             transform.position = startingPosition.initialValue;
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.LoadInventoryScene();
             //Debug.Log("Position was not from a load");
         }   
         else
@@ -82,6 +85,8 @@ public class Player : MonoBehaviour
             transform.position = loadPos;
             loadGame = false;
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.LoadInventory();
 
         }
         if(textReq)
@@ -90,7 +95,11 @@ public class Player : MonoBehaviour
             textReq = false;
             PlayerPrefs.SetInt("spawnText", (loadGame ? 1 : 0));
         }
-
+        if(PlayerPrefs.HasKey("BattleReward"))
+        {
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.Reward();
+        }
     }
 
     public void Update()

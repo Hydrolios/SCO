@@ -3009,7 +3009,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7004932257082467301, guid: 8df08990527044a4d80b2bbd2a1356de, type: 3}
       propertyPath: m_text
-      value: Rainbow Dungeon F5 Red
+      value: Rainbow Dungeon Safe Room
       objectReference: {fileID: 0}
     - target: {fileID: 7004932257930275355, guid: 8df08990527044a4d80b2bbd2a1356de, type: 3}
       propertyPath: m_RootOrder

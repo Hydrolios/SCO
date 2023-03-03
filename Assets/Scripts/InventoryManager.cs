@@ -17,28 +17,14 @@ public class InventoryManager : MonoBehaviour
     public Player player;
 
 
-    void Start()
+    public void Reward()
     {
-        if (player.loadGame)
-        {
-            Debug.Log("1");
-            LoadInventory();
-        }
-        else
-        {
-            Debug.Log("2");
-            LoadInventoryScene();
-        }
+        Debug.Log("item rewarded from battle");
 
-        if(PlayerPrefs.HasKey("BattleReward"))
-        {
-            int reward = PlayerPrefs.GetInt("BattleReward");
-
-            AddItem(itemList.items[reward]);
-            PlayerPrefs.DeleteKey("BattleReward");
-        }
-
-
+        int reward = PlayerPrefs.GetInt("BattleReward");
+        Debug.Log(itemList.items[reward]);
+        AddItem(itemList.items[reward]);
+        PlayerPrefs.DeleteKey("BattleReward");
     }
 
     public void ClickedSlot(GameObject slot) // Gets the selected inventory slot that was clicked
@@ -51,12 +37,14 @@ public class InventoryManager : MonoBehaviour
     }
     public bool AddItem(Items item) // Adds an item to the inventory but checks for a place to insert the item
     {
+        Debug.Log("in process of adding the item");
         for (int i = 0; i < inventorySlots.Length; i++) //finds the slot with same item to stack
         {
             InventorySlot slot = inventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>(); //checks if equip slot is occupied
             if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < maxStack && itemInSlot.item.stackable == true)
             {
+                Debug.Log("Slot found of same item");
                 itemInSlot.count++;
                 itemInSlot.RefreshCount();
                 return true;
@@ -69,6 +57,7 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>(); //checks if equip slot is occupied
             if (itemInSlot == null)
             {
+                Debug.Log("Empty slot found for the item");
                 SpawnNewItem(item, slot);
                 return true;
             }

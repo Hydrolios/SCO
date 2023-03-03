@@ -20,7 +20,7 @@ public class CombatItem : MonoBehaviour
     }
     public void LoadConsumables() // checks all the consumable items, and instantiates it into the scene
     {
-        for (int i = 0; i < 15; i++) // loads in the saved inventory with the playerprefs
+        for (int i = 0; i <= 18; i++) // loads in the saved inventory with the playerprefs
         {
             int id = PlayerPrefs.GetInt("InventorySlotScene" + i + "ID", -1);
             int count = PlayerPrefs.GetInt("InventorySlotScene" + i + "Count", 0);
@@ -41,11 +41,13 @@ public class CombatItem : MonoBehaviour
             }
             if (item != null && item.type == ItemType.Consumable) //check if its a consumable
             {
+                Debug.Log("itemslot id in button creation loop is " + i);
                 //if its a consumable, instantiate the prefab "Item" as a child
                 GameObject buttonGO = Instantiate(itemButton, transform);
                 Text buttonText = buttonGO.GetComponentInChildren<Text>();
+                int temp = i;
                 buttonText.text = item.name + " x" + count;
-                buttonGO.GetComponent<Button>().onClick.AddListener(() => UseItem(buttonGO, count, item, i)); // need to add this second part to another method, this should open an UI
+                buttonGO.GetComponent<Button>().onClick.AddListener(() => UseItem(buttonGO, count, item, temp)); // need to add this second part to another method, this should open an UI
                 
 
             }
@@ -54,26 +56,25 @@ public class CombatItem : MonoBehaviour
         }
     }
 
-    public void UseItem(GameObject buttonGO, int count, Items item, int id) //consumption of the item
+    public void UseItem(GameObject buttonGO, int count, Items item, int ident) //consumption of the item
     {
         if(battleManager.state == BattleState.PLAYERTURN )
         {
-            Debug.Log("UseItem ran");
-            Debug.Log(id);
+            Debug.Log("supposedly the item slot id "+ ident);
             StartCoroutine(UpdateButtonCount(buttonGO, count - 1, item));
             if (item.consumeType == ConsumableType.HP) // checks what type of consumable it is, hp, mp, buff, etc
             {
-                //PlayerPrefs.SetInt("InventorySlotScene" + id + "Count", count - 1);
+                //PlayerPrefs.SetInt("InventorySlotScene" + ident + "Count", count - 1);
                 PlayerPrefs.SetString("combatItemName", item.itemName);
                 PlayerPrefs.SetInt("combatItemEffect", item.hp);
-                battleManager.UseItem(); // will need one for UseItemHP
+                battleManager.UseItem(ident); // will need one for UseItemHP
             }
             else if (item.consumeType == ConsumableType.MP)
             {
-                //PlayerPrefs.SetInt("InventorySlotScene" + id + "Count", count - 1);
+                //PlayerPrefs.SetInt("InventorySlotScene" + ident + "Count", count - 1);
                 PlayerPrefs.SetString("combatItemName", item.itemName);
                 PlayerPrefs.SetInt("combatItemEffect", item.mp);
-                battleManager.UseItem();// will need one for UseItemMP
+                battleManager.UseItem(ident);// will need one for UseItemMP
             }
 
         }
@@ -82,7 +83,7 @@ public class CombatItem : MonoBehaviour
 
     public IEnumerator UpdateButtonCount(GameObject buttonGO, int newCount, Items item) //updates the item count and remove button if theres no more
     {
-        Debug.Log("Update button ran");
+        //Debug.Log("Update button ran");
         count = newCount;
         Text buttonText = buttonGO.GetComponentInChildren<Text>();
         buttonText.text = item.itemName + " x" + count;
