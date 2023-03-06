@@ -17,6 +17,9 @@ public class EnterDoorRBD : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.SaveInventoryScene();
+
             if (eventCheck.shadeKilled)
             {
                 playerStorage.initialValue = playerPosition;

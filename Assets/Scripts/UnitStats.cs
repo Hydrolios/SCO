@@ -80,7 +80,18 @@ public class UnitStats : MonoBehaviour
             return false;
     }
 
-    public void HealDamage(int health) // method for healing from an item
+    public void useMP(int mp)
+    {
+        if(mp > currentMP)
+        {
+            return;
+        }
+        else
+        {
+            currentMP -= mp;
+        }
+    }
+    public void HealHP(int health) // method for healing from an item
     {
         if(currentHP + health <= maxHP)
         {
@@ -91,6 +102,18 @@ public class UnitStats : MonoBehaviour
             currentHP = maxHP;
         }
         
+    }
+    public void HealMP(int mana) // method for healing from an item
+    {
+        if (currentMP + mana <= maxMP)
+        {
+            currentMP += mana;
+        }
+        else
+        {
+            currentMP = maxMP;
+        }
+
     }
 
 

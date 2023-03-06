@@ -24,9 +24,9 @@ public class Encounter : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("DPos: " + designatedPos);
-        Debug.Log("DScene: " + designatedScene);
-        Debug.Log("CScene: " + SceneManager.GetActiveScene().name);
+        //Debug.Log("DPos: " + designatedPos);
+        //Debug.Log("DScene: " + designatedScene);
+        //Debug.Log("CScene: " + SceneManager.GetActiveScene().name);
         triggered.SetActive(false); //notification above NPC to display if they have been triggered by player entering line of sight
         for (int i = 0; i < Object.FindObjectsOfType<Encounter>().Length; i++)
         {

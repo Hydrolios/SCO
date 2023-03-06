@@ -64,14 +64,14 @@ public class CombatItem : MonoBehaviour
             StartCoroutine(UpdateButtonCount(buttonGO, count - 1, item));
             if (item.consumeType == ConsumableType.HP) // checks what type of consumable it is, hp, mp, buff, etc
             {
-                //PlayerPrefs.SetInt("InventorySlotScene" + ident + "Count", count - 1);
+                PlayerPrefs.SetString("HPMP", "HP");
                 PlayerPrefs.SetString("combatItemName", item.itemName);
                 PlayerPrefs.SetInt("combatItemEffect", item.hp);
                 battleManager.UseItem(ident); // will need one for UseItemHP
             }
             else if (item.consumeType == ConsumableType.MP)
             {
-                //PlayerPrefs.SetInt("InventorySlotScene" + ident + "Count", count - 1);
+                PlayerPrefs.SetString("HPMP", "MP");
                 PlayerPrefs.SetString("combatItemName", item.itemName);
                 PlayerPrefs.SetInt("combatItemEffect", item.mp);
                 battleManager.UseItem(ident);// will need one for UseItemMP

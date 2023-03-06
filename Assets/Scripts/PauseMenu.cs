@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
     {
         playerRef = player.GetComponent<Player>();
 
-        if ((Input.GetKeyDown(KeyCode.Escape)) && (playerRef.openedUIInven == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
+        if (Input.GetKeyDown(KeyCode.Escape) && (playerRef.openedDialog == false) && (playerRef.openedUIInven == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
         {
             if (GameIsPaused && (playerRef.openedUIPause == true))             
             {

@@ -17,6 +17,9 @@ public class EnterDoorTav : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.SaveInventoryScene();
+
             if (eventCheck.rbdreport)
             {
                 Debug.Log("rbdreported");

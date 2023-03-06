@@ -147,12 +147,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f9a322a5c93904d888644810a94ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   unitName: Kuller
   unitLevel: 60
   attack: 150
   damagedealt: 0
+  minDmg: 0
+  maxDmg: 0
   maxHP: 550
   currentHP: 550
+  maxMP: 100
+  currentMP: 100
+  def: 0
+  exp: 0
+  rad: 0
+  enx: 0
+  sol: 0
+  chr: 0
+  movetutorrage: 0
   raged: 0
 --- !u!1001 &6378536548251455059
 PrefabInstance:

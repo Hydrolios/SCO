@@ -12,7 +12,7 @@ public class StatsUI : MonoBehaviour
     private void Update()
     {
         playerRef = player.GetComponent<Player>();
-        if (Input.GetKeyDown(KeyCode.X) && (playerRef.openedUIPause == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIInven == false))
+        if (Input.GetKeyDown(KeyCode.X) && (playerRef.openedDialog == false) && (playerRef.openedUIPause == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIInven == false))
         {
 
             if (GameIsPaused && (playerRef.openedUIStats == true))

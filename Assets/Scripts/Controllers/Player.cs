@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     public bool openedUIGO = false;
     public bool openedUIShop = false;
     public bool openedUIStats = false;
+    public bool openedDialog = false;
     public bool textReq; //for trigger text dialogue in spawning in a scene
     static int healthPool;
     public int currentHealth;

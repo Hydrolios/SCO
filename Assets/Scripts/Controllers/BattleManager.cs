@@ -165,8 +165,18 @@ public class BattleManager : MonoBehaviour
         turncounter++;
         //Debug.Log("itembeingused!!");
         state = BattleState.ENEMYTURN;
-        playerUnit.HealDamage(PlayerPrefs.GetInt("combatItemEffect"));
-        playerHUD.SetHP(playerUnit.currentHP);
+        if(PlayerPrefs.GetString("HPMP") == "HP")
+        {
+            playerUnit.HealHP(PlayerPrefs.GetInt("combatItemEffect"));
+            playerHUD.SetHP(playerUnit.currentHP);
+            
+        }
+        else if(PlayerPrefs.GetString("HPMP") == "MP")
+        {
+            playerUnit.HealMP(PlayerPrefs.GetInt("combatItemEffect"));
+            playerHUD.SetHP(playerUnit.currentMP);
+
+        }
         dialogueText.text = playerUnit.unitName + " used " + PlayerPrefs.GetString("combatItemName") + "!";
         yield return new WaitForSeconds(2f);
         PlayerPrefs.DeleteKey("combatItemEffect");
@@ -243,6 +253,8 @@ public class BattleManager : MonoBehaviour
     {
         turncounter++;
         dialogueText.text = playerUnit.unitName + " is enraged for 3 turns!";
+        playerUnit.useMP(5);
+        playerHUD.SetMP(playerUnit.currentMP);
         playerClone.SetActive(false);// hides player UI 
         playerRageAnimation.SetActive(true); // shows rage animation
         state = BattleState.ENEMYTURN;
@@ -265,6 +277,7 @@ public class BattleManager : MonoBehaviour
         
         playerHUD.SetHP(playerUnit.currentHP);
         PlayerPrefs.SetInt("playerHPnow", playerUnit.currentHP);
+        PlayerPrefs.SetInt("playerMPnow", playerUnit.currentMP);
         //Debug.Log("player current HP: " + playerUnit.currentHP);
         dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + " and deals " + playerUnit.damagedealt + " damage";
         if(turncounter >= buffcounter && buffcounter != 0)

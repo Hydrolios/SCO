@@ -42,6 +42,7 @@ public class DialogueManager : MonoBehaviour
     string loadScene;
     public IEnumerator ShowDialogue(Dialogue dialogue, string scene, bool load, bool shop, bool exp) // show dialogue and sets conditions for any additional actions required
     {
+        uiChecker.openedDialog = true;
         uiChecker.StopSpeed();
         yield return new WaitForEndOfFrame();
 
@@ -57,6 +58,7 @@ public class DialogueManager : MonoBehaviour
     }
     public IEnumerator ShowDialogueV2(Dialogue dialogue, bool dream) // simplified check for more niche uses which doesn't require much
     {
+        uiChecker.openedDialog = true;
         uiChecker.StopSpeed();
         yield return new WaitForEndOfFrame();
 
@@ -68,6 +70,7 @@ public class DialogueManager : MonoBehaviour
     }
     public IEnumerator ShowDialogueV3(Dialogue dialogue, string scene, bool encounter) // simplified check for more niche uses which doesn't require much
     {
+        uiChecker.openedDialog = true;
         uiChecker.StopSpeed();
         yield return new WaitForEndOfFrame();
 
@@ -95,6 +98,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = 0;
                 dialogueBox.SetActive(false);
+                uiChecker.openedDialog = false;
                 uiChecker.ResumeSpeed();
                 OnCloseDialogue?.Invoke();
                 if (loadReq)
@@ -105,7 +109,7 @@ public class DialogueManager : MonoBehaviour
                         int activeScene = SceneManager.GetActiveScene().buildIndex;
                         PlayerPrefs.SetInt("PreBattleScene", activeScene);
                         PlayerPrefs.SetFloat("PBx", player.transform.position.x);
-                        PlayerPrefs.SetFloat("PBy", player.transform.position.y - 0.5f);
+                        PlayerPrefs.SetFloat("PBy", player.transform.position.y);
                         PlayerPrefs.SetInt("encounter", (battle ? 1 : 0));
                     }
                     SceneManager.LoadScene(loadScene);

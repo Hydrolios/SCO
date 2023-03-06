@@ -8,7 +8,7 @@ public class BattleINFO : MonoBehaviour
     public Text nameText;
     public Text levelText;
     public Slider hpSlider;
-    //public Slider mpSlider;
+    public Slider mpSlider;
 
     public void SetHUD(UnitStats unit)
     {
@@ -16,11 +16,18 @@ public class BattleINFO : MonoBehaviour
         levelText.text = "Lvl " + unit.unitLevel;
         hpSlider.maxValue = unit.maxHP;
         hpSlider.value = unit.currentHP;
+        mpSlider.maxValue = unit.maxMP;
+        mpSlider.value = unit.currentMP;
     }
 
     public void SetHP(int hp)
     {
         hpSlider.value = hp;
+    }
+
+    public void SetMP(int mp)
+    {
+        mpSlider.value = mp;
     }
 
 }

@@ -17,6 +17,7 @@ public class StatsText : MonoBehaviour
     public bool mp;
     public bool exp;
     public bool lvl;
+    public bool att;
     public bool skillpts;
     // Start is called before the first frame update
     void Update()
@@ -57,6 +58,10 @@ public class StatsText : MonoBehaviour
         else if (skillpts)
         {
             stat.text = PlayerPrefs.GetInt("skillpts").ToString();
+        }
+        else if (att)
+        {
+            stat.text = PlayerPrefs.GetInt("playerattack").ToString();
         }
         else
         {
