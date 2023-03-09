@@ -8,26 +8,37 @@ public class StatsUI : MonoBehaviour
     public GameObject player;
     public GameObject statUI;
     public GameObject hoverUI;
+    public int currentWeaponID;
+    public int attvalue;
+    public int solvalue;
+    public int radvalue;
+    public int chrvalue;
+    public int enxvalue;
     public Player playerRef; //player reference
+
+    private void Start()
+    {
+        currentWeaponID = PlayerPrefs.GetInt("CurrentWeaponID", -1);
+    }
     private void Update()
     {
         playerRef = player.GetComponent<Player>();
         if (Input.GetKeyDown(KeyCode.X) && (playerRef.openedDialog == false) && (playerRef.openedUIPause == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIInven == false))
         {
-
+            
             if (GameIsPaused && (playerRef.openedUIStats == true))
             {
 
                 playerRef.openedUIStats = false;
                 Resume();
-                Debug.Log("Stat window Close");
+                //Debug.Log("Stat window Close");
             }
             else if (playerRef.openedUIStats == false)
             {
                 
                 playerRef.openedUIStats = true;
                 Pause();
-                Debug.Log("Stat window Open");
+                //Debug.Log("Stat window Open");
             }
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && (playerRef.openedUIStats == true) && (playerRef.openedUIPause == false))
@@ -35,10 +46,11 @@ public class StatsUI : MonoBehaviour
 
             playerRef.openedUIStats = false;
             Resume();
-            Debug.Log("Stat window Close");
+            //Debug.Log("Stat window Close");
 
         }
     }
+
 
     public void Resume()
     {

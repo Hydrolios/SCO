@@ -15,14 +15,14 @@ public class HoverManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("0.25");
+        //Debug.Log("0.25");
         onMouseHover += ShowText;
         onMouseAway += HideText;
     }
 
     private void OnDisable()
     {
-        Debug.Log("0.5");
+        //Debug.Log("0.5");
         onMouseHover -= ShowText;
         onMouseAway -= HideText;
     }
@@ -34,7 +34,7 @@ public class HoverManager : MonoBehaviour
 
     private void ShowText(string text, Vector2 mousePos)
     {
-        Debug.Log("1");
+        //Debug.Log("1");
         infoText.text = text;
         textWindow.sizeDelta = new Vector2(infoText.preferredWidth > 250 ? 250 : infoText.preferredWidth, infoText.preferredHeight); //adjustable window with fixed width
 
@@ -44,7 +44,7 @@ public class HoverManager : MonoBehaviour
 
     private void HideText() 
     {
-        Debug.Log("2");
+        //Debug.Log("2");
         infoText.text = default;
         textWindow.gameObject.SetActive(false);
     }

@@ -40,6 +40,7 @@ public class BattleManager : MonoBehaviour
     public BattleINFO enemyHUD;
 
     public GameObject player;
+    public GameObject rage;
     public Vector2 playerPosition;
     public VectorValue playerStorage;
     public NPCManager npcManager;
@@ -82,6 +83,14 @@ public class BattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         fadeIN.SetActive(false);
+        if (PlayerPrefs.GetInt("learnedrage") != 0)
+        {
+            rage.SetActive(true);
+        }
+        else
+        {
+            rage.SetActive(false);
+        }
         state = BattleState.PLAYERTURN;
         PlayerTurn();
         

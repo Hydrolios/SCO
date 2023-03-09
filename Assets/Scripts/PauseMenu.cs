@@ -65,6 +65,12 @@ public class PauseMenu : MonoBehaviour
         InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
         inventoryManager.SaveInventory();
         Debug.Log("Position x: " + PlayerPrefs.GetFloat("x") + " Position y: " + PlayerPrefs.GetFloat("y"));
+        Debug.Log("Savedgame");
+        PlayerPrefs.SetInt("Savedplayerattack", PlayerPrefs.GetInt("playerattack"));
+        PlayerPrefs.SetInt("Savedplayersol", PlayerPrefs.GetInt("playersol"));
+        PlayerPrefs.SetInt("Savedplayerrad", PlayerPrefs.GetInt("playerrad"));
+        PlayerPrefs.SetInt("Savedplayerenx", PlayerPrefs.GetInt("playerenx"));
+        PlayerPrefs.SetInt("Savedplayerchr", PlayerPrefs.GetInt("playerchr"));
         PlayerPrefs.Save();
 
     }
@@ -80,6 +86,12 @@ public class PauseMenu : MonoBehaviour
             playerRef.loadGame = true;
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.LoadInventory();
+            Debug.Log("LoadedGame");
+            PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("Savedplayerattack"));
+            PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("Savedplayersol"));
+            PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("Savedplayerrad"));
+            PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("Savedplayerenx"));
+            PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("Savedplayerchr"));
             PlayerPrefs.SetInt("load", (playerRef.loadGame ? 1 : 0));
             Debug.Log("player reference of boolean load game: " + playerRef.loadGame);
             Time.timeScale = 1f;

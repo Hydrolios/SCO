@@ -24,13 +24,13 @@ public class InventoryMenu : MonoBehaviour
 
                 playerRef.openedUIInven = false;
                 Resume();
-                Debug.Log("Inventory Close");
+                //Debug.Log("Inventory Close");
             }
             else if (playerRef.openedUIInven == false)
             {
                 playerRef.openedUIInven = true;
                 Pause();
-                Debug.Log("Inventory Open");
+                //Debug.Log("Inventory Open");
             }
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && (playerRef.openedUIInven == true) && (playerRef.openedUIPause == false))
@@ -38,7 +38,7 @@ public class InventoryMenu : MonoBehaviour
 
             playerRef.openedUIInven = false;
             Resume();
-            Debug.Log("Inventory Close");
+            //Debug.Log("Inventory Close");
            
         }
     }

@@ -16,10 +16,17 @@ public class InventoryManager : MonoBehaviour
     public InventoryItem selectedItem;
     public Player player;
 
+    public int currentWeaponID;
+    public int attvalue;
+    public int solvalue;
+    public int radvalue;
+    public int chrvalue;
+    public int enxvalue;
+
 
     public void Reward()
     {
-        Debug.Log("item rewarded from battle");
+        //Debug.Log("item rewarded from battle");
 
         int reward = PlayerPrefs.GetInt("BattleReward");
         Debug.Log(itemList.items[reward]);
@@ -37,14 +44,14 @@ public class InventoryManager : MonoBehaviour
     }
     public bool AddItem(Items item) // Adds an item to the inventory but checks for a place to insert the item
     {
-        Debug.Log("in process of adding the item");
+        //Debug.Log("in process of adding the item");
         for (int i = 0; i < inventorySlots.Length; i++) //finds the slot with same item to stack
         {
             InventorySlot slot = inventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>(); //checks if equip slot is occupied
             if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < maxStack && itemInSlot.item.stackable == true)
             {
-                Debug.Log("Slot found of same item");
+                //Debug.Log("Slot found of same item");
                 itemInSlot.count++;
                 itemInSlot.RefreshCount();
                 return true;
@@ -57,7 +64,7 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>(); //checks if equip slot is occupied
             if (itemInSlot == null)
             {
-                Debug.Log("Empty slot found for the item");
+                //Debug.Log("Empty slot found for the item");
                 SpawnNewItem(item, slot);
                 return true;
             }
@@ -90,7 +97,7 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = inventorySlots[i].GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null)
             {
-                Debug.Log("one");
+                //Debug.Log("one");
                 PlayerPrefs.SetInt("InventorySlot" + i + "ID", itemInSlot.item.id); 
                 PlayerPrefs.SetInt("InventorySlot" + i + "Count", itemInSlot.count);
                 
@@ -102,28 +109,28 @@ public class InventoryManager : MonoBehaviour
         InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
         if (hatItem != null)
         {
-            Debug.Log("A");
+            //Debug.Log("A");
             PlayerPrefs.SetInt("InventorySlotA", hatItem.item.id);
         }
 
         InventoryItem shirtItem = shirtEquip.GetComponentInChildren<InventoryItem>();
         if (shirtItem != null)
         {
-            Debug.Log("B");
+            //Debug.Log("B");
             PlayerPrefs.SetInt("InventorySlotB", shirtItem.item.id);
         }
 
         InventoryItem pantsItem = pantsEquip.GetComponentInChildren<InventoryItem>();
         if (pantsItem != null)
         {
-            Debug.Log("C");
+            //Debug.Log("C");
             PlayerPrefs.SetInt("InventorySlotC", pantsItem.item.id);
         }
 
         InventoryItem weaponItem = wepEquip.GetComponentInChildren<InventoryItem>();
         if (weaponItem != null)
         {
-            Debug.Log("D");
+            //Debug.Log("D");
             PlayerPrefs.SetInt("InventorySlotD", weaponItem.item.id);
         }
     }
@@ -239,28 +246,28 @@ public class InventoryManager : MonoBehaviour
         InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
         if (hatItem != null)
         {
-            Debug.Log("A");
+            //Debug.Log("A");
             PlayerPrefs.SetInt("InventorySlotA", hatItem.item.id);
         }
 
         InventoryItem shirtItem = shirtEquip.GetComponentInChildren<InventoryItem>();
         if (shirtItem != null)
         {
-            Debug.Log("B");
+            //Debug.Log("B");
             PlayerPrefs.SetInt("InventorySlotB", shirtItem.item.id);
         }
 
         InventoryItem pantsItem = pantsEquip.GetComponentInChildren<InventoryItem>();
         if (pantsItem != null)
         {
-            Debug.Log("C");
+            //Debug.Log("C");
             PlayerPrefs.SetInt("InventorySlotC", pantsItem.item.id);
         }
 
         InventoryItem weaponItem = wepEquip.GetComponentInChildren<InventoryItem>();
         if (weaponItem != null)
         {
-            Debug.Log("D");
+            //Debug.Log("D");
             PlayerPrefs.SetInt("InventorySlotD", weaponItem.item.id);
         }
         
@@ -350,13 +357,28 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") + selectedItem.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") + selectedItem.item.chr);
                 Destroy(selectedItem.gameObject);
             }
             else
             {
                 AddItem(itemInSlot.item);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - itemInSlot.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - itemInSlot.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") - itemInSlot.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") - itemInSlot.item.chr);
                 Destroy(selectedItem.gameObject);
                 SpawnNewItem(selectedItem.item, slot);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") + selectedItem.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") + selectedItem.item.chr);
             }
         }
 
@@ -367,13 +389,28 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") + selectedItem.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") + selectedItem.item.chr);
                 Destroy(selectedItem.gameObject);
             }
             else
             {
                 AddItem(itemInSlot.item);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - itemInSlot.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - itemInSlot.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") - itemInSlot.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") - itemInSlot.item.chr);
                 Destroy(selectedItem.gameObject);
                 SpawnNewItem(selectedItem.item, slot);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") + selectedItem.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") + selectedItem.item.chr);
             }
         }
 
@@ -384,13 +421,28 @@ public class InventoryManager : MonoBehaviour
             if(itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") + selectedItem.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") + selectedItem.item.chr);
                 Destroy(selectedItem.gameObject);
             }
             else
             {
                 AddItem(itemInSlot.item);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - itemInSlot.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - itemInSlot.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") - itemInSlot.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") - itemInSlot.item.chr);
                 Destroy(selectedItem.gameObject);
                 SpawnNewItem(selectedItem.item, slot);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") + selectedItem.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") + selectedItem.item.chr);
             }
 
         }
@@ -402,13 +454,30 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                
+
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") + selectedItem.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") + selectedItem.item.chr);
                 Destroy(selectedItem.gameObject);
             }
             else
             {
                 AddItem(itemInSlot.item);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - itemInSlot.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - itemInSlot.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") - itemInSlot.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") - itemInSlot.item.chr);
                 Destroy(selectedItem.gameObject);
                 SpawnNewItem(selectedItem.item, slot);
+                PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
+                PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
+                PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
+                PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") + selectedItem.item.enx);
+                PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") + selectedItem.item.chr);
             }
         }
     }
@@ -417,6 +486,11 @@ public class InventoryManager : MonoBehaviour
         selectedItem.count--;
         selectedItem.RefreshCount();
         AddItem(selectedItem.item);
+        PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - selectedItem.item.att);
+        PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - selectedItem.item.sol);
+        PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - selectedItem.item.rad);
+        PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") - selectedItem.item.enx);
+        PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") - selectedItem.item.chr);
         Destroy(selectedItem.gameObject);
         selectedItem.ItemUsed();
 

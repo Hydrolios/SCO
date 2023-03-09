@@ -358,6 +358,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76178b0dbb19e864dba94c900eb30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &19392796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1855189509, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+  m_PrefabInstance: {fileID: 19392793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &77739152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -369,6 +374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: ItemUI
+      value: 
+      objectReference: {fileID: 19392796}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: fadeIN
       value: 

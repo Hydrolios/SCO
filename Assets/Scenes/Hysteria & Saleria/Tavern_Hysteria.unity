@@ -10724,6 +10724,7 @@ MonoBehaviour:
   sleep: 0
   item: 0
   item_inf: 0
+  item_battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -11054,6 +11055,7 @@ MonoBehaviour:
   sleep: 0
   item: 0
   item_inf: 0
+  item_battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -13013,6 +13015,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2522379320570810245, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522379320601576969, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2522379321382864436, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}

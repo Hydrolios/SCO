@@ -85,6 +85,11 @@ public class Player : MonoBehaviour
             Vector2 loadPos = new Vector2(xPos, yPos);
             transform.position = loadPos;
             loadGame = false;
+            PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("Savedplayerattack"));
+            PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("Savedplayersol"));
+            PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("Savedplayerrad"));
+            PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("Savedplayerenx"));
+            PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("Savedplayerchr"));
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.LoadInventory();
@@ -107,12 +112,40 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C)) //debugger key for console
         {
-
+            ItemList itemList = FindObjectOfType<ItemList>();
             Debug.Log("Debug Log:");
-            TakeDamage(2);
-            Debug.Log("player hp now:" + PlayerPrefs.GetInt("playerHPnow"));
-            Debug.Log("player hp max:" + PlayerPrefs.GetInt("playerHPMax"));
-            Debug.Log("player level:" + PlayerPrefs.GetInt("playerlevel"));
+            for (int i = 0; i <= 18; i++) // loads in the saved inventory with the playerprefs
+            {
+                int id = PlayerPrefs.GetInt("InventorySlotScene" + i + "ID", -1);
+                int count = PlayerPrefs.GetInt("InventorySlotScene" + i + "Count", 0);
+                Items item = null;
+
+                for (int j = 0; j < itemList.items.Length; j++)
+                {
+                    if (itemList.items[j].id == id)
+                    {
+
+                        item = itemList.items[j];
+                        //Debug.Log(item.itemName + " " + count);
+                    }
+                    if (item != null)
+                    {
+                        break;
+                    }
+                }
+                if (item != null && item.equipType == EquipmentType.Weapon) //check if its a consumable
+                {
+                    Debug.Log("Position of item is in " + i);
+
+
+                }
+
+
+            }
+            //TakeDamage(2);
+            //Debug.Log("player hp now:" + PlayerPrefs.GetInt("playerHPnow"));
+            //Debug.Log("player hp max:" + PlayerPrefs.GetInt("playerHPMax"));
+            //Debug.Log("player level:" + PlayerPrefs.GetInt("playerlevel"));
 
         }
         else if (Input.anyKey) //used to adjust size of interactable radius in case player opens a UI next to another interactable, this is to prevent overlap

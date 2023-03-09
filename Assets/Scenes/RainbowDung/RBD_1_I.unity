@@ -491,6 +491,7 @@ MonoBehaviour:
   sleep: 0
   item: 0
   item_inf: 0
+  item_battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -1353,16 +1354,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: itemList
+      value: 
+      objectReference: {fileID: 1793149783}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 678750332}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 811774027}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: dialogue2.lines.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
-      value: You found a Potion!
+      value: You found a HP Potion!
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: dialogue2.lines.Array.data[0]

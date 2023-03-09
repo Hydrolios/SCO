@@ -643,6 +643,10 @@ PrefabInstance:
       value: BattleManager
       objectReference: {fileID: 0}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: rage
+      value: 
+      objectReference: {fileID: 9106115791973468988}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: ItemUI
       value: 
       objectReference: {fileID: 1855189509}
@@ -741,7 +745,7 @@ PrefabInstance:
       objectReference: {fileID: 1684748263}
     - target: {fileID: 1855189510, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -268
+      value: -268.00003
       objectReference: {fileID: 0}
     - target: {fileID: 1855189510, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -801,7 +805,7 @@ PrefabInstance:
       objectReference: {fileID: 9106115791973468987}
     - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -268
+      value: -268.00003
       objectReference: {fileID: 0}
     - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -948,3 +952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &9106115791973468988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9106115793914677960, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+  m_PrefabInstance: {fileID: 9106115791973468986}
+  m_PrefabAsset: {fileID: 0}
