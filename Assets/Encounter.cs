@@ -16,6 +16,7 @@ public class Encounter : MonoBehaviour
     public string objectID;
     public string designatedScene;
     public Vector2 designatedPos;
+
     private void Awake()
     {
         objectID = name + transform.position.ToString();
@@ -48,14 +49,21 @@ public class Encounter : MonoBehaviour
         {
             Defeated(new Vector2(999f, 999f));
         }
-        if (SceneManager.GetActiveScene().name != designatedScene)
+        else if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            triggered.SetActive(false);
+        }
+        else if (SceneManager.GetActiveScene().name != designatedScene)
         {
             transform.position = new Vector2 (999f, 999f);
+            
         }
         else if(SceneManager.GetActiveScene().name == designatedScene)
         {
             transform.position = designatedPos;
-        }    
+        }
+        
+
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -63,7 +71,6 @@ public class Encounter : MonoBehaviour
         {
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.SaveInventoryScene();
-
             defeated = false;
             triggered.SetActive(true);
             float itemChance = 0.5f;
@@ -77,14 +84,14 @@ public class Encounter : MonoBehaviour
                 int item_id = Random.Range(item_id_low, item_id_high); //will be used to decide item reward, list will be sorted by tiers eventually
                 PlayerPrefs.SetInt("BattleReward", item_id);
             }
-            
+
             StartCoroutine(DialogueManager.Instance.ShowDialogueV3(dialogue, sceneToLoad, true));
             
-            
+
         }
     }
 
-    public void Defeated(Vector2 moveaway)
+    public void Defeated(Vector2 moveaway) // move away the npcs that have been defeated
     {
         transform.position = moveaway;
         designatedPos = moveaway;

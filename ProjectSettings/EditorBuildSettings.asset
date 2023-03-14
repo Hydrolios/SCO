@@ -119,4 +119,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 39618a6e49732f041ad16aa9a0f29bac
+  - enabled: 1
+    path: Assets/Scenes/Hysteria & Saleria/Sarah_House.unity
+    guid: 46247b5a65da6d547a0bf8dc5731c80c
   m_configObjects: {}

@@ -680,6 +680,11 @@ MonoBehaviour:
   skillname: 
   skillele: 
   skillpower: 0
+--- !u!1 &913526484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9106115793914677960, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+  m_PrefabInstance: {fileID: 913526477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &974360783
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: rage
+      value: 
+      objectReference: {fileID: 913526484}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: fadeIN
       value: 

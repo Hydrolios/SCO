@@ -476,9 +476,9 @@ MonoBehaviour:
     lines: []
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
-  playerRef: {fileID: 0}
-  inventoryManager: {fileID: 0}
-  itemList: {fileID: 0}
+  playerRef: {fileID: 678750332}
+  inventoryManager: {fileID: 811774027}
+  itemList: {fileID: 1793149783}
   item_id: 0
   chest_id: 0
   npc_id: 0

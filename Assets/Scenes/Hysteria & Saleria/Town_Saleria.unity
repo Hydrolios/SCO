@@ -3239,7 +3239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
-      value: You found a Potion!
+      value: You found a HP Potion!
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: dialogue2.lines.Array.data[0]
@@ -6063,7 +6063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183380912789219837, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
       propertyPath: m_Size.y
-      value: 0.88446045
+      value: 0.8267212
       objectReference: {fileID: 0}
     - target: {fileID: 9183380912789219837, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
       propertyPath: m_Offset.x
@@ -6071,7 +6071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183380912789219837, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
       propertyPath: m_Offset.y
-      value: -0.112579346
+      value: -0.08370972
       objectReference: {fileID: 0}
     - target: {fileID: 9183380912789219837, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -6101,7 +6101,8 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
 --- !u!1 &755750856 stripped
 GameObject:

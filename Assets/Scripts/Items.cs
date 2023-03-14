@@ -14,11 +14,13 @@ public class Items : ScriptableObject
     public int id;
     public int hp;
     public int mp;
+    public int def;
     public int att;
     public int rad;
     public int enx;
     public int sol;
     public int chr;
+    public string desc;
     public Vector2Int range = new Vector2Int(5, 4);
     [Header("Only UI")]
     public bool stackable = true;

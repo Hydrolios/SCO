@@ -80,15 +80,16 @@ public class UnitStats : MonoBehaviour
             return false;
     }
 
-    public void useMP(int mp)
+    public bool useMP(int mp)
     {
         if(mp > currentMP)
         {
-            return;
+            return false;
         }
         else
         {
             currentMP -= mp;
+            return true;
         }
     }
     public void HealHP(int health) // method for healing from an item

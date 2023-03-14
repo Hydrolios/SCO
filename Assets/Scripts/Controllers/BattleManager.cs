@@ -260,20 +260,31 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerBuffing() // runs the animation and stat changes for the buff skill (currently rage)
     {
-        turncounter++;
-        dialogueText.text = playerUnit.unitName + " is enraged for 3 turns!";
-        playerUnit.useMP(5);
-        playerHUD.SetMP(playerUnit.currentMP);
-        playerClone.SetActive(false);// hides player UI 
-        playerRageAnimation.SetActive(true); // shows rage animation
-        state = BattleState.ENEMYTURN;
-        yield return new WaitForSeconds(1.55f);
-        playerRageAnimation.SetActive(false);
-        playerClone.SetActive(true);
-        yield return new WaitForSeconds(0.45f);
-        playerUnit.raged = true;
-        buffcounter = turncounter + 3; 
-        StartCoroutine(EnemyTurn());
+        bool usable = playerUnit.useMP(5);
+        if (!usable)
+        {
+            dialogueText.text = "You do not have enough MP to use this!";
+            yield return new WaitForSeconds(1.5f);
+            PlayerTurn();
+        }
+        else
+        {
+            turncounter++;
+            dialogueText.text = playerUnit.unitName + " is enraged for 3 turns!";
+
+            playerHUD.SetMP(playerUnit.currentMP);
+            playerClone.SetActive(false);// hides player UI 
+            playerRageAnimation.SetActive(true); // shows rage animation
+            state = BattleState.ENEMYTURN;
+            yield return new WaitForSeconds(1.55f);
+            playerRageAnimation.SetActive(false);
+            playerClone.SetActive(true);
+            yield return new WaitForSeconds(0.45f);
+            playerUnit.raged = true;
+            buffcounter = turncounter + 3;
+            StartCoroutine(EnemyTurn());
+        }
+        
     }
 
     //dialogue and decision making for Enemy
@@ -348,7 +359,7 @@ public class BattleManager : MonoBehaviour
             {
                 dialogueText.text = "YOU DEFEATED ME!!!!!! I WILL TEACH YOU 'RAGE'";
                 yield return new WaitForSeconds(2.5f);
-                dialogueText.text = "USE IT TO DOUBLE THE ATTACK OF YOUR NEXT 3 MOVES!";
+                dialogueText.text = "USE IT TO DOUBLE YOUR ATTACK FOR YOUR NEXT 3 TURNS!";
                 yield return new WaitForSeconds(2.5f);
                 bool learnedrage = true;
                 PlayerPrefs.SetInt("learnedrage", (learnedrage ? 1 : 0));

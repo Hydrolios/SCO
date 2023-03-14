@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 608d9e0663e00134abc0047fde73658b, type: 3}
-  m_Name: HP Potion
+  m_Name: Cat Ears
   m_EditorClassIdentifier: 
-  itemName: HP Potion
-  type: 1
-  actionType: 1
-  equipType: 4
-  consumeType: 0
-  id: 0
-  hp: 10
-  mp: 0
+  itemName: Cat Ears
+  type: 0
+  actionType: 0
+  equipType: 0
+  consumeType: 2
+  id: 3
+  hp: 2
+  mp: 1
   att: 0
   rad: 0
   enx: 0
   sol: 0
-  chr: 0
+  chr: 1
+  desc: 
   range: {x: 5, y: 4}
   stackable: 1
-  image: {fileID: 21300000, guid: 8306e49343aa151408c7e25f305ecc8a, type: 3}
+  image: {fileID: 21300000, guid: af1a1fae8e1398847948b69ee92b3d0f, type: 3}

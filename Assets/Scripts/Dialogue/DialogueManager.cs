@@ -152,6 +152,7 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
         
     }
+ 
 
 
 }

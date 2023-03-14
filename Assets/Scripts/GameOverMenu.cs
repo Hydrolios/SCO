@@ -32,17 +32,21 @@ public class GameOverMenu : MonoBehaviour
         //When we load we want to set the starting position of the Player
         if (PlayerPrefs.HasKey("x"))
         {
-            int activeScene = PlayerPrefs.GetInt("ActiveScene");
-
-            float x = PlayerPrefs.GetFloat("x");
-            float y = PlayerPrefs.GetFloat("y");
             playerRef.sceneTransitioned = false;
             playerRef.openedUIPause = false;
             GameIsPaused = false;
-            Debug.Log(playerRef.sceneTransitioned);
-            Vector2 playerposition = new Vector2(x, y);
-            StartCoroutine(LoadNewScene(activeScene));
-            playerRef.transform.position = playerposition;
+            StartCoroutine(LoadNewScene(PlayerPrefs.GetInt("ActiveScene")));
+            playerRef.loadGame = true;
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.LoadInventory();
+            Debug.Log("LoadedGame");
+            PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("Savedplayerattack"));
+            PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("Savedplayersol"));
+            PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("Savedplayerrad"));
+            PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("Savedplayerenx"));
+            PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("Savedplayerchr"));
+            PlayerPrefs.SetInt("load", (playerRef.loadGame ? 1 : 0));
+            Debug.Log("player reference of boolean load game: " + playerRef.loadGame);
             Time.timeScale = 1f;
         }
         else

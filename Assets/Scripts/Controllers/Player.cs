@@ -93,6 +93,7 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.LoadInventory();
+            Time.timeScale = 1f;
 
         }
         if(textReq)
