@@ -5,15 +5,21 @@ using UnityEngine.UI;
 
 public class ListingButton : MonoBehaviour
 {
-    public ListingUI ShopUI;
+    public ListingUI ShopUIlist;
     public Items item;
     public void OnButtonClick() // get the listing component from the parent
     {
-        Debug.Log(item);
+        //Debug.Log(item);
         GameObject shopUIObj = GameObject.Find("ShopUI"); // finds shop ui
-        ShopUI = shopUIObj.GetComponent<ListingUI>(); // gets the listingUI component of it
-        GameObject itemInfo = ShopUI.itemStatUI; // gets specifically the itemstatUI of the listingUI
-        
+        ShopUIlist = shopUIObj.GetComponent<ListingUI>(); // gets the listingUI component of it
+        GameObject itemInfo = ShopUIlist.itemStatUI; // gets specifically the itemstatUI of the listingUI
+
+        //gets the ShopUI and sets the item to buy
+        ShopUI shopUIGO = FindObjectOfType<ShopUI>();
+        Debug.Log(shopUIGO);
+        shopUIGO.SetItem(item);
+
+        //assigning the text game objects
         Text itemInfoATT = itemInfo.transform.Find("ATT").GetComponent<Text>();
         Text itemInfoDEF = itemInfo.transform.Find("DEF").GetComponent<Text>();
         Text itemInfoHP = itemInfo.transform.Find("HP").GetComponent<Text>();
@@ -23,8 +29,10 @@ public class ListingButton : MonoBehaviour
         Text itemInfoRAD = itemInfo.transform.Find("RAD").GetComponent<Text>();
         Text itemInfoCHR = itemInfo.transform.Find("CHR").GetComponent<Text>();
         Text itemInfoDSC = itemInfo.transform.Find("Description").GetComponent<Text>();
+        Image itemInfoSprite = itemInfo.transform.Find("Image").GetComponent<Image>();
 
         itemInfoDSC.text = item.desc;
+        itemInfoSprite.sprite = item.image;
         //main stat value
         itemInfoATT.text = "ATT : " + item.att.ToString();
         itemInfoHP.text = "HP : " + item.hp.ToString();
@@ -37,9 +45,9 @@ public class ListingButton : MonoBehaviour
         itemInfoCHR.text = "CHR : " + item.chr.ToString();
 
         //itemInfoATT.text = item.att.ToString();
-
         itemInfo.SetActive(true);
     }
+
 
 
 }

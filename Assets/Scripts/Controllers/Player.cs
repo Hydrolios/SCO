@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     static int manaPool;
     public int currentMana;
     public int level;
+    public int money;
     public int exp;
     public HealthBar healthBar;
     public ManaBar manaBar;
@@ -52,6 +53,7 @@ public class Player : MonoBehaviour
         manaBar.SetMaxMana(manaPool);
         textReq = PlayerPrefs.GetInt("spawnText") != 0;
         exp = PlayerPrefs.GetInt("exp");
+        money = PlayerPrefs.GetInt("money");
         level = PlayerPrefs.GetInt("playerlevel");
         loadGame = PlayerPrefs.GetInt("load") != 0;
         newGameCheck = PlayerPrefs.GetInt("newgame") != 0;

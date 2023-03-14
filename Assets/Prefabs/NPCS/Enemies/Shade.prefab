@@ -159,6 +159,7 @@ MonoBehaviour:
   currentMP: 0
   def: 0
   exp: 50
+  cash: 25
   rad: 0
   enx: 0
   sol: 0

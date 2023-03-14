@@ -120,6 +120,8 @@ public class DialogueManager : MonoBehaviour
                     PlayerPrefs.SetFloat("interact_range", 0f);
                     uiChecker.openedUIShop = true;
                     shopUI.SetActive(true);
+                    Text curcash = shopUI.transform.Find("PlayerCash").GetComponent<Text>();
+                    curcash.text = "$" + PlayerPrefs.GetInt("cash");
                     Time.timeScale = 0f;
                     /*shop UI opens
                      * shopUI.SetActive(true);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryMenu : MonoBehaviour
 {
@@ -18,7 +19,8 @@ public class InventoryMenu : MonoBehaviour
         playerRef = player.GetComponent<Player>();
         if (Input.GetKeyDown(KeyCode.I) && (playerRef.openedDialog == false) && (playerRef.openedUIPause == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
         {
-
+            Text curcash = InventoryMenuUI.transform.Find("Cash").GetComponent<Text>();
+            curcash.text = "$" + PlayerPrefs.GetInt("cash");
             if (GameIsPaused && (playerRef.openedUIInven == true))
             {
 

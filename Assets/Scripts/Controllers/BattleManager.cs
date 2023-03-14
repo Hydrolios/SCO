@@ -365,9 +365,16 @@ public class BattleManager : MonoBehaviour
                 PlayerPrefs.SetInt("learnedrage", (learnedrage ? 1 : 0));
             }
             dialogueText.text = "You've defeated " + enemyUnit.unitName + "!";
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1.25f);
             dialogueText.text = "You've gained " + enemyUnit.exp + " EXP";
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1.25f);
+            if(enemyUnit.cash > 0)
+            {
+                dialogueText.text = "You've received $" + enemyUnit.cash + "!";
+                PlayerPrefs.SetInt("cash", PlayerPrefs.GetInt("cash") + enemyUnit.cash);
+                yield return new WaitForSeconds(1.25f);
+            }
+
             Encounter.defeated = true;
             if (PlayerPrefs.HasKey("BattleReward")) // text to display reward item
             {

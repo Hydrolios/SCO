@@ -20,6 +20,7 @@ public class UnitStats : MonoBehaviour
     public int currentMP;
     public int def;
     public int exp;
+    public int cash;
 
     public int rad;
     public int enx;
