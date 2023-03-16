@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 827048472}
   - component: {fileID: 827048471}
   m_Layer: 10
-  m_Name: Sarah
+  m_Name: Cherry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - Hey there!  Are you one of my fans?  You must be!
+    - Hey there!  I am Cherry! Are you one of my fans?  You must be!
     - Here, take this!
     - You Received A Cat Ear Hat
   dialogue2:
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 1704882406}
   itemList: {fileID: 556639921}
   item_id: 3
-  chest_id: 0
+  chest_id: 7
   npc_id: 0
   sceneToLoad: 
   shopKeeper: 0

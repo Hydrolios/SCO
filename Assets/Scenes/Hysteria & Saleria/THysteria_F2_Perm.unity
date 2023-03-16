@@ -655,6 +655,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: You found a Rusty Dagger!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: dialogue2.lines.Array.data[0]
       value: Nothing is inside.
       objectReference: {fileID: 0}

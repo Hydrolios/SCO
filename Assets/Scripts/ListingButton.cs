@@ -29,10 +29,12 @@ public class ListingButton : MonoBehaviour
         Text itemInfoRAD = itemInfo.transform.Find("RAD").GetComponent<Text>();
         Text itemInfoCHR = itemInfo.transform.Find("CHR").GetComponent<Text>();
         Text itemInfoDSC = itemInfo.transform.Find("Description").GetComponent<Text>();
+        Text itemInfoPrice = itemInfo.transform.Find("Pricetag").GetComponent<Text>();
         Image itemInfoSprite = itemInfo.transform.Find("Image").GetComponent<Image>();
 
         itemInfoDSC.text = item.desc;
         itemInfoSprite.sprite = item.image;
+        itemInfoPrice.text = "$" + item.buycost.ToString();
         //main stat value
         itemInfoATT.text = "ATT : " + item.att.ToString();
         itemInfoHP.text = "HP : " + item.hp.ToString();
@@ -44,7 +46,7 @@ public class ListingButton : MonoBehaviour
         itemInfoRAD.text = "RAD : " + item.rad.ToString();
         itemInfoCHR.text = "CHR : " + item.chr.ToString();
 
-        //itemInfoATT.text = item.att.ToString();
+        
         itemInfo.SetActive(true);
     }
 

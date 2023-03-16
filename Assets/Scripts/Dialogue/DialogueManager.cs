@@ -121,7 +121,7 @@ public class DialogueManager : MonoBehaviour
                     uiChecker.openedUIShop = true;
                     shopUI.SetActive(true);
                     Text curcash = shopUI.transform.Find("PlayerCash").GetComponent<Text>();
-                    curcash.text = "$" + PlayerPrefs.GetInt("cash");
+                    curcash.text = "$" + PlayerPrefs.GetInt("currentcash");
                     Time.timeScale = 0f;
                     /*shop UI opens
                      * shopUI.SetActive(true);

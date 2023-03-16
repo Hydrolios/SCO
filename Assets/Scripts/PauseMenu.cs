@@ -71,6 +71,7 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.SetInt("Savedplayerrad", PlayerPrefs.GetInt("playerrad"));
         PlayerPrefs.SetInt("Savedplayerenx", PlayerPrefs.GetInt("playerenx"));
         PlayerPrefs.SetInt("Savedplayerchr", PlayerPrefs.GetInt("playerchr"));
+        PlayerPrefs.SetInt("cash", PlayerPrefs.GetInt("currentcash"));
         PlayerPrefs.Save();
 
     }
@@ -92,6 +93,7 @@ public class PauseMenu : MonoBehaviour
             PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("Savedplayerrad"));
             PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("Savedplayerenx"));
             PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("Savedplayerchr"));
+            PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("cash"));
             PlayerPrefs.SetInt("load", (playerRef.loadGame ? 1 : 0));
             Debug.Log("player reference of boolean load game: " + playerRef.loadGame);
             Time.timeScale = 1f;

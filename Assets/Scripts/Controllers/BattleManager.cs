@@ -371,7 +371,7 @@ public class BattleManager : MonoBehaviour
             if(enemyUnit.cash > 0)
             {
                 dialogueText.text = "You've received $" + enemyUnit.cash + "!";
-                PlayerPrefs.SetInt("cash", PlayerPrefs.GetInt("cash") + enemyUnit.cash);
+                PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") + enemyUnit.cash);
                 yield return new WaitForSeconds(1.25f);
             }
 

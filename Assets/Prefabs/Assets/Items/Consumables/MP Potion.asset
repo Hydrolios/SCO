@@ -26,6 +26,8 @@ MonoBehaviour:
   enx: 0
   sol: 0
   chr: 0
+  buycost: 10
+  sellcost: 5
   desc: A regular mana potion.  Recovers 10 MP.
   range: {x: 5, y: 4}
   stackable: 1

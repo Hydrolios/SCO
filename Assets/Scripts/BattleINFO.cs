@@ -7,11 +7,23 @@ public class BattleINFO : MonoBehaviour
 {
     public Text nameText;
     public Text levelText;
+    public Text hpText;
+    public Text mpText;
+    public int maxHP;
+    public int maxMP;
     public Slider hpSlider;
     public Slider mpSlider;
 
     public void SetHUD(UnitStats unit)
     {
+        maxHP = unit.maxHP;
+        maxMP = unit.maxMP;
+        hpText.text = unit.currentHP + " / " + unit.maxHP;
+        if(unit.maxMP > 0)
+        {
+            mpText.text = unit.currentMP + " / " + unit.maxMP;
+        }
+        
         nameText.text = unit.unitName;
         levelText.text = "Lvl " + unit.unitLevel;
         hpSlider.maxValue = unit.maxHP;
@@ -23,11 +35,19 @@ public class BattleINFO : MonoBehaviour
     public void SetHP(int hp)
     {
         hpSlider.value = hp;
+        if(hp < 0)
+        {
+            hp = 0;
+        }
+        hpText.text = hp + " / " + maxHP;
+ 
     }
 
     public void SetMP(int mp)
     {
         mpSlider.value = mp;
+        mpText.text = mp + " / " + maxMP;
+
     }
 
 }

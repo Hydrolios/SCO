@@ -22,7 +22,7 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt("playerlevel", 1);
         PlayerPrefs.SetInt("exptolevel", 25);
         PlayerPrefs.SetInt("exp", 0);
-        PlayerPrefs.SetInt("cash", 0);
+        PlayerPrefs.SetInt("currentcash", 0);
         PlayerPrefs.SetInt("playerHPMax", 10);
         PlayerPrefs.SetInt("playerHPnow", 10);
         PlayerPrefs.SetInt("playerMPMax", 10);

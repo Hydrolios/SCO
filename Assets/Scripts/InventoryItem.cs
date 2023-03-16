@@ -124,7 +124,17 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
 
         InventoryItem itemInSlot = GetComponentInChildren<InventoryItem>(); // gets the component thats a child of the gameObject clicked?
         Items item = itemInSlot.item; // this is the item in the designated inventory slot
-        player.HealDamage(item.hp);
+        
+        //cover each case of different consumable types
+        if(item.consumeType == ConsumableType.HP)
+        {
+            player.HealDamage(item.hp);
+        }    
+        else if (item.consumeType == ConsumableType.MP)
+        {
+            player.HealDamage(item.mp);
+        }    
+        
     }
 
 

@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
         manaBar.SetMaxMana(manaPool);
         textReq = PlayerPrefs.GetInt("spawnText") != 0;
         exp = PlayerPrefs.GetInt("exp");
-        money = PlayerPrefs.GetInt("money");
+        money = PlayerPrefs.GetInt("currentcash");
         level = PlayerPrefs.GetInt("playerlevel");
         loadGame = PlayerPrefs.GetInt("load") != 0;
         newGameCheck = PlayerPrefs.GetInt("newgame") != 0;
@@ -92,6 +92,7 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("Savedplayerrad"));
             PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("Savedplayerenx"));
             PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("Savedplayerchr"));
+            PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("cash"));
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.LoadInventory();
@@ -179,6 +180,20 @@ public class Player : MonoBehaviour
         }
         PlayerPrefs.SetInt("playerHPnow", currentHealth);
         healthBar.SetHealth();
+    }
+
+    public void HealMana (int mana)
+    {
+        currentMana += mana;
+        if (currentMana > PlayerPrefs.GetInt("playerMPMax"))
+        {
+            int placeholder;
+            placeholder = currentMana - PlayerPrefs.GetInt("playerMPMax");
+            currentMana -= placeholder;
+        }
+        PlayerPrefs.SetInt("playerMPnow", currentMana);
+        manaBar.SetHealth();
+
     }
     public void StopSpeed() // code to pause player speed
     {

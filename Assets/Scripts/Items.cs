@@ -20,6 +20,8 @@ public class Items : ScriptableObject
     public int enx;
     public int sol;
     public int chr;
+    public int buycost;
+    public int sellcost;
     public string desc;
     public Vector2Int range = new Vector2Int(5, 4);
     [Header("Only UI")]

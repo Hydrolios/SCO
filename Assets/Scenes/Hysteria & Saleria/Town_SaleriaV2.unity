@@ -33438,19 +33438,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: soldier
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 423499660}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
-      propertyPath: dialogue2.lines.Array.size
+      propertyPath: dialogue.lines.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
+      propertyPath: dialogue2.lines.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
-      value: Go on inside, we've been expecting your visit.
+      value: Thanks for dealing with the intruder.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
+      propertyPath: dialogue.lines.Array.data[1]
+      value: Not sure how they sneaked past us though...
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: dialogue2.lines.Array.data[0]
