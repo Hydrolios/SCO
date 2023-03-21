@@ -56,7 +56,7 @@ public class UnitStats : MonoBehaviour
 
 
     // check to see if damage has killed an enemy
-    public bool DealDamage(int dmg, bool buffed)
+    public bool DealDamage(int dmg, bool buffed) //will need to adjust this or create a new method to take in elements
     {
 
         if (buffed)
@@ -125,8 +125,11 @@ public class UnitStats : MonoBehaviour
 
         if (PlayerPrefs.GetString("skillele") == "Physical" || PlayerPrefs.GetString("skillele") == "Solstice")
         {
-            minDmg = (0.85 + (PlayerPrefs.GetInt("playersol") * 0.01)) * (PlayerPrefs.GetFloat("skillpower") * dmg);
-            maxDmg = (1.15 + (PlayerPrefs.GetInt("playersol") * 0.01)) * (PlayerPrefs.GetFloat("skillpower") * dmg);
+            Debug.Log("skill was physical");
+            minDmg = 0.85 + (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.01));
+            maxDmg = 1.15 + (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.01));
+            Debug.Log("min dmg is " + minDmg);
+            Debug.Log("max dmg is " + maxDmg);
 
         }
         
@@ -137,7 +140,7 @@ public class UnitStats : MonoBehaviour
             Debug.Log("attack was non elemental");
         }
 
-        return Mathf.RoundToInt(Random.Range((float)minDmg, (float)maxDmg));
+        return Mathf.CeilToInt(Random.Range((float)minDmg, (float)maxDmg));
     }
 
 }

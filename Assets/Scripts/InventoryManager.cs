@@ -104,7 +104,7 @@ public class InventoryManager : MonoBehaviour
             }
 
         }
-
+        /*
         //need to remember to include the individual saving of the equipment slots, hatEquip...wepEquip
         InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
         if (hatItem != null)
@@ -130,9 +130,11 @@ public class InventoryManager : MonoBehaviour
         InventoryItem weaponItem = wepEquip.GetComponentInChildren<InventoryItem>();
         if (weaponItem != null)
         {
-            //Debug.Log("D");
+            Debug.Log("D");
             PlayerPrefs.SetInt("InventorySlotD", weaponItem.item.id);
+            Debug.Log(PlayerPrefs.GetInt("InventorySlotD"));
         }
+        */
     }
 
     public void DeleteInv() // for testing functionality of cleaning out the inventory
@@ -242,7 +244,7 @@ public class InventoryManager : MonoBehaviour
 
         }
 
-        
+        /*
         InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
         if (hatItem != null)
         {
@@ -270,6 +272,7 @@ public class InventoryManager : MonoBehaviour
             //Debug.Log("D");
             PlayerPrefs.SetInt("InventorySlotD", weaponItem.item.id);
         }
+        */
         
     }
 

@@ -51,7 +51,11 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         state = BattleState.START;
+        PlayerPrefs.DeleteKey("skillele");
+        PlayerPrefs.DeleteKey("skillpower");
+        PlayerPrefs.DeleteKey("skillname");
         StartCoroutine(SetupBattle());
+
     }
 
     //Spawns the units onto the scene and sets the values for the HUD
@@ -148,7 +152,39 @@ public class BattleManager : MonoBehaviour
     {
         return "aeiouAEIOU".IndexOf(c) != -1;
     }
-    // future attack implementation February
+    
+    public void WeaponSkill() //need this to be flexible and used for all equipped weapon and all buttons
+    {
+       
+        WeaponSkillAttack();
+
+    }
+
+    IEnumerator WeaponSkillAttack()
+    {
+        bool isDead = enemyUnit.DealDamage(playerUnit.attack, playerUnit.raged);
+        state = BattleState.ENEMYTURN;
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        dialogueText.text = playerUnit.unitName + " uses " + PlayerPrefs.GetString("skillname") + " on " + enemyUnit.unitName + " and deals " + enemyUnit.damagedealt + " damage";
+        yield return new WaitForSeconds(0.8f);
+        playerSlashAnimation.SetActive(false);
+        yield return new WaitForSeconds(1.2f);
+
+        //Check if dead
+        if (isDead) //Ends Combat if true
+        {
+
+            state = BattleState.WIN;
+            StartCoroutine(ExitCombat());
+
+
+        }
+        else //Enemy Turn
+        {
+
+            StartCoroutine(EnemyTurn());
+        }
+    }
 
     public void UseItem(int ident) // uses the item selected
     {
@@ -305,7 +341,7 @@ public class BattleManager : MonoBehaviour
             playerUnit.raged = false;
             buffcounter = 0;
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
 
         if(isDead)
         {

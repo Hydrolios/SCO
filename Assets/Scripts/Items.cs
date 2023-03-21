@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 [CreateAssetMenu(menuName = "Scriptable object/Item")]
 public class Items : ScriptableObject
@@ -26,6 +25,12 @@ public class Items : ScriptableObject
     public Vector2Int range = new Vector2Int(5, 4);
     [Header("Only UI")]
     public bool stackable = true;
+
+    [Header("Only Weapons")]
+    public string[] skillName;
+    public int[] skillLevel;
+    public string[] skillElement;
+    public float[] skillPower;
 
     [Header("Both")]
     public Sprite image;

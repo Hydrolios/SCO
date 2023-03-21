@@ -17,4 +17,10 @@ public class PlayerSkills : MonoBehaviour
         PlayerPrefs.SetFloat("skillpower", skillpower);
     }
 
+    public void AttackSkill(string name, string element, float power)
+    {
+        PlayerPrefs.SetString("skillname", name);
+        PlayerPrefs.SetString("skillele", element);
+        PlayerPrefs.SetFloat("skillpower", power);
+    }
 }
