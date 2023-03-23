@@ -34,20 +34,21 @@ public class ItemAttacks : MonoBehaviour
 
                 weapon = itemList.items[j];
                 Debug.Log(weapon.itemName);
-            }
-            if (weapon != null)
-            {
                 break;
             }
+
         }
+
+        
         for (int i = 0; i < weapon.skillName.Length; i++) // for each skill the weapon has, make a button
         {
             if(PlayerPrefs.GetInt("playerlevel") >= weapon.skillLevel[i])
             {
                 GameObject buttonGO = Instantiate(attackButton, transform);
                 Text buttonText = buttonGO.GetComponentInChildren<Text>();
+                int temp = i; // need this as int i from the loop is not usable in the call for elements
                 buttonText.text = weapon.skillName[i];
-                buttonGO.GetComponent<Button>().onClick.AddListener(() => UseSkill(weapon.skillName[i], weapon.skillPower[i], weapon.skillElement[i]));
+                buttonGO.GetComponent<Button>().onClick.AddListener(() => UseSkill(weapon.skillName[temp], weapon.skillPower[temp], weapon.skillElement[temp]));
             }
             
         }
@@ -57,7 +58,7 @@ public class ItemAttacks : MonoBehaviour
     {
         if (battleManager.state == BattleState.PLAYERTURN)
         {
-            PlayerSkills skill = GetComponent<PlayerSkills>();
+            PlayerSkills skill = GetComponentInChildren<PlayerSkills>();
             skill.AttackSkill(skillname, element, power);
             battleManager.WeaponSkill();
             Debug.Log("button for the skill was made");

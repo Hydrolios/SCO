@@ -155,8 +155,8 @@ public class BattleManager : MonoBehaviour
     
     public void WeaponSkill() //need this to be flexible and used for all equipped weapon and all buttons
     {
-       
-        WeaponSkillAttack();
+        AttackListUI.SetActive(false);
+        StartCoroutine(WeaponSkillAttack());
 
     }
 
@@ -219,7 +219,7 @@ public class BattleManager : MonoBehaviour
         else if(PlayerPrefs.GetString("HPMP") == "MP")
         {
             playerUnit.HealMP(PlayerPrefs.GetInt("combatItemEffect"));
-            playerHUD.SetHP(playerUnit.currentMP);
+            playerHUD.SetMP(playerUnit.currentMP);
 
         }
         dialogueText.text = playerUnit.unitName + " used " + PlayerPrefs.GetString("combatItemName") + "!";

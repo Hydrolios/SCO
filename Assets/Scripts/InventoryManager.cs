@@ -348,6 +348,11 @@ public class InventoryManager : MonoBehaviour
 
     }
 
+    public void ItemInfo() // opens up UI to display item info, similar to shop
+    {
+
+    }
+    
     public void EquipItem() // equipping item and making sure to swap with already equipped item WIP
     {
         selectedItem.count--;

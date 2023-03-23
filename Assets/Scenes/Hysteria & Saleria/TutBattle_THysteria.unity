@@ -428,6 +428,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7271588050982234810, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: itemList
+      value: 
+      objectReference: {fileID: 1611866546}
+    - target: {fileID: 7271588050982234810, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: battleManager
+      value: 
+      objectReference: {fileID: 1936214028}
     - target: {fileID: 9106115791856435292, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

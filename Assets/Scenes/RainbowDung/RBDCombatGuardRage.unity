@@ -779,6 +779,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ItemListReturn
       objectReference: {fileID: 0}
+    - target: {fileID: 7271588050982234810, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: itemList
+      value: 
+      objectReference: {fileID: 1474488587}
+    - target: {fileID: 7271588050982234810, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: battleManager
+      value: 
+      objectReference: {fileID: 1684748263}
     - target: {fileID: 9106115791856435292, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
