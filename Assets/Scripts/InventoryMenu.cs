@@ -10,6 +10,10 @@ public class InventoryMenu : MonoBehaviour
     public GameObject InventoryMenuUI;
     public GameObject useMenu;
     public GameObject equipMenu;
+    public GameObject itemInfoUI;
+    public GameObject equipmentinfomenu;
+    public GameObject consumableinfomenu;
+    public GameObject armorinfomenu;
     public Player playerRef; //player reference
 
 
@@ -51,6 +55,44 @@ public class InventoryMenu : MonoBehaviour
         InventoryMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+    }
+
+    public void CloseInfo()
+    {
+        itemInfoUI.SetActive(false);
+    }
+
+    public void OpenInfo()
+    {
+        InventoryItem inventoryItem = FindObjectOfType<InventoryItem>();
+        inventoryItem.equipMenu.transform.position = new Vector2(1500, 0);
+        inventoryItem.useMenu.transform.position = new Vector2(1500, 0);
+        InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
+        itemInfoUI.SetActive(true);
+        Transform infoItemPic = transform.Find("Inventory/ItemInfo/FG/ItemPic/Item");
+        if (inventoryManager.selectedItem.item.type == ItemType.Consumable)
+        {
+            Debug.Log("consumable");
+            equipmentinfomenu.SetActive(false);
+            armorinfomenu.SetActive(false);
+            consumableinfomenu.SetActive(true);
+            Transform infoItemName = transform.Find("Inventory/ItemInfo/FG/Consumable/StatValues/Name");
+            Transform infoItemHP = transform.Find("Inventory/ItemInfo/FG/Consumable/StatValues/HP");
+            Transform infoItemMP = transform.Find("Inventory/ItemInfo/FG/Consumable/StatValues/MP");
+            Transform infoItemDesc = transform.Find("Inventory/ItemInfo/FG/Consumable/StatValues/Desc");
+            Text itemname = infoItemName.GetComponent<Text>();
+            Text itemHP = infoItemHP.GetComponent<Text>();
+            Text itemMP = infoItemMP.GetComponent<Text>();
+            Text itemDesc = infoItemDesc.GetComponent<Text>();
+            itemname.text = inventoryManager.selectedItem.item.itemName;
+            itemHP.text = "HP: " + inventoryManager.selectedItem.item.hp.ToString();
+            itemMP.text = "MP: " + inventoryManager.selectedItem.item.mp.ToString();
+            itemDesc.text = inventoryManager.selectedItem.item.desc;
+        }
+        
+        
+        Image itemimage = infoItemPic.GetComponent<Image>();
+        itemimage.sprite = inventoryManager.selectedItem.image.sprite;
     }
 
     void Pause()
