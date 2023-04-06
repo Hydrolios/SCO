@@ -28,7 +28,8 @@ MonoBehaviour:
   chr: 0
   buycost: 0
   sellcost: 0
-  desc: 
+  desc: A rusty dagger.  Typically found at the bottom of a barrel.  There's an odd
+    glow to it though.
   range: {x: 5, y: 4}
   stackable: 0
   skillName:

@@ -10,7 +10,11 @@ public class ItemAttacks : MonoBehaviour
     public GameObject attackButton;
     void Start()
     {
-        LoadAttackSkills();
+        if(PlayerPrefs.GetInt("InventorySlotScene" + 18 + "ID", -1) != -1)
+        {
+            LoadAttackSkills();
+        }
+        
     }
 
     public void LoadAttackSkills()

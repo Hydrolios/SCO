@@ -14,6 +14,9 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
     public GameObject equipMenu;
     public GameObject unequip;
 
+    public float startTime;
+    public float waitTime;
+
     private Button button;
 
     public int count = 1;
@@ -55,6 +58,9 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         {
             itemText = unequip.GetComponentInChildren<Text>();
             itemText.text = item.itemName;
+            equipMenu.transform.position = new Vector2(1500, 0);
+            useMenu.transform.position = new Vector2(1500, 0);
+            startTime = Time.realtimeSinceStartup;
             unequip.SetActive(true);
             unequip.transform.position = new Vector2(Input.mousePosition.x + 60, Input.mousePosition.y); //show display at mouse
         }
@@ -62,6 +68,9 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         {
             itemText = equipMenu.GetComponentInChildren<Text>();
             itemText.text = item.itemName;
+            useMenu.transform.position = new Vector2(1500, 0);
+            unequip.transform.position = new Vector2(1500, 0);
+            startTime = Time.realtimeSinceStartup;
             equipMenu.SetActive(true);
             equipMenu.transform.position = new Vector2(Input.mousePosition.x + 60, Input.mousePosition.y); //show display at mouse
         }
@@ -69,6 +78,9 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         {
             itemText = useMenu.GetComponentInChildren<Text>();
             itemText.text = item.itemName;
+            equipMenu.transform.position = new Vector2(1500, 0);
+            unequip.transform.position = new Vector2(1500, 0);
+            startTime = Time.realtimeSinceStartup;
             useMenu.SetActive(true);
             useMenu.transform.position = new Vector2(Input.mousePosition.x + 60, Input.mousePosition.y); //show display at mouse
         }
@@ -90,6 +102,14 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
 
         while (Time.realtimeSinceStartup < startTime + waitTime) // need to use realtime as time scale is 0 while menuing 
         {
+            if (RectTransformUtility.RectangleContainsScreenPoint(equipMenu.transform.Find("BG").GetComponent<RectTransform>(), Input.mousePosition) ||
+        RectTransformUtility.RectangleContainsScreenPoint(useMenu.transform.Find("BG").GetComponent<RectTransform>(), Input.mousePosition) ||
+        RectTransformUtility.RectangleContainsScreenPoint(unequip.transform.Find("BG").GetComponent<RectTransform>(), Input.mousePosition))
+            {
+                // If the mouse is hovering over a menu, continue waiting
+                startTime = Time.realtimeSinceStartup;
+            }
+
             yield return null;
         }
         equipMenu.transform.position = new Vector2(1500, 0);
