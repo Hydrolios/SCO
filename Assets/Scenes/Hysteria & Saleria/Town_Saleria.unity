@@ -32236,7 +32236,7 @@ PrefabInstance:
       objectReference: {fileID: 423499661}
     - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
       propertyPath: sceneToLoad
-      value: RBDungeon
+      value: RBD_Entrance
       objectReference: {fileID: 0}
     - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
       propertyPath: playerStorage

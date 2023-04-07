@@ -10,11 +10,14 @@ public class CombatItem : MonoBehaviour
     public GameObject buttonGO;
     public BattleManager battleManager;
     public GameObject UseUI;
+    public GameObject emptyUI;
 
+    public int itemcount;
     public int id;
     public int count;
     public void Start()
     {
+        itemcount = 0;
         LoadConsumables();
         
     }
@@ -25,6 +28,10 @@ public class CombatItem : MonoBehaviour
             int id = PlayerPrefs.GetInt("InventorySlotScene" + i + "ID", -1);
             int count = PlayerPrefs.GetInt("InventorySlotScene" + i + "Count", 0);
             Items item = null;
+            if (itemcount > 0) // remove the Empty text in the item list if there are items
+            {
+                emptyUI.SetActive(false);
+            }
 
             for (int j = 0; j < itemList.items.Length; j++)
             {
@@ -41,6 +48,7 @@ public class CombatItem : MonoBehaviour
             }
             if (item != null && item.type == ItemType.Consumable) //check if its a consumable
             {
+                itemcount++;
                 Debug.Log("itemslot id in button creation loop is " + i);
                 //if its a consumable, instantiate the prefab "Item" as a child
                 GameObject buttonGO = Instantiate(itemButton, transform);
@@ -94,6 +102,11 @@ public class CombatItem : MonoBehaviour
         if (count <= 0)
         {
             Destroy(buttonGO);
+            itemcount--;
+            if(itemcount == 0)
+            {
+                emptyUI.SetActive(true);
+            }    
         }
         yield return new WaitForSeconds(0.5f);
         

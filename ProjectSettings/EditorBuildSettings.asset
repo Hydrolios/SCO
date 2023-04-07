@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Hysteria & Saleria/Town_Saleria.unity
     guid: 14199a5bf32234f4292e0cad721538f7
   - enabled: 1
-    path: Assets/Scenes/RainbowDung/RBDungeon.unity
+    path: Assets/Scenes/RainbowDung/RBD_Entrance.unity
     guid: 34b9c39086ceb9b4496dcce9edcdf9ea
   - enabled: 1
     path: Assets/Scenes/RainbowDung/RBD_1_Y.unity
