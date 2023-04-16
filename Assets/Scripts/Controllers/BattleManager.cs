@@ -46,6 +46,9 @@ public class BattleManager : MonoBehaviour
     public NPCManager npcManager;
     public Encounter npcbattling;
 
+    public bool aftBattle_Diag;
+    public string[] aftBattle_lines;
+
     public BattleState state;
     // Start is called before the first frame update
     void Start()
@@ -108,6 +111,8 @@ public class BattleManager : MonoBehaviour
 
     public void OnAttacksButton() //selecting "attacks" open up a list UI 
     {
+        if (state != BattleState.PLAYERTURN)
+            return;
         AttackListUI.SetActive(true);
     }
 
@@ -118,6 +123,8 @@ public class BattleManager : MonoBehaviour
 
     public void OnItemButton() //selecting "items" open up a list UI
     {
+        if (state != BattleState.PLAYERTURN)
+            return;
         ItemUI.SetActive(true);
     }
 

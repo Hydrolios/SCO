@@ -44,9 +44,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.015
+  m_Volume: 0.05
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -140,10 +140,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99dae66f7f9e60f4b8ae68ad75da0d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tavern1Music: {fileID: 8300000, guid: ec5882542350fab46a5129520f34ed2a, type: 3}
-  battle1Music: {fileID: 8300000, guid: f732cc10de11f0e4f9b27479b87a8ab2, type: 3}
-  battle2Music: {fileID: 8300000, guid: 3e7b1883d088ecd48a1c848a69e2db15, type: 3}
-  menuMusic: {fileID: 8300000, guid: 6c86e8a38b3736a4f9ed2e0fe7f84d3a, type: 3}
-  dungeon1Music: {fileID: 8300000, guid: c217cf1b2e398094a9b734b44feaade4, type: 3}
+  musicPlaying: 0
+  sceneChanged: 0
+  tavern1MusicStart: {fileID: 8300000, guid: 79f8652c1204cfa43b74ffa8902ed34a, type: 3}
+  tavern1MusicLoop: {fileID: 8300000, guid: 79f8652c1204cfa43b74ffa8902ed34a, type: 3}
+  battle1MusicStart: {fileID: 8300000, guid: 0e909834fa79b0e49b8df6249f381d20, type: 3}
+  battle1MusicLoop: {fileID: 8300000, guid: 0e909834fa79b0e49b8df6249f381d20, type: 3}
+  battle2MusicStart: {fileID: 8300000, guid: 5b7d04cd43d7f1e4b9e2507d4f755976, type: 3}
+  battle2MusicLoop: {fileID: 8300000, guid: 5d74ed7da9799f740af8cdbb79e3a4d5, type: 3}
+  menuMusicStart: {fileID: 8300000, guid: a6939cee54dd6ee4083df4e08e81fabf, type: 3}
+  menuMusicLoop: {fileID: 8300000, guid: 14d1383261957024396f7db594e7396d, type: 3}
+  dungeon1MusicStart: {fileID: 8300000, guid: c217cf1b2e398094a9b734b44feaade4, type: 3}
+  dungeon1MusicLoop: {fileID: 8300000, guid: c217cf1b2e398094a9b734b44feaade4, type: 3}
   audioSource: {fileID: 4577400850114222111}
   currentTrackName: 
