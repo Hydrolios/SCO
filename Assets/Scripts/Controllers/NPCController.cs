@@ -22,6 +22,8 @@ public class NPCController : MonoBehaviour, Interactable
 
     //bool conditions to seperate different instances for different uses
     public string sceneToLoad;
+    public bool repeatDiag;
+    public bool diagV2;
     public bool shopKeeper;
     public bool expgiver;
     public bool rbdreport;
@@ -44,6 +46,7 @@ public class NPCController : MonoBehaviour, Interactable
             PlayerPrefs.SetInt("BattleReward", item_id);
 
         }
+
         if (elder)
         {
             if (PlayerPrefs.GetInt("rbdreport") != 0) //dialogue for reporting back to elder after shade is killed

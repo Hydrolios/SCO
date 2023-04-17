@@ -138,6 +138,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ItemListReturn
       objectReference: {fileID: 0}
+    - target: {fileID: 6060777093110243079, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060777093110243079, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7271588050982234810, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: itemList
       value: 
@@ -432,6 +440,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3334700564863145370, guid: fb9525ed76ecf844d92a211c6824d1ca, type: 3}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: aftBattle_Diag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: playerPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -447,6 +459,18 @@ PrefabInstance:
       propertyPath: playerEleRadAnimation
       value: 
       objectReference: {fileID: 530116521}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: aftBattle_lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: aftBattle_lines.Array.data[0]
+      value: 'Pyramid God: You defeated me...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: aftBattle_lines.Array.data[1]
+      value: But it only gets harder for you here on out!
+      objectReference: {fileID: 0}
     - target: {fileID: 1151366177237767934, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: m_RootOrder
       value: 1

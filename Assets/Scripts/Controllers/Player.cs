@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
             inventoryManager.LoadInventoryScene();
             //Debug.Log("Position was not from a load");
         }   
-        else
+        else // player is spawning from a save file
         {
             Debug.Log("Position was from a load");
             xPos = PlayerPrefs.GetFloat("x");
@@ -87,19 +87,22 @@ public class Player : MonoBehaviour
             Vector2 loadPos = new Vector2(xPos, yPos);
             transform.position = loadPos;
             loadGame = false;
+            //Player stats
             PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("Savedplayerattack"));
             PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("Savedplayersol"));
             PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("Savedplayerrad"));
             PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("Savedplayerenx"));
             PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("Savedplayerchr"));
             PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("cash"));
+            //Player progression
+            PlayerPrefs.SetInt("shadeKilled", PlayerPrefs.GetInt("shadeSave", 0));
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.LoadInventory();
             Time.timeScale = 1f;
 
         }
-        if(textReq)
+        if(textReq) // text for loading into a scene
         {
             StartCoroutine(DialogueManager.Instance.ShowDialogueV2(dialogue, textReq));
             textReq = false;
@@ -116,9 +119,11 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C)) //debugger key for console
         {
-            ItemList itemList = FindObjectOfType<ItemList>();
+            //ItemList itemList = FindObjectOfType<ItemList>();
             Debug.Log("Debug Log:");
-            for (int i = 0; i <= 18; i++) // loads in the saved inventory with the playerprefs
+            Debug.Log(PlayerPrefs.GetInt("shadeKilled"));
+            PlayerPrefs.SetInt("shadeKilled", 0);
+            /*for (int i = 0; i <= 18; i++) // loads in the saved inventory with the playerprefs
             {
                 int id = PlayerPrefs.GetInt("InventorySlotScene" + i + "ID", -1);
                 int count = PlayerPrefs.GetInt("InventorySlotScene" + i + "Count", 0);
@@ -145,7 +150,7 @@ public class Player : MonoBehaviour
                 }
 
 
-            }
+            }*/
             //TakeDamage(2);
             //Debug.Log("player hp now:" + PlayerPrefs.GetInt("playerHPnow"));
             //Debug.Log("player hp max:" + PlayerPrefs.GetInt("playerHPMax"));

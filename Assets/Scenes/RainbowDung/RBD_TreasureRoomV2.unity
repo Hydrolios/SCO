@@ -759,6 +759,15 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 388689501}
+    - target: {fileID: 6046456739436440389, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
+      propertyPath: dialogue.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046456739436440389, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: Who was that person? He said I was too late, I better check if the sword
+        is still here!
+      objectReference: {fileID: 0}
     - target: {fileID: 6046456739436440409, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4841,8 +4850,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 326934089}
     - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: repeatDiag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: dialogue.lines.Array.size
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: dialogue2.lines.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
@@ -4858,7 +4875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: dialogue.lines.Array.data[3]
-      value: '"Meet me at Hue''s Settlement"'
+      value: I better report back to the Sage.
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: dialogue.lines.Array.data[4]
@@ -4867,6 +4884,11 @@ PrefabInstance:
     - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: dialogue.lines.Array.data[5]
       value: '"Meet me at Hue''s Settlement"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
+      propertyPath: dialogue2.lines.Array.data[0]
+      value: The sword is gone, lets not waste time.  I should report back to the
+        Sage.
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: m_RootOrder

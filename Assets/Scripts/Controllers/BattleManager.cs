@@ -48,6 +48,7 @@ public class BattleManager : MonoBehaviour
 
     public bool aftBattle_Diag;
     public string[] aftBattle_lines;
+    public bool textAftBattle;
 
     public BattleState state;
     // Start is called before the first frame update
@@ -364,7 +365,17 @@ public class BattleManager : MonoBehaviour
     }
     IEnumerator ExitCombat()
     {
-        if (state == BattleState.WIN && tutorial)
+        if (state == BattleState.WIN && aftBattle_Diag)
+        {
+            for (int i = 0; i < aftBattle_lines.Length; i++)
+            {
+                dialogueText.text = aftBattle_lines[i];
+                yield return new WaitForSeconds(1.5f);
+            }
+
+        }
+        /*
+        else if (state == BattleState.WIN && tutorial)
         {
             dialogueText.text = "Pyramid God: You defeated me...";
             yield return new WaitForSeconds(1.5f);
@@ -377,8 +388,9 @@ public class BattleManager : MonoBehaviour
             PlayerPrefs.SetInt("playerMPnow", 10);
             SceneManager.LoadScene(sceneToLoad);
         }
+        */
 
-        else if (state == BattleState.WIN)
+        if (state == BattleState.WIN)
         {
             for(int i = 0; i <= 18; i++) // re updates the count of all inventory items after the battle is over
             {
@@ -409,8 +421,11 @@ public class BattleManager : MonoBehaviour
             }
             dialogueText.text = "You've defeated " + enemyUnit.unitName + "!";
             yield return new WaitForSeconds(1.25f);
-            dialogueText.text = "You've gained " + enemyUnit.exp + " EXP";
-            yield return new WaitForSeconds(1.25f);
+            if(enemyUnit.exp > 0)
+            {
+                dialogueText.text = "You've gained " + enemyUnit.exp + " EXP";
+                yield return new WaitForSeconds(1.25f);
+            }
             if(enemyUnit.cash > 0)
             {
                 dialogueText.text = "You've received $" + enemyUnit.cash + "!";
@@ -431,6 +446,10 @@ public class BattleManager : MonoBehaviour
             {
                 dialogueText.text = "You leveled to " + (PlayerPrefs.GetInt("playerlevel") + 1) + "!";
                 yield return new WaitForSeconds(1.5f);
+            }
+            if (textAftBattle)
+            {
+                PlayerPrefs.SetInt("spawnText", textAftBattle ? 1 : 0);
             }
             levelSys.AddExp(enemyUnit.exp);
             if (PlayerPrefs.GetInt("encounter") !=0)

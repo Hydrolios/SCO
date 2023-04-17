@@ -928,12 +928,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5781220071371349390, guid: 203bd8767a351c14084b330b2b96af03, type: 3}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: aftBattle_Diag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: playerPosition.x
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: playerPosition.y
       value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: aftBattle_lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: aftBattle_lines.Array.data[0]
+      value: Well done! You've beaten me.
       objectReference: {fileID: 0}
     - target: {fileID: 1151366177237767934, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: m_RootOrder

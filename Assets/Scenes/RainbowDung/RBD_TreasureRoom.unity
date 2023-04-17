@@ -940,6 +940,8 @@ MonoBehaviour:
   chest_id: 0
   npc_id: 0
   sceneToLoad: 
+  repeatDiag: 0
+  diagV2: 0
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
@@ -4274,6 +4276,8 @@ MonoBehaviour:
   chest_id: 0
   npc_id: 0
   sceneToLoad: RBDCombatShade
+  repeatDiag: 0
+  diagV2: 0
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
@@ -4325,13 +4329,15 @@ MonoBehaviour:
     lines: []
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
-  playerRef: {fileID: 0}
+  playerRef: {fileID: 1253318728}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
   chest_id: 0
   npc_id: 0
   sceneToLoad: 
+  repeatDiag: 0
+  diagV2: 0
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
