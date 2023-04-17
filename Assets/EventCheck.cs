@@ -24,4 +24,10 @@ public class EventCheck : MonoBehaviour
         shadeKilled = PlayerPrefs.GetInt("shadeKilled") != 0;
     }
 
+    void Start()
+    {
+        // Call OnSceneLoaded manually to update state when scene is reloaded or refreshed
+        OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+    }
+
 }

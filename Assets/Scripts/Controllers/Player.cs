@@ -79,22 +79,28 @@ public class Player : MonoBehaviour
             Debug.Log("Position was from a load");
             xPos = PlayerPrefs.GetFloat("x");
             yPos = PlayerPrefs.GetFloat("y");
-            currentHealth = PlayerPrefs.GetInt("savedHP");
-            currentMana = PlayerPrefs.GetInt("savedMP");
-            PlayerPrefs.SetInt("playerHPnow", currentHealth);
-            PlayerPrefs.SetInt("playerMPnow", currentMana);
+            
             healthBar.SetHealth();
             Vector2 loadPos = new Vector2(xPos, yPos);
             transform.position = loadPos;
             loadGame = false;
             //Player stats
+            PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("savedMaxHP"));
+            PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("savedMaxMP"));
+            currentHealth = PlayerPrefs.GetInt("savedHP");
+            currentMana = PlayerPrefs.GetInt("savedMP");
+            PlayerPrefs.SetInt("playerHPnow", currentHealth);
+            PlayerPrefs.SetInt("playerMPnow", currentMana);
             PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("Savedplayerattack"));
             PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("Savedplayersol"));
             PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("Savedplayerrad"));
             PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("Savedplayerenx"));
             PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("Savedplayerchr"));
             PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("cash"));
-            //Player progression
+            PlayerPrefs.SetInt("exp", PlayerPrefs.GetInt("saveEXP"));
+            PlayerPrefs.SetInt("playerlevel", PlayerPrefs.GetInt("saveplevel"));
+            PlayerPrefs.SetInt("exptolevel", PlayerPrefs.GetInt("saveEXPlevel"));
+            //Players story progression
             PlayerPrefs.SetInt("shadeKilled", PlayerPrefs.GetInt("shadeSave", 0));
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene

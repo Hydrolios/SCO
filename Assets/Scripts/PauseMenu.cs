@@ -60,20 +60,25 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.SetInt("ActiveScene", activeScene);
         PlayerPrefs.SetFloat("x", playerposition.x);
         PlayerPrefs.SetFloat("y", playerposition.y);
-        PlayerPrefs.SetInt("savedHP", PlayerPrefs.GetInt("playerHPnow"));
-        PlayerPrefs.SetInt("savedMP", PlayerPrefs.GetInt("playerMPnow"));
         InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
         inventoryManager.SaveInventory();
         Debug.Log("Position x: " + PlayerPrefs.GetFloat("x") + " Position y: " + PlayerPrefs.GetFloat("y"));
         Debug.Log("Savedgame");
         //Player stats
+        PlayerPrefs.SetInt("savedMaxHP", PlayerPrefs.GetInt("playerHPMax"));
+        PlayerPrefs.SetInt("savedMaxMP", PlayerPrefs.GetInt("playerMPMax"));
+        PlayerPrefs.SetInt("savedHP", PlayerPrefs.GetInt("playerHPnow"));
+        PlayerPrefs.SetInt("savedMP", PlayerPrefs.GetInt("playerMPnow"));
         PlayerPrefs.SetInt("Savedplayerattack", PlayerPrefs.GetInt("playerattack"));
         PlayerPrefs.SetInt("Savedplayersol", PlayerPrefs.GetInt("playersol"));
         PlayerPrefs.SetInt("Savedplayerrad", PlayerPrefs.GetInt("playerrad"));
         PlayerPrefs.SetInt("Savedplayerenx", PlayerPrefs.GetInt("playerenx"));
         PlayerPrefs.SetInt("Savedplayerchr", PlayerPrefs.GetInt("playerchr"));
         PlayerPrefs.SetInt("cash", PlayerPrefs.GetInt("currentcash"));
-        //Story progression
+        PlayerPrefs.SetInt("saveEXP", PlayerPrefs.GetInt("exp"));
+        PlayerPrefs.SetInt("saveplevel", PlayerPrefs.GetInt("playerlevel"));
+        PlayerPrefs.SetInt("saveEXPlevel", PlayerPrefs.GetInt("exptolevel"));
+        //Players story progression
         PlayerPrefs.SetInt("shadeSave", PlayerPrefs.GetInt("shadeKilled", 0));
         PlayerPrefs.Save();
 
