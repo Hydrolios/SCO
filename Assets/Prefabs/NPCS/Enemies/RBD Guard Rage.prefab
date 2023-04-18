@@ -153,8 +153,8 @@ MonoBehaviour:
   damagedealt: 0
   minDmg: 0
   maxDmg: 0
-  maxHP: 20
-  currentHP: 20
+  maxHP: 30
+  currentHP: 30
   maxMP: 0
   currentMP: 0
   def: 0

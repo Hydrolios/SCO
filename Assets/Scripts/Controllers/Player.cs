@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     public bool openedUIShop = false;
     public bool openedUIStats = false;
     public bool openedDialog = false;
+    public bool fadeINrestriction = false;
     public bool textReq; //for trigger text dialogue in spawning in a scene
     static int healthPool;
     public int currentHealth;
@@ -80,7 +81,7 @@ public class Player : MonoBehaviour
             xPos = PlayerPrefs.GetFloat("x");
             yPos = PlayerPrefs.GetFloat("y");
             
-            healthBar.SetHealth();
+            
             Vector2 loadPos = new Vector2(xPos, yPos);
             transform.position = loadPos;
             loadGame = false;
@@ -101,8 +102,11 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("playerlevel", PlayerPrefs.GetInt("saveplevel"));
             PlayerPrefs.SetInt("exptolevel", PlayerPrefs.GetInt("saveEXPlevel"));
             //Players story progression
+            PlayerPrefs.SetInt("learnedrage", PlayerPrefs.GetInt("saveRage", 0));
             PlayerPrefs.SetInt("shadeKilled", PlayerPrefs.GetInt("shadeSave", 0));
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
+            healthBar.SetHealth();
+            manaBar.SetHealth();
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.LoadInventory();
             Time.timeScale = 1f;
@@ -112,15 +116,30 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(DialogueManager.Instance.ShowDialogueV2(dialogue, textReq));
             textReq = false;
+            fadeINrestriction = true;
             PlayerPrefs.SetInt("spawnText", (loadGame ? 1 : 0));
         }
-        if(PlayerPrefs.HasKey("BattleReward"))
+        else // if no text is required, there will be a fade in for scenes
+        {
+            StartCoroutine(FadeIN());
+
+        }
+        if(PlayerPrefs.HasKey("BattleReward")) // if there was a battle reward, add it to the inventory
         {
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.Reward();
         }
     }
 
+    public IEnumerator FadeIN()
+    {
+
+        fadeINrestriction = false;
+        yield return new WaitForSeconds(1f);
+        fadeINrestriction = true;
+
+
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.C)) //debugger key for console
@@ -220,6 +239,9 @@ public class Player : MonoBehaviour
 
     public void HandleUpdate() // code to move the player in 1 of eight directions, and adjust the speed of the player
     {
+        if (!fadeINrestriction)
+            return;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 

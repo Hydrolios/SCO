@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
     {
         playerRef = player.GetComponent<Player>();
 
-        if (Input.GetKeyDown(KeyCode.Escape) && (playerRef.openedDialog == false) && (playerRef.openedUIInven == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
+        if (Input.GetKeyDown(KeyCode.Escape) && (playerRef.fadeINrestriction == true) && (playerRef.openedDialog == false) && (playerRef.openedUIInven == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
         {
             if (GameIsPaused && (playerRef.openedUIPause == true))             
             {
@@ -78,7 +78,9 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.SetInt("saveEXP", PlayerPrefs.GetInt("exp"));
         PlayerPrefs.SetInt("saveplevel", PlayerPrefs.GetInt("playerlevel"));
         PlayerPrefs.SetInt("saveEXPlevel", PlayerPrefs.GetInt("exptolevel"));
+
         //Players story progression
+        PlayerPrefs.SetInt("saveRage", PlayerPrefs.GetInt("learnedrage"));
         PlayerPrefs.SetInt("shadeSave", PlayerPrefs.GetInt("shadeKilled", 0));
         PlayerPrefs.Save();
 
@@ -91,7 +93,6 @@ public class PauseMenu : MonoBehaviour
             playerRef.sceneTransitioned = false;
             playerRef.openedUIPause = false;
             GameIsPaused = false;
-            StartCoroutine(LoadNewScene(PlayerPrefs.GetInt("ActiveScene")));
             playerRef.loadGame = true;
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.LoadInventory();
@@ -105,6 +106,7 @@ public class PauseMenu : MonoBehaviour
             PlayerPrefs.SetInt("load", (playerRef.loadGame ? 1 : 0));
             Debug.Log("player reference of boolean load game: " + playerRef.loadGame);
             Time.timeScale = 1f;
+            StartCoroutine(LoadNewScene(PlayerPrefs.GetInt("ActiveScene")));
         }
         else
         {

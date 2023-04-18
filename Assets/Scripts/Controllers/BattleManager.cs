@@ -403,6 +403,13 @@ public class BattleManager : MonoBehaviour
                 }    
 
             }
+            if(tutorial)
+            {
+                PlayerPrefs.SetInt("playerHPMax", 10);
+                PlayerPrefs.SetInt("playerHPnow", 10);
+                PlayerPrefs.SetInt("playerMPMax", 10);
+                PlayerPrefs.SetInt("playerMPnow", 10);
+            }
             
             if (enemyUnit.unitName == "Shade")
             {

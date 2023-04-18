@@ -33,6 +33,7 @@ public class NPCController : MonoBehaviour, Interactable
     public bool item;
     public bool item_inf;
     public bool item_battle;
+    public bool battle;
     public bool sceneChangeReq; // check if a scene change is required 
     public Vector2 playerPosition;
     public VectorValue playerStorage;
@@ -46,6 +47,13 @@ public class NPCController : MonoBehaviour, Interactable
             PlayerPrefs.SetInt("BattleReward", item_id);
 
         }
+
+        if(battle)
+        {
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            inventoryManager.SaveInventoryScene();
+        }
+
 
         if (elder)
         {

@@ -149,7 +149,7 @@ MonoBehaviour:
   isPlayer: 0
   unitName: Guard
   unitLevel: 2
-  attack: 3
+  attack: 2
   damagedealt: 0
   minDmg: 0
   maxDmg: 0

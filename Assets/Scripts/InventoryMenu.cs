@@ -21,7 +21,7 @@ public class InventoryMenu : MonoBehaviour
     {
         
         playerRef = player.GetComponent<Player>();
-        if (Input.GetKeyDown(KeyCode.I) && (playerRef.openedDialog == false) && (playerRef.openedUIPause == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
+        if (Input.GetKeyDown(KeyCode.I) && (playerRef.fadeINrestriction == true) && (playerRef.openedDialog == false) && (playerRef.openedUIPause == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
         {
             Text curcash = InventoryMenuUI.transform.Find("Cash").GetComponent<Text>();
             curcash.text = "$" + PlayerPrefs.GetInt("currentcash");
