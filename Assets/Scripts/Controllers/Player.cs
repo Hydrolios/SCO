@@ -146,40 +146,7 @@ public class Player : MonoBehaviour
         {
             //ItemList itemList = FindObjectOfType<ItemList>();
             Debug.Log("Debug Log:");
-            Debug.Log(PlayerPrefs.GetInt("shadeKilled"));
-            PlayerPrefs.SetInt("shadeKilled", 0);
-            /*for (int i = 0; i <= 18; i++) // loads in the saved inventory with the playerprefs
-            {
-                int id = PlayerPrefs.GetInt("InventorySlotScene" + i + "ID", -1);
-                int count = PlayerPrefs.GetInt("InventorySlotScene" + i + "Count", 0);
-                Items item = null;
-
-                for (int j = 0; j < itemList.items.Length; j++)
-                {
-                    if (itemList.items[j].id == id)
-                    {
-
-                        item = itemList.items[j];
-                        //Debug.Log(item.itemName + " " + count);
-                    }
-                    if (item != null)
-                    {
-                        break;
-                    }
-                }
-                if (item != null && item.equipType == EquipmentType.Weapon) //check if its a consumable
-                {
-                    Debug.Log("Position of item is in " + i);
-
-
-                }
-
-
-            }*/
-            //TakeDamage(2);
-            //Debug.Log("player hp now:" + PlayerPrefs.GetInt("playerHPnow"));
-            //Debug.Log("player hp max:" + PlayerPrefs.GetInt("playerHPMax"));
-            //Debug.Log("player level:" + PlayerPrefs.GetInt("playerlevel"));
+            PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") +5);
 
         }
         else if (Input.anyKey) //used to adjust size of interactable radius in case player opens a UI next to another interactable, this is to prevent overlap

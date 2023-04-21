@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608d9e0663e00134abc0047fde73658b, type: 3}
+  m_Name: Leather Cuirass
+  m_EditorClassIdentifier: 
+  itemName: Leather Cuirass
+  type: 0
+  actionType: 0
+  equipType: 1
+  consumeType: 2
+  id: 5
+  hp: 2
+  mp: 0
+  def: 1
+  att: 0
+  rad: 0
+  enx: 0
+  sol: 2
+  chr: 0
+  buycost: 18
+  sellcost: 0
+  desc: A regular leather cuirass.  There's a funky smell to it.
+  range: {x: 5, y: 4}
+  stackable: 0
+  skillName: []
+  skillLevel: 
+  skillElement: []
+  skillPower: []
+  image: {fileID: 4866472382579881605, guid: 1ef9d8135283f1f4ba0c286e9dc4885d, type: 3}
