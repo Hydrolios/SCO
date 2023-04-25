@@ -380,8 +380,9 @@ public class InventoryManager : MonoBehaviour
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
                 PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") - itemInSlot.item.enx);
                 PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") - itemInSlot.item.chr);
-                Destroy(selectedItem.gameObject);
-                SpawnNewItem(selectedItem.item, slot);
+                Destroy(selectedItem.gameObject); // deletes the new item from inventory
+                Destroy(itemInSlot.gameObject); // deletes the item in the weapon slot
+                SpawnNewItem(selectedItem.item, slot); //adds the new item into the weapon slot
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -412,8 +413,9 @@ public class InventoryManager : MonoBehaviour
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
                 PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") - itemInSlot.item.enx);
                 PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") - itemInSlot.item.chr);
-                Destroy(selectedItem.gameObject);
-                SpawnNewItem(selectedItem.item, slot);
+                Destroy(selectedItem.gameObject); // deletes the new item from inventory
+                Destroy(itemInSlot.gameObject); // deletes the item in the weapon slot
+                SpawnNewItem(selectedItem.item, slot); //adds the new item into the weapon slot
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -444,8 +446,9 @@ public class InventoryManager : MonoBehaviour
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
                 PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") - itemInSlot.item.enx);
                 PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") - itemInSlot.item.chr);
-                Destroy(selectedItem.gameObject);
-                SpawnNewItem(selectedItem.item, slot);
+                Destroy(selectedItem.gameObject); // deletes the new item from inventory
+                Destroy(itemInSlot.gameObject); // deletes the item in the weapon slot
+                SpawnNewItem(selectedItem.item, slot); //adds the new item into the weapon slot
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -459,8 +462,10 @@ public class InventoryManager : MonoBehaviour
         {
             InventorySlot slot = wepEquip;
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>(); //checks if equip slot is occupied
+            Debug.Log(itemInSlot);
             if (itemInSlot == null)
             {
+                Debug.Log("No equipped weapon, adding weapon");
                 SpawnNewItem(selectedItem.item, slot);
                 
 
@@ -473,14 +478,16 @@ public class InventoryManager : MonoBehaviour
             }
             else
             {
-                AddItem(itemInSlot.item);
+                Debug.Log("Has equipped weapon, taking off weapon");
+                AddItem(itemInSlot.item); // adds the equipped item into inventory
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - itemInSlot.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - itemInSlot.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
                 PlayerPrefs.SetInt("playerenx", PlayerPrefs.GetInt("playerenx") - itemInSlot.item.enx);
                 PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") - itemInSlot.item.chr);
-                Destroy(selectedItem.gameObject);
-                SpawnNewItem(selectedItem.item, slot);
+                Destroy(selectedItem.gameObject); // deletes the new item from inventory
+                Destroy(itemInSlot.gameObject); // deletes the item in the weapon slot
+                SpawnNewItem(selectedItem.item, slot); //adds the new item into the weapon slot
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);

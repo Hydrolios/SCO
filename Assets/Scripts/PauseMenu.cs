@@ -15,18 +15,33 @@ public class PauseMenu : MonoBehaviour
     {
         playerRef = player.GetComponent<Player>();
 
-        if (Input.GetKeyDown(KeyCode.Escape) && (playerRef.fadeINrestriction == true) && (playerRef.openedDialog == false) && (playerRef.openedUIInven == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
+        if (Input.GetKeyDown(KeyCode.Escape) && GameObject.Find("BattleManager") != null)
         {
-            if (GameIsPaused && (playerRef.openedUIPause == true))             
+            Debug.Log("Found battlemanager");
+            if (GameIsPaused && (playerRef.openedUIPause == true))
             {
-                Debug.Log("Stats UI is: " + playerRef.openedUIStats);
                 playerRef.openedUIPause = false;
                 Resume();
                 Debug.Log("Pause Close");
             }
             else if (playerRef.openedUIPause == false)
             {
-                Debug.Log("Stats UI is: " + playerRef.openedUIStats);
+                playerRef.openedUIPause = true;
+                Pause();
+                Debug.Log("Pause Open");
+            }
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && (playerRef.fadeINrestriction == true) && (playerRef.openedDialog == false) && (playerRef.openedUIInven == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
+        {
+            if (GameIsPaused && (playerRef.openedUIPause == true))             
+            {
+                playerRef.openedUIPause = false;
+                Resume();
+                Debug.Log("Pause Close");
+            }
+            else if (playerRef.openedUIPause == false)
+            {
                 playerRef.openedUIPause = true;
                 Pause();
                 Debug.Log("Pause Open");

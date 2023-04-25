@@ -910,6 +910,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1023408862677802633, guid: 3ff7603860ad95c4692292e8b4362038, type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 6046456739436440389, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
     - target: {fileID: 2116560345592753698, guid: 3ff7603860ad95c4692292e8b4362038, type: 3}
       propertyPath: m_Name
       value: PauseMenuCombat
