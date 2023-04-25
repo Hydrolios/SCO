@@ -23,13 +23,11 @@ public class HoverPopup : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private void ShowMessages()
     {
-        Debug.Log("3");
         HoverManager.onMouseHover(showText, Input.mousePosition);
     }
 
     private IEnumerator StartTimer()
     {
-        Debug.Log("4");
         yield return new WaitForSeconds(0f);
         ShowMessages();
     }
