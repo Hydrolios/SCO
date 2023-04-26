@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public GameObject saveText;
+    public GameObject noloadText;
     public GameObject player;
     public GameObject pauseMenuUI;
     public Player playerRef; // player reference
     public Vector2 playerposition;
-    
+
     private void Update()
     {
         playerRef = player.GetComponent<Player>();
@@ -34,7 +36,7 @@ public class PauseMenu : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && (playerRef.fadeINrestriction == true) && (playerRef.openedDialog == false) && (playerRef.openedUIInven == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
         {
-            if (GameIsPaused && (playerRef.openedUIPause == true))             
+            if (GameIsPaused && (playerRef.openedUIPause == true))
             {
                 playerRef.openedUIPause = false;
                 Resume();
@@ -47,7 +49,7 @@ public class PauseMenu : MonoBehaviour
                 Debug.Log("Pause Open");
             }
         }
-      
+
     }
 
     public void Resume()
@@ -71,6 +73,7 @@ public class PauseMenu : MonoBehaviour
     {
         //When we save we want to take the position and we will load it as the starting position as well as scene
         playerposition = playerRef.transform.position;
+        StartCoroutine(MoveText());
         int activeScene = SceneManager.GetActiveScene().buildIndex;
         PlayerPrefs.SetInt("ActiveScene", activeScene);
         PlayerPrefs.SetFloat("x", playerposition.x);
@@ -125,6 +128,7 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
+            StartCoroutine(NoLoadTxt());
             Debug.Log("No Save Data");
         }
     }
@@ -141,6 +145,20 @@ public class PauseMenu : MonoBehaviour
 
         asyncOperation.allowSceneActivation = true;
     }
+
+    IEnumerator NoLoadTxt()
+    {
+        noloadText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-625, -500);
+        yield return new WaitForSecondsRealtime(1f);
+        noloadText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-600, 0);
+    }
+    IEnumerator MoveText() // move text on screen to tell user what is going on, saving game, no load found, etc
+    {
+        saveText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-625, -500); //directly influences the X Y in inspector
+        yield return new WaitForSecondsRealtime(1f);
+        saveText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-600, 0);
+    }
+
     public void ExitToMenu()
     {
         playerRef.openedUIPause = false;

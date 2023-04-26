@@ -6414,6 +6414,7 @@ MonoBehaviour:
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -6602,6 +6603,7 @@ MonoBehaviour:
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -9632,6 +9634,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 423499661}
+    - target: {fileID: 3288446544368365660, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4346009573836738423, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9640,6 +9646,46 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 423499661}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672315423984078417, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -285
+      objectReference: {fileID: 0}
     - target: {fileID: 6078329605973782516, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -10848,6 +10894,7 @@ MonoBehaviour:
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -30920,6 +30967,7 @@ MonoBehaviour:
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -32664,6 +32712,7 @@ MonoBehaviour:
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -32838,6 +32887,7 @@ MonoBehaviour:
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
