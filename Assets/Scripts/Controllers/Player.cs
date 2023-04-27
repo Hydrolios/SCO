@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetString("versionText", "V.0.1.15");
         Debug.Log("Player executes");
         ResumeSpeed();
         boxCollider = GetComponent<BoxCollider2D>();

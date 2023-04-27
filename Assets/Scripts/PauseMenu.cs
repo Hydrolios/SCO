@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -10,9 +11,16 @@ public class PauseMenu : MonoBehaviour
     public GameObject noloadText;
     public GameObject player;
     public GameObject pauseMenuUI;
+    public GameObject versionText;
     public Player playerRef; // player reference
     public Vector2 playerposition;
 
+    public void Start()
+    {
+        Text versionTxt = versionText.GetComponent<Text>();
+        versionTxt.text = PlayerPrefs.GetString("versionText");
+        Debug.Log(versionTxt.text);
+    }
     private void Update()
     {
         playerRef = player.GetComponent<Player>();
@@ -56,6 +64,7 @@ public class PauseMenu : MonoBehaviour
     {
         PlayerPrefs.SetFloat("interact_range", 0.6f);
         playerRef.openedUIPause = false;
+        versionText.SetActive(false);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -64,6 +73,7 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         PlayerPrefs.SetFloat("interact_range", 0f);
+        versionText.SetActive(true);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
