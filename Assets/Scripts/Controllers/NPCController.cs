@@ -12,6 +12,9 @@ public class NPCController : MonoBehaviour, Interactable
     public HealthBar hpbar;
     public ManaBar mpbar;
     public Player playerRef;
+    private SpriteRenderer spriteRender;
+    public Sprite closedChestSprite;
+    public Sprite openedChestSprite;
 
     //some stuff for the ability of giving item upon interaction (mainly for things like chest)
     public InventoryManager inventoryManager;
@@ -30,6 +33,7 @@ public class NPCController : MonoBehaviour, Interactable
     public bool elder;
     public bool soldier;
     public bool sleep;
+    public bool chest;
     public bool item;
     public bool item_inf;
     public bool item_battle;
@@ -37,6 +41,20 @@ public class NPCController : MonoBehaviour, Interactable
     public bool sceneChangeReq; // check if a scene change is required 
     public Vector2 playerPosition;
     public VectorValue playerStorage;
+
+    public void Start()
+    {
+        spriteRender = GetComponent<SpriteRenderer>();
+        if (chest && PlayerPrefs.HasKey("ChestOpenedID" + chest_id) && (PlayerPrefs.GetInt("ChestOpenedID" + chest_id) > 0)) // chest has been opened
+        {
+            spriteRender.sprite = openedChestSprite;
+        } 
+        else if(chest) // chest hasn't been opened yet
+        {
+            spriteRender.sprite = closedChestSprite;
+        }
+            
+    }
     public void Interact()
     {
         playerRef.StopSpeed();
@@ -87,17 +105,19 @@ public class NPCController : MonoBehaviour, Interactable
             }
 
         }
-        else if (item && PlayerPrefs.HasKey("ChestOpenedID" + chest_id)) // if its an item and has key, it signifies it is opened
+        else if (item && PlayerPrefs.HasKey("ChestOpenedID" + chest_id) && (PlayerPrefs.GetInt("ChestOpenedID" + chest_id) > 0)) // if its an item and has key, it signifies it is opened
         {
-
+            Debug.Log("chest alr opened");
             StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue2, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
 
         }
         else if (item) // for giving an item, it will set it so chest is opened as a prefab afterwards voiding any more rewards
         {
             PlayerPrefs.SetInt("ChestOpenedID" + chest_id, 1);
+            //Debug.Log(chest_id);
             ReceiveItem(item_id);
             StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
+            spriteRender.sprite = openedChestSprite; //change sprite to opened chest
 
         }
         else if (item_inf)

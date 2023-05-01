@@ -133,21 +133,27 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 0}
+  closedChestSprite: {fileID: -6617760167090312889, guid: 973032c98834a8942a4469403b1a0466, type: 3}
+  openedChestSprite: {fileID: -6487137687727752638, guid: 973032c98834a8942a4469403b1a0466, type: 3}
   inventoryManager: {fileID: 5861313048351347114, guid: 99760292e04d9874fb18c55dab4ac448, type: 3}
   itemList: {fileID: 7372655217861805402, guid: 6c7b1f69099616b46821b2c2bb5f4919, type: 3}
   item_id: 1
   chest_id: 0
   npc_id: 0
   sceneToLoad: 
+  repeatDiag: 0
+  diagV2: 0
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 1
   item: 1
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}

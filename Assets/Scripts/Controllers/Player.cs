@@ -103,6 +103,11 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("playerlevel", PlayerPrefs.GetInt("saveplevel"));
             PlayerPrefs.SetInt("exptolevel", PlayerPrefs.GetInt("saveEXPlevel"));
             //Players story progression
+            for (int i = 0; i < 15; i++) // loading chest states
+            {
+                Debug.Log("chest states loaded");
+                PlayerPrefs.SetInt("ChestOpenedID" + i, PlayerPrefs.GetInt("chestIDState" + i, 0));
+            }
             PlayerPrefs.SetInt("learnedrage", PlayerPrefs.GetInt("saveRage", 0));
             PlayerPrefs.SetInt("shadeKilled", PlayerPrefs.GetInt("shadeSave", 0));
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
@@ -147,7 +152,11 @@ public class Player : MonoBehaviour
         {
             //ItemList itemList = FindObjectOfType<ItemList>();
             Debug.Log("Debug Log:");
-            PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") +5);
+            PlayerPrefs.SetInt("ChestOpenedID2", 0);
+            Debug.Log(PlayerPrefs.GetInt("ChestOpenedID2"));
+
+            //PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") +5);
+
 
         }
         else if (Input.anyKey) //used to adjust size of interactable radius in case player opens a UI next to another interactable, this is to prevent overlap

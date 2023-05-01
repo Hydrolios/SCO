@@ -1536,6 +1536,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 178159125}
+  closedChestSprite: {fileID: 21300000, guid: 2d93fa00388ef394491c9ac1c0aa8748, type: 3}
+  openedChestSprite: {fileID: 21300000, guid: 2d93fa00388ef394491c9ac1c0aa8748, type: 3}
   inventoryManager: {fileID: 1704882406}
   itemList: {fileID: 556639921}
   item_id: 3
@@ -1550,9 +1552,11 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 1
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}

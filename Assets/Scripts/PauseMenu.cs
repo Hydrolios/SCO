@@ -108,6 +108,11 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.SetInt("saveEXPlevel", PlayerPrefs.GetInt("exptolevel"));
 
         //Players story progression
+        for (int i = 0; i < 15; i++) // saving chest states
+        {
+            //Debug.Log("chest states saved");
+            PlayerPrefs.SetInt("chestIDState" + i, PlayerPrefs.GetInt("ChestOpenedID" + i, 0));
+        }
         PlayerPrefs.SetInt("saveRage", PlayerPrefs.GetInt("learnedrage"));
         PlayerPrefs.SetInt("shadeSave", PlayerPrefs.GetInt("shadeKilled", 0));
         PlayerPrefs.Save();

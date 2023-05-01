@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ItemListReturn
       objectReference: {fileID: 0}
+    - target: {fileID: 1855189510, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -276.29996
+      objectReference: {fileID: 0}
     - target: {fileID: 6060777093110243079, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -177,6 +181,10 @@ PrefabInstance:
     - target: {fileID: 9106115792110839371, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AttacksListReturn
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -276.29996
       objectReference: {fileID: 0}
     - target: {fileID: 9106115792718493920, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_Pivot.x
@@ -297,7 +305,7 @@ PrefabInstance:
     - target: {fileID: 9106115792828050351, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6afb5882f3c6c16469785b0ac2976d19, type: 3}
+      objectReference: {fileID: 21300000, guid: 535539c5435d51b428a44efaff2a159e, type: 3}
     - target: {fileID: 9106115793032126979, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

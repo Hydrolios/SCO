@@ -800,14 +800,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1684748263}
-    - target: {fileID: 1855189510, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -268.00003
-      objectReference: {fileID: 0}
-    - target: {fileID: 1855189510, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -298.00003
-      objectReference: {fileID: 0}
     - target: {fileID: 693828017563591551, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1024,26 +1016,6 @@ PrefabInstance:
       propertyPath: mpSlider
       value: 
       objectReference: {fileID: 9106115791973468987}
-    - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 472.03003
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -268.00003
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -298.00027
-      objectReference: {fileID: 0}
     - target: {fileID: 9106115792505491499, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_IsActive
       value: 0
