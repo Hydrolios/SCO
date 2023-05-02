@@ -165,13 +165,13 @@ public class PauseMenu : MonoBehaviour
     {
         noloadText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-625, -500);
         yield return new WaitForSecondsRealtime(1f);
-        noloadText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-600, 0);
+        noloadText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-800, 0);
     }
     IEnumerator MoveText() // move text on screen to tell user what is going on, saving game, no load found, etc
     {
         saveText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-625, -500); //directly influences the X Y in inspector
         yield return new WaitForSecondsRealtime(1f);
-        saveText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-600, 0);
+        saveText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-800, 0);
     }
 
     public void ExitToMenu()

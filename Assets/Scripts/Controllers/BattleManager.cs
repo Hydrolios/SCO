@@ -32,15 +32,18 @@ public class BattleManager : MonoBehaviour
     public Text dialogueText;
     public string sceneToLoad;
     public bool tutorial;
+    public int blockingcounter;
     public int turncounter;
     public int buffcounter;
     public int itemcount;
+    //public int partysize;
 
     public BattleINFO playerHUD;
     public BattleINFO enemyHUD;
 
     public GameObject player;
-    public GameObject rage;
+    public GameObject rageButton;
+    public GameObject blockButton;
     public Vector2 playerPosition;
     public VectorValue playerStorage;
     public NPCManager npcManager;
@@ -67,6 +70,7 @@ public class BattleManager : MonoBehaviour
     {
         turncounter = 0;
         buffcounter = 0;
+        blockingcounter = 0;
         playerClone = Instantiate(playerPrefab);
         playerUnit = playerClone.GetComponent<UnitStats>();
 
@@ -89,16 +93,26 @@ public class BattleManager : MonoBehaviour
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
 
-        yield return new WaitForSeconds(2f);
-        fadeIN.SetActive(false);
-        if (PlayerPrefs.GetInt("learnedrage") != 0)
+        
+        
+        if (PlayerPrefs.GetInt("learnedBlock") != 0) //shows block
         {
-            rage.SetActive(true);
+            blockButton.SetActive(true);
         }
         else
         {
-            rage.SetActive(false);
+            blockButton.SetActive(false);
         }
+        if (PlayerPrefs.GetInt("learnedrage") != 0) //shows rage
+        {
+            rageButton.SetActive(true);
+        }
+        else
+        {
+            rageButton.SetActive(false);
+        }
+        yield return new WaitForSeconds(2f);
+        fadeIN.SetActive(false);
         state = BattleState.PLAYERTURN;
         PlayerTurn();
         
@@ -109,6 +123,13 @@ public class BattleManager : MonoBehaviour
         dialogueText.text = playerUnit.unitName + "'s turn";
     }
 
+    public void OnBlockButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        StartCoroutine(PlayerBlock());
+
+    }
 
     public void OnAttacksButton() //selecting "attacks" open up a list UI 
     {
@@ -238,6 +259,18 @@ public class BattleManager : MonoBehaviour
     }
 
     //player attack sequence
+    IEnumerator PlayerBlock()
+    {
+        turncounter++;
+        state = BattleState.ENEMYTURN;
+        dialogueText.text = playerUnit.unitName + " prepares to block!";
+        //playerBlockAnimation.SetActive(true);
+        playerUnit.blocking = true;
+        blockingcounter = turncounter;
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(EnemyTurn());
+
+    }
     IEnumerator PlayerAttack() //basic attack
     {
         turncounter++;
@@ -305,12 +338,14 @@ public class BattleManager : MonoBehaviour
     IEnumerator PlayerBuffing() // runs the animation and stat changes for the buff skill (currently rage)
     {
         bool usable = playerUnit.useMP(5);
+        // not enough mana to use the buff
         if (!usable)
         {
             dialogueText.text = "You do not have enough MP to use this!";
             yield return new WaitForSeconds(1.5f);
             PlayerTurn();
         }
+        //enough mana to use the buff
         else
         {
             turncounter++;
@@ -337,20 +372,28 @@ public class BattleManager : MonoBehaviour
         PlayerPrefs.DeleteKey("skillele");
         PlayerPrefs.DeleteKey("skillpower");
         PlayerPrefs.DeleteKey("skillname");
-        bool isDead = playerUnit.DealDamage(enemyUnit.attack, enemyUnit.raged);
+        bool isDead = playerUnit.EnemyDealDamage(enemyUnit.attack, playerUnit.blocking);
         
         playerHUD.SetHP(playerUnit.currentHP);
         PlayerPrefs.SetInt("playerHPnow", playerUnit.currentHP);
         PlayerPrefs.SetInt("playerMPnow", playerUnit.currentMP);
         //Debug.Log("player current HP: " + playerUnit.currentHP);
         dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + " and deals " + playerUnit.damagedealt + " damage";
-        if(turncounter >= buffcounter && buffcounter != 0)
+        //checks if the buff duration is over
+        if (turncounter >= buffcounter && buffcounter != 0) 
         {
             playerUnit.raged = false;
             buffcounter = 0;
         }
+        // checks if the block duration is over
+        Debug.Log("Turn: " + turncounter + " Blockcounter: " + blockingcounter);
+        if (turncounter >= blockingcounter && blockingcounter != 0) 
+        {
+            playerUnit.blocking = false;
+            blockingcounter = 0;
+        }
         yield return new WaitForSeconds(1.5f);
-
+        //checks if the unit is dead
         if(isDead)
         {
             state = BattleState.LOSE;

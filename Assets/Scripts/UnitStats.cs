@@ -34,6 +34,7 @@ public class UnitStats : MonoBehaviour
     //inherit traits (essence, some others) will give bonuses to certain stats, e.g. essence = higher att multiplier
     //player will be able to change trait based on gear but NPCS will have inherit and fixed traits
     public bool raged;
+    public bool blocking;
 
     public void Start()
     {
@@ -64,7 +65,29 @@ public class UnitStats : MonoBehaviour
             damagedealt = AttackRoll(dmg) * 2;
             currentHP -= damagedealt;
             Debug.Log(damagedealt);
-   
+        }
+        else
+        {
+            damagedealt = AttackRoll(dmg);
+            currentHP -= damagedealt;
+            Debug.Log(damagedealt);
+
+        }
+
+
+        if (currentHP <= 0)
+            return true;
+        else
+            return false;
+    }
+
+    public bool EnemyDealDamage(int dmg, bool block)
+    {
+        if (block)
+        {
+            damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 0.2f);
+            currentHP -= damagedealt;
+            Debug.Log(damagedealt);
         }
         else
         {

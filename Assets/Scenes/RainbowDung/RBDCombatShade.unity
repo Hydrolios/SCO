@@ -531,6 +531,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724651e5bebc4334c90d063148c9d747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1561459237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8456081799269531778, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+  m_PrefabInstance: {fileID: 9106115791973468986}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1684748263 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
@@ -602,6 +607,14 @@ PrefabInstance:
       propertyPath: playerHUD
       value: 
       objectReference: {fileID: 511311558}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: rageButton
+      value: 
+      objectReference: {fileID: 9106115791973468988}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: blockButton
+      value: 
+      objectReference: {fileID: 1561459237}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: sceneToLoad
       value: RBD_TreasureRoomV2
@@ -800,6 +813,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1684748263}
+    - target: {fileID: 1855189510, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -276.29996
+      objectReference: {fileID: 0}
+    - target: {fileID: 602643451493991640, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1684748263}
+    - target: {fileID: 602643451493991640, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBlockButton
+      objectReference: {fileID: 0}
     - target: {fileID: 693828017563591551, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1016,6 +1041,10 @@ PrefabInstance:
       propertyPath: mpSlider
       value: 
       objectReference: {fileID: 9106115791973468987}
+    - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -276.29996
+      objectReference: {fileID: 0}
     - target: {fileID: 9106115792505491499, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_IsActive
       value: 0
