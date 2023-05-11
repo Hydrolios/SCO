@@ -95,7 +95,7 @@ public class BattleManager : MonoBehaviour
 
         
         
-        if (PlayerPrefs.GetInt("learnedBlock") != 0) //shows block
+        if (PlayerPrefs.GetInt("learnedblock") != 0) //shows block
         {
             blockButton.SetActive(true);
         }
@@ -120,6 +120,7 @@ public class BattleManager : MonoBehaviour
 
     void PlayerTurn()
     {
+        Debug.Log("turn counter is: " + turncounter);
         dialogueText.text = playerUnit.unitName + "'s turn";
     }
 
@@ -372,7 +373,7 @@ public class BattleManager : MonoBehaviour
         PlayerPrefs.DeleteKey("skillele");
         PlayerPrefs.DeleteKey("skillpower");
         PlayerPrefs.DeleteKey("skillname");
-        bool isDead = playerUnit.EnemyDealDamage(enemyUnit.attack, playerUnit.blocking);
+        bool isDead = playerUnit.EnemyDealDamage(enemyUnit.attack, playerUnit.blocking, enemyUnit.unitName, turncounter);
         
         playerHUD.SetHP(playerUnit.currentHP);
         PlayerPrefs.SetInt("playerHPnow", playerUnit.currentHP);

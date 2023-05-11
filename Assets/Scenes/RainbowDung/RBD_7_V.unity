@@ -904,12 +904,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 365143873}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
+      propertyPath: dialogue.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: dialogue2.lines.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
       value: I... I was attacked, there's an intruder in there... I tried my best.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
+      propertyPath: dialogue.lines.Array.data[1]
+      value: Their attacks can really pack a punch, be careful.  Consider blocking
+        some of it.
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: dialogue2.lines.Array.data[0]

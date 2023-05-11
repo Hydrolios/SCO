@@ -42,6 +42,7 @@ public class EnterDoorRBD : MonoBehaviour
         }
         else
         {
+            PlayerPrefs.SetInt("learnedblock", 1);
             playerStorage.initialValue = playerPosition;
             SceneManager.LoadScene(sceneToLoad);
         }

@@ -113,7 +113,8 @@ public class PauseMenu : MonoBehaviour
             //Debug.Log("chest states saved");
             PlayerPrefs.SetInt("chestIDState" + i, PlayerPrefs.GetInt("ChestOpenedID" + i, 0));
         }
-        PlayerPrefs.SetInt("saveRage", PlayerPrefs.GetInt("learnedrage"));
+        PlayerPrefs.SetInt("saveBlock", PlayerPrefs.GetInt("learnedblock", 0));
+        PlayerPrefs.SetInt("saveRage", PlayerPrefs.GetInt("learnedrage", 0));
         PlayerPrefs.SetInt("shadeSave", PlayerPrefs.GetInt("shadeKilled", 0));
         PlayerPrefs.Save();
 

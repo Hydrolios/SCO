@@ -108,6 +108,7 @@ public class Player : MonoBehaviour
                 Debug.Log("chest states loaded");
                 PlayerPrefs.SetInt("ChestOpenedID" + i, PlayerPrefs.GetInt("chestIDState" + i, 0));
             }
+            PlayerPrefs.SetInt("learnedblock", PlayerPrefs.GetInt("saveBlock", 0));
             PlayerPrefs.SetInt("learnedrage", PlayerPrefs.GetInt("saveRage", 0));
             PlayerPrefs.SetInt("shadeKilled", PlayerPrefs.GetInt("shadeSave", 0));
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
@@ -152,8 +153,8 @@ public class Player : MonoBehaviour
         {
             //ItemList itemList = FindObjectOfType<ItemList>();
             Debug.Log("Debug Log:");
-            PlayerPrefs.SetInt("ChestOpenedID2", 0);
-            Debug.Log(PlayerPrefs.GetInt("ChestOpenedID2"));
+            Debug.Log(PlayerPrefs.GetInt("shadeKilled", 0));
+            Debug.Log(PlayerPrefs.GetInt("shadeSave", 0));
 
             //PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") +5);
 

@@ -317,7 +317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -383,7 +383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -449,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1039,6 +1039,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 1253318728}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -1053,12 +1055,84 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+--- !u!1001 &613613269
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1897876093}
+    m_Modifications:
+    - target: {fileID: 2909686603482956034, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 1253318728}
+    - target: {fileID: 2909686603482956034, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: The upcoming battle is a hard one.  Block his heavy hitting attacks!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956035, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_Name
+      value: Tip_Sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 408.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 302.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.038989186
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+--- !u!4 &613613270 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+  m_PrefabInstance: {fileID: 613613269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &771527461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1072,7 +1146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2944,7 +3018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3120,7 +3194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4042,7 +4116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4367,7 +4441,7 @@ MonoBehaviour:
   dialogue:
     lines:
     - '! ! ! ! ! ! '
-    - I can't let you pass
+    - Now who's this pipsqueak, I ain't got time for you
   dialogue2:
     lines: []
   dialogue3:
@@ -4375,6 +4449,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 1253318728}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -4389,9 +4465,11 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -4435,6 +4513,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 1253318728}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -4449,9 +4529,11 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -5297,6 +5379,7 @@ Transform:
   - {fileID: 1648354561}
   - {fileID: 470454598}
   - {fileID: 1517907196}
+  - {fileID: 613613270}
   - {fileID: 771527462}
   - {fileID: 1154141640}
   - {fileID: 1223253718}
@@ -5321,7 +5404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3415436695805063292, guid: 626aa76d097a9e649ba2654ffa2aa10d, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,12 +1,16 @@
 using System.Collections;
+using System.Reflection;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitStats : MonoBehaviour
 {
+    // this script is mainly for dealing damage in combat
+
     public bool isPlayer;
 
     public string unitName;
+    public string[] enemyNames = { "Shade", "Captain Tint" }; // list of enemys with special AI
     public int unitLevel;
 
     public int attack;
@@ -56,9 +60,10 @@ public class UnitStats : MonoBehaviour
 
 
 
-    // check to see if damage has killed an enemy
+    // check to see if damage from the player has killed an enemy 
     public bool DealDamage(int dmg, bool buffed) //will need to adjust this or create a new method to take in elements
     {
+        
 
         if (buffed)
         {
@@ -75,13 +80,75 @@ public class UnitStats : MonoBehaviour
         }
 
 
-        if (currentHP <= 0)
-            return true;
-        else
-            return false;
+        return currentHP <= 0;
     }
 
-    public bool EnemyDealDamage(int dmg, bool block)
+    public bool EnemyDealDamage(int dmg, bool block, string name, int turncounter)
+    {
+    
+        for (int i = 0; i< enemyNames.Length; i++)
+        {
+            if(name == enemyNames[i]) // execute special enemy AI depending on the enemy
+            {
+                Debug.Log(name + " found at inquiry " + i);
+                string methodName = enemyNames[i].Replace(" ", "") + "DealDamage";
+                MethodInfo method = GetType().GetMethod(methodName);
+                method.Invoke(this, new object[] { dmg, block, turncounter });
+                return currentHP <= 0;
+
+            }
+        }
+        // if name is not found, default attack
+        DealDamageDefault(dmg, block);
+        // returns if dead or not after damage dealt
+        return currentHP <= 0;
+
+
+    }
+    public void ShadeDealDamage(int dmg, bool block, int turncounter)
+    {
+        Debug.Log("turncounter is " + turncounter);
+        if(turncounter % 2 == 0) //turn is even, sett damagedealt to be powered
+        {
+            Debug.Log("Powered attack");
+            damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 2f);
+            
+        }
+        if (block)
+        {
+            if (turncounter % 2 == 0) //turn is even
+            {
+                //turn is even so powered attack but block is active so dmg is still reduced
+                damagedealt = Mathf.RoundToInt(damagedealt * 0.2f);
+                currentHP -= damagedealt;
+                Debug.Log(damagedealt);
+            }
+            else
+            {
+                //no power attack but block is active so dmg is reduced
+                damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 0.2f);
+                currentHP -= damagedealt;
+                Debug.Log(damagedealt);
+            }
+            
+        }
+        else // did not block and not an even turn, so do a normal attack
+        {
+            if (turncounter % 2 == 0)
+            {
+                currentHP -= damagedealt;
+                Debug.Log(damagedealt);
+            }
+            else
+            {
+                damagedealt = AttackRoll(dmg);
+                currentHP -= damagedealt;
+                Debug.Log(damagedealt);
+            }
+        }
+        
+    }
+    public bool DealDamageDefault(int dmg, bool block)
     {
         if (block)
         {
@@ -97,11 +164,8 @@ public class UnitStats : MonoBehaviour
 
         }
 
-
-        if (currentHP <= 0)
-            return true;
-        else
-            return false;
+        // returns if dead or not after damage dealt
+        return currentHP <= 0;
     }
 
     public bool useMP(int mp)
@@ -148,11 +212,11 @@ public class UnitStats : MonoBehaviour
 
         if (PlayerPrefs.GetString("skillele") == "Physical" || PlayerPrefs.GetString("skillele") == "Solstice")
         {
-            Debug.Log("skill was physical");
+            //Debug.Log("skill was physical");
             minDmg = 0.85 + (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.01));
             maxDmg = 1.15 + (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.01));
-            Debug.Log("min dmg is " + minDmg);
-            Debug.Log("max dmg is " + maxDmg);
+            //Debug.Log("min dmg is " + minDmg);
+            //Debug.Log("max dmg is " + maxDmg);
 
         }
         
@@ -160,7 +224,7 @@ public class UnitStats : MonoBehaviour
         {
             minDmg = 0.85 * dmg;
             maxDmg = 1.15 * dmg;
-            Debug.Log("attack was non elemental");
+            //Debug.Log("attack was non elemental");
         }
 
         return Mathf.CeilToInt(Random.Range((float)minDmg, (float)maxDmg));
