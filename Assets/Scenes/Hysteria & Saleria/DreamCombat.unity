@@ -392,6 +392,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9106115793914677960, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
   m_PrefabInstance: {fileID: 19392793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &19392798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8456081799269531778, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+  m_PrefabInstance: {fileID: 19392793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &77739152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -416,6 +421,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 387236846}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6046456739436440409, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: enemyHUD
       value: 
       objectReference: {fileID: 19392795}
@@ -427,6 +436,14 @@ PrefabInstance:
       propertyPath: playerHUD
       value: 
       objectReference: {fileID: 19392794}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: rageButton
+      value: 
+      objectReference: {fileID: 19392797}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: blockButton
+      value: 
+      objectReference: {fileID: 19392798}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: enemyPrefab
       value: 

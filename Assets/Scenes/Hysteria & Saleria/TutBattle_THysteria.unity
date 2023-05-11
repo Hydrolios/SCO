@@ -335,6 +335,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ItemListReturn
       objectReference: {fileID: 0}
+    - target: {fileID: 1855189510, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -276.29996
+      objectReference: {fileID: 0}
     - target: {fileID: 6060777093110243079, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -374,6 +378,10 @@ PrefabInstance:
     - target: {fileID: 9106115792110839371, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AttacksListReturn
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -276.29996
       objectReference: {fileID: 0}
     - target: {fileID: 9106115792718493920, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_Pivot.x
@@ -624,6 +632,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9106115793914677960, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
   m_PrefabInstance: {fileID: 913526477}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &913526485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8456081799269531778, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+  m_PrefabInstance: {fileID: 913526477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1610634227 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1855189509, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
@@ -732,6 +745,14 @@ PrefabInstance:
       propertyPath: playerHUD
       value: 
       objectReference: {fileID: 913526480}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: rageButton
+      value: 
+      objectReference: {fileID: 913526484}
+    - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
+      propertyPath: blockButton
+      value: 
+      objectReference: {fileID: 913526485}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: enemyPrefab
       value: 
