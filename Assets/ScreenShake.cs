@@ -1,69 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class ScreenShake : MonoBehaviour
 {
-    // Transform of the GameObject you want to shake
-    private Transform transforming;
 
-    // Desired duration of the shake effect
-    private float shakeDuration = 1.5f;
+    public float shakeAmount = 0.2f;
+    public float shakeDuration = 0.5f;
 
-    // A measure of magnitude for the shake. Tweak based on your preference
-    private float shakeMagnitude = 0.5f;
+    private Vector3 originalPos;
+    public CinemachineVirtualCamera virtualCamera;
 
-    // A measure of how quickly the shake effect should evaporate
-    private float dampingSpeed = 1.0f;
-
-    // The initial position of the GameObject
-    Vector3 initialPosition;
-
-    public bool triggered;
-
-    void Awake()
+    private void Start()
     {
-        if (transforming == null)
+        Debug.Log("Start of screen shake script");
+        virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        originalPos = virtualCamera.transform.localPosition;
+        StartCoroutine(ShakeScreen());
+        /*if (PlayerPrefs.GetInt("tunnel1Shake", 0) == 0)
         {
-            transforming = GetComponent(typeof(Transform)) as Transform;
-        }
+            StartCoroutine(ShakeScreen());
+        }*/
+        
     }
 
-    void OnEnable()
+    IEnumerator ShakeScreen()
     {
-        initialPosition = transforming.localPosition;
-    }
-
-    public void Update()
-    {
-        triggered = PlayerPrefs.GetInt("caveshake") != 0;
-        if (shakeDuration > 0)
+        PlayerPrefs.SetInt("tunnel1Shake", 1);
+        yield return new WaitForSeconds(0.25f);
+        Debug.Log("shaking");
+        float elapsed = 0f;
+        while (elapsed < shakeDuration)
         {
-            transforming.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
-
-            shakeDuration -= Time.deltaTime * dampingSpeed;
-            Debug.Log("Shake triggering");
+            float x = Random.Range(-1f, 1f) * shakeAmount;
+            float y = Random.Range(-1f, 1f) * shakeAmount;
+            virtualCamera.transform.localPosition = originalPos + new Vector3(x, y, 0f);
+            elapsed += Time.deltaTime;
+            yield return null;
         }
-        else
-        {
-            shakeDuration = 0f;
-            transforming.localPosition = initialPosition;
-            Debug.Log("Shake over");
-        }
-
+        virtualCamera.transform.localPosition = originalPos;
     }
-
-    public void TriggerShake()
-    {
-        if (!triggered)
-        {
-            shakeDuration = 2.0f;
-            triggered = true;
-            PlayerPrefs.SetInt("caveshake", (triggered ? 1 : 0));
-            Debug.Log("shake triggered");
-            
-        }
-    }
-
 
 }

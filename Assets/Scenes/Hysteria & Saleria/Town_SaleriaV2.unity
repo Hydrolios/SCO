@@ -812,6 +812,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 423499661}
     - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
+      propertyPath: fadeOut
+      value: 
+      objectReference: {fileID: 875605768}
+    - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 423499660}
+    - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
       propertyPath: sceneToLoad
       value: Tunnel_Hue_Ent
       objectReference: {fileID: 0}
@@ -2789,6 +2797,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -2803,9 +2813,11 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -24619,6 +24631,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -24633,9 +24647,11 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -30463,6 +30479,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -30477,9 +30495,11 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -31973,6 +31993,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -31987,9 +32009,11 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -32566,6 +32590,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -32580,9 +32606,11 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}

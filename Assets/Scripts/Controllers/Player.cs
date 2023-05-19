@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
             currentHealth = healthPool;
             currentMana = manaPool;
         }
-        else if (loadGame == false)
+        else if (loadGame == false) // player is spawning in from neither a save or a new game
         {
             transform.position = startingPosition.initialValue;
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene

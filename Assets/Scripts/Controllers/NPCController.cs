@@ -58,7 +58,11 @@ public class NPCController : MonoBehaviour, Interactable
     public void Interact()
     {
         playerRef.StopSpeed();
-        if(item_battle)
+        if (sceneChangeReq)
+        {
+            playerStorage.initialValue = playerPosition;
+        }
+        if (item_battle)
         {
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.SaveInventoryScene();
@@ -92,9 +96,10 @@ public class NPCController : MonoBehaviour, Interactable
         }
         else if (soldier) // special case for story progression, some soldiers require a check to unlock other dialogue options
         {
+            
             if (rbdreport)
             {
-                playerStorage.initialValue = playerPosition;
+                
                 StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
 
                 Debug.Log("rbdreported");

@@ -104,6 +104,7 @@ public class BGMusic : MonoBehaviour
 
     private void PlayMusic(AudioClip startAudio, AudioClip loopAudio)
     {
+
         //checking if the audio is the same upon scene transition to continue playing
         if (sceneChanged)
         {
@@ -127,18 +128,13 @@ public class BGMusic : MonoBehaviour
         audioSource.Play();
         currentTrackName = audioSource.clip.ToString();
         Debug.Log("playing audio");
-        
-        
-        
-        
-
-        
         musicPlaying = true;
+
         loopCoroutine = StartCoroutine(PlayLoop(audioSource.clip.length));
         IEnumerator PlayLoop(float length)
         {
             Debug.Log("waiting to loop");
-            yield return new WaitForSeconds(length-0.3f);
+            yield return new WaitForSeconds(length - 0.2f);
             if(sceneChanged)
             {
                 Debug.Log("stopping coroutine");
@@ -153,6 +149,7 @@ public class BGMusic : MonoBehaviour
             audioSource.loop = true;
             audioSource.Play();
         }
+        
     }
     private void StopLoop()
     {
