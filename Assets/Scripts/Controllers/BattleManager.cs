@@ -12,6 +12,8 @@ public class BattleManager : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject AttackListUI;
     public GameObject ItemUI;
+    public GameObject heavyAttackAnimation;
+    public GameObject enemyAttackAnimation;
     public GameObject playerRageAnimation;
     public GameObject playerSlashAnimation;
     public GameObject playerEleRadAnimation;
@@ -374,6 +376,15 @@ public class BattleManager : MonoBehaviour
         PlayerPrefs.DeleteKey("skillpower");
         PlayerPrefs.DeleteKey("skillname");
         bool isDead = playerUnit.EnemyDealDamage(enemyUnit.attack, playerUnit.blocking, enemyUnit.unitName, turncounter);
+        //checks what animation to play
+        if (PlayerPrefs.GetInt("HeavyAttack", 0) == 1)
+        {
+            heavyAttackAnimation.SetActive(true);
+        }
+        else
+        {
+            enemyAttackAnimation.SetActive(true);
+        }
         
         playerHUD.SetHP(playerUnit.currentHP);
         PlayerPrefs.SetInt("playerHPnow", playerUnit.currentHP);
@@ -393,9 +404,13 @@ public class BattleManager : MonoBehaviour
             playerUnit.blocking = false;
             blockingcounter = 0;
         }
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.8f);
+        //turn off all animations
+        heavyAttackAnimation.SetActive(false);
+        enemyAttackAnimation.SetActive(false);
+        yield return new WaitForSeconds(0.7f);
         //checks if the unit is dead
-        if(isDead)
+        if (isDead)
         {
             state = BattleState.LOSE;
             StartCoroutine(ExitCombat());

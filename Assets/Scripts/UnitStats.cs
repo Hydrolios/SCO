@@ -85,7 +85,9 @@ public class UnitStats : MonoBehaviour
 
     public bool EnemyDealDamage(int dmg, bool block, string name, int turncounter)
     {
-    
+        //Resets the value of all checks for special attacks
+        PlayerPrefs.SetInt("HeavyAttack", 0);
+
         for (int i = 0; i< enemyNames.Length; i++)
         {
             if(name == enemyNames[i]) // execute special enemy AI depending on the enemy
@@ -118,6 +120,7 @@ public class UnitStats : MonoBehaviour
         {
             if (turncounter % 2 == 0) //turn is even
             {
+                PlayerPrefs.SetInt("HeavyAttack", 1);
                 //turn is even so powered attack but block is active so dmg is still reduced
                 damagedealt = Mathf.RoundToInt(damagedealt * 0.2f);
                 currentHP -= damagedealt;
@@ -125,6 +128,7 @@ public class UnitStats : MonoBehaviour
             }
             else
             {
+                PlayerPrefs.SetInt("HeavyAttack", 0);
                 //no power attack but block is active so dmg is reduced
                 damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 0.2f);
                 currentHP -= damagedealt;
@@ -136,11 +140,13 @@ public class UnitStats : MonoBehaviour
         {
             if (turncounter % 2 == 0)
             {
+                PlayerPrefs.SetInt("HeavyAttack", 1);
                 currentHP -= damagedealt;
                 Debug.Log(damagedealt);
             }
             else
             {
+                PlayerPrefs.SetInt("HeavyAttack", 0);
                 damagedealt = AttackRoll(dmg);
                 currentHP -= damagedealt;
                 Debug.Log(damagedealt);
@@ -148,6 +154,7 @@ public class UnitStats : MonoBehaviour
         }
         
     }
+
     public bool DealDamageDefault(int dmg, bool block)
     {
         if (block)
