@@ -5348,6 +5348,10 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1183532655}
+    - target: {fileID: 5581948513152003937, guid: 463abbd21201d1b44ade9ae9a9c73575, type: 3}
+      propertyPath: playerStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
     - target: {fileID: 5920964099674320671, guid: 463abbd21201d1b44ade9ae9a9c73575, type: 3}
       propertyPath: m_Name
       value: RBD_Guard_Rage

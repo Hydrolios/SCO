@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject saveText;
+    public GameObject noSaveText;
     public GameObject noloadText;
     public GameObject player;
     public GameObject pauseMenuUI;
@@ -81,6 +82,12 @@ public class PauseMenu : MonoBehaviour
 
     public void SaveGame()
     {
+        if (SceneManager.GetActiveScene().name == "RBD_TreasureRoom")
+        {
+            Debug.Log("Unable to save in this map");
+            StartCoroutine(NoSaveText());
+            return;
+        }
         //When we save we want to take the position and we will load it as the starting position as well as scene
         playerposition = playerRef.transform.position;
         StartCoroutine(MoveText());
@@ -174,7 +181,12 @@ public class PauseMenu : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         saveText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-800, 0);
     }
-
+    IEnumerator NoSaveText() // move text on screen to tell user what is going on, saving game, no load found, etc
+    {
+        noSaveText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-625, -500); //directly influences the X Y in inspector
+        yield return new WaitForSecondsRealtime(1f);
+        noSaveText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-800, 0);
+    }
     public void ExitToMenu()
     {
         playerRef.openedUIPause = false;

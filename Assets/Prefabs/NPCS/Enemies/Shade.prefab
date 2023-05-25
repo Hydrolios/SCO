@@ -148,13 +148,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   unitName: Shade
+  enemyNames:
+  - Shade
+  - Captain Tint
   unitLevel: 5
   attack: 4
   damagedealt: 0
   minDmg: 0
   maxDmg: 0
-  maxHP: 55
-  currentHP: 55
+  maxHP: 45
+  currentHP: 45
   maxMP: 0
   currentMP: 0
   def: 0
@@ -166,3 +169,4 @@ MonoBehaviour:
   chr: 0
   movetutorrage: 0
   raged: 0
+  blocking: 0

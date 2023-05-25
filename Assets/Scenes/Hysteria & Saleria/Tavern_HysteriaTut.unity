@@ -11432,6 +11432,10 @@ PrefabInstance:
       value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 857958465}
+    - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
       propertyPath: uiChecker
       value: 
       objectReference: {fileID: 857958464}
@@ -11443,6 +11447,14 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1658863449}
+    - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
+      propertyPath: playerposition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
+      propertyPath: playerposition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
 --- !u!1001 &1916258491
@@ -11908,6 +11920,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 857958464}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 1
@@ -11922,12 +11936,14 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 1
+  battle: 0
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
-  playerStorage: {fileID: 0}
+  playerStorage: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
 --- !u!1 &2055433020
 GameObject:
   m_ObjectHideFlags: 0

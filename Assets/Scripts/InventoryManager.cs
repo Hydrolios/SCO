@@ -365,6 +365,11 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") + selectedItem.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") + selectedItem.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -372,9 +377,14 @@ public class InventoryManager : MonoBehaviour
                 PlayerPrefs.SetInt("playerchr", PlayerPrefs.GetInt("playerchr") + selectedItem.item.chr);
                 Destroy(selectedItem.gameObject);
             }
-            else
+            else // else is for swapping out equip
             {
                 AddItem(itemInSlot.item);
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") - itemInSlot.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") - itemInSlot.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") - itemInSlot.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") - itemInSlot.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - itemInSlot.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - itemInSlot.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
@@ -383,6 +393,11 @@ public class InventoryManager : MonoBehaviour
                 Destroy(selectedItem.gameObject); // deletes the new item from inventory
                 Destroy(itemInSlot.gameObject); // deletes the item in the weapon slot
                 SpawnNewItem(selectedItem.item, slot); //adds the new item into the weapon slot
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") + selectedItem.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") + selectedItem.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -398,6 +413,11 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") + selectedItem.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") + selectedItem.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -408,6 +428,11 @@ public class InventoryManager : MonoBehaviour
             else
             {
                 AddItem(itemInSlot.item);
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") - itemInSlot.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") - itemInSlot.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") - itemInSlot.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") - itemInSlot.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - itemInSlot.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - itemInSlot.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
@@ -416,6 +441,11 @@ public class InventoryManager : MonoBehaviour
                 Destroy(selectedItem.gameObject); // deletes the new item from inventory
                 Destroy(itemInSlot.gameObject); // deletes the item in the weapon slot
                 SpawnNewItem(selectedItem.item, slot); //adds the new item into the weapon slot
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") + selectedItem.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") + selectedItem.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -431,6 +461,11 @@ public class InventoryManager : MonoBehaviour
             if(itemInSlot == null)
             {
                 SpawnNewItem(selectedItem.item, slot);
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") + selectedItem.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") + selectedItem.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -441,6 +476,11 @@ public class InventoryManager : MonoBehaviour
             else
             {
                 AddItem(itemInSlot.item);
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") - itemInSlot.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") - itemInSlot.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") - itemInSlot.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") - itemInSlot.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - itemInSlot.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - itemInSlot.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
@@ -449,6 +489,11 @@ public class InventoryManager : MonoBehaviour
                 Destroy(selectedItem.gameObject); // deletes the new item from inventory
                 Destroy(itemInSlot.gameObject); // deletes the item in the weapon slot
                 SpawnNewItem(selectedItem.item, slot); //adds the new item into the weapon slot
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") + selectedItem.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") + selectedItem.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -467,8 +512,12 @@ public class InventoryManager : MonoBehaviour
             {
                 Debug.Log("No equipped weapon, adding weapon");
                 SpawnNewItem(selectedItem.item, slot);
-                
 
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") + selectedItem.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") + selectedItem.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -480,6 +529,11 @@ public class InventoryManager : MonoBehaviour
             {
                 Debug.Log("Has equipped weapon, taking off weapon");
                 AddItem(itemInSlot.item); // adds the equipped item into inventory
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") - itemInSlot.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") - itemInSlot.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") - itemInSlot.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") - itemInSlot.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - itemInSlot.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - itemInSlot.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - itemInSlot.item.rad);
@@ -488,6 +542,11 @@ public class InventoryManager : MonoBehaviour
                 Destroy(selectedItem.gameObject); // deletes the new item from inventory
                 Destroy(itemInSlot.gameObject); // deletes the item in the weapon slot
                 SpawnNewItem(selectedItem.item, slot); //adds the new item into the weapon slot
+                //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + selectedItem.item.hp);
+                PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") + selectedItem.item.mp);
+                PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") + selectedItem.item.mp);
                 PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + selectedItem.item.att);
                 PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") + selectedItem.item.sol);
                 PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") + selectedItem.item.rad);
@@ -501,6 +560,11 @@ public class InventoryManager : MonoBehaviour
         selectedItem.count--;
         selectedItem.RefreshCount();
         AddItem(selectedItem.item);
+        //PlayerPrefs.SetInt("playerDEFnow", PlayerPrefs.GetInt("playerDEFnow") + selectedItem.item.hp);
+        PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") - selectedItem.item.hp);
+        PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") - selectedItem.item.hp);
+        PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") - selectedItem.item.mp);
+        PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") - selectedItem.item.mp);
         PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") - selectedItem.item.att);
         PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("playersol") - selectedItem.item.sol);
         PlayerPrefs.SetInt("playerrad", PlayerPrefs.GetInt("playerrad") - selectedItem.item.rad);

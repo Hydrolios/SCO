@@ -4472,7 +4472,7 @@ MonoBehaviour:
   battle: 0
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
-  playerStorage: {fileID: 0}
+  playerStorage: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
 --- !u!1 &1528602761
 GameObject:
   m_ObjectHideFlags: 0

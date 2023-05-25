@@ -1003,6 +1003,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2909686603482956034, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 1485533310}
+    - target: {fileID: 2909686603482956034, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
       propertyPath: dialogue.lines.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1025,11 +1029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 400.5
+      value: 406.5
       objectReference: {fileID: 0}
     - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 304.5
+      value: 299
       objectReference: {fileID: 0}
     - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
       propertyPath: m_LocalPosition.z

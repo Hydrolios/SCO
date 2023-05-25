@@ -623,6 +623,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 1622517212}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -637,9 +639,11 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
+  battle: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -2520,6 +2524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1622517214}
     - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
       propertyPath: uiChecker
       value: 

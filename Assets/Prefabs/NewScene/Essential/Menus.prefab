@@ -905,6 +905,10 @@ PrefabInstance:
       propertyPath: saveload
       value: 
       objectReference: {fileID: 5861313048351347114, guid: 99760292e04d9874fb18c55dab4ac448, type: 3}
+    - target: {fileID: 7679781666042036561, guid: b68a2d7e76796e84d9b7b25f2e966f9c, type: 3}
+      propertyPath: noSaveText
+      value: 
+      objectReference: {fileID: 1983413581750593267}
     - target: {fileID: 8788906784069496904, guid: b68a2d7e76796e84d9b7b25f2e966f9c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1026,5 +1030,10 @@ PrefabInstance:
 --- !u!224 &3288446544368365662 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8788906784994636286, guid: b68a2d7e76796e84d9b7b25f2e966f9c, type: 3}
+  m_PrefabInstance: {fileID: 6078329605042717088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1983413581750593267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5754492800269952851, guid: b68a2d7e76796e84d9b7b25f2e966f9c, type: 3}
   m_PrefabInstance: {fileID: 6078329605042717088}
   m_PrefabAsset: {fileID: 0}
