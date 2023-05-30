@@ -7,6 +7,7 @@ public class InventoryMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject player;
+    public GameObject skillListPrefab;
     public GameObject InventoryMenuUI;
     public GameObject useMenu;
     public GameObject equipMenu;
@@ -80,7 +81,7 @@ public class InventoryMenu : MonoBehaviour
         InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
         itemInfoUI.SetActive(true);
         Transform infoItemPic = transform.Find("Inventory/ItemInfo/FG/ItemPic/Item");
-        if (inventoryManager.selectedItem.item.type == ItemType.Consumable)
+        if (inventoryManager.selectedItem.item.type == ItemType.Consumable) // if the item is a consumable find all the relevant info
         {
             Debug.Log("consumable");
             equipmentinfomenu.SetActive(false);
@@ -99,6 +100,7 @@ public class InventoryMenu : MonoBehaviour
             itemMP.text = "MP: " + inventoryManager.selectedItem.item.mp.ToString();
             itemDesc.text = inventoryManager.selectedItem.item.desc;
         }
+        // if its an equipment and a weapon, find the relevant information
         else if (inventoryManager.selectedItem.item.type == ItemType.Equipment && inventoryManager.selectedItem.item.equipType == EquipmentType.Weapon)
         {
             Debug.Log("Weapon");
@@ -115,6 +117,23 @@ public class InventoryMenu : MonoBehaviour
             Transform infoItemCHR = transform.Find("Inventory/ItemInfo/FG/Weapon/StatValues/CHR");
             Transform infoItemRAD = transform.Find("Inventory/ItemInfo/FG/Weapon/StatValues/RAD");
             Transform infoItemSOL = transform.Find("Inventory/ItemInfo/FG/Weapon/StatValues/SOL");
+            Transform infoItemSkills = transform.Find("Inventory/ItemInfo/FG/Weapon/StatValues/Skills");
+            // remove any additional skillnames from before, keep the first one as it is a placeholder
+            Transform[] childItemSkills = infoItemSkills.GetComponentsInChildren<Transform>();
+            for (int i = 2; i < childItemSkills.Length; i++)
+            {
+                Debug.Log(childItemSkills.Length);
+                GameObject.Destroy(childItemSkills[i].gameObject);
+            }
+            // for each weapon skill, add a SkillList gameobject with the name of the weapon skill and level required
+            for (int j = 0; j < inventoryManager.selectedItem.item.skillName.Length; j++)
+            {
+                GameObject skillListObject = Instantiate(skillListPrefab, infoItemSkills);
+                skillListObject.transform.SetParent(infoItemSkills, false);
+
+                Text skillNameText = skillListObject.GetComponent<Text>();
+                skillNameText.text = "Lvl " + inventoryManager.selectedItem.item.skillLevel[j] + " " + inventoryManager.selectedItem.item.skillName[j];
+            }
             Text itemname = infoItemName.GetComponent<Text>();
             Text itemHP = infoItemHP.GetComponent<Text>();
             Text itemMP = infoItemMP.GetComponent<Text>();
@@ -136,6 +155,7 @@ public class InventoryMenu : MonoBehaviour
             itemRAD.text = "RAD: " + inventoryManager.selectedItem.item.rad.ToString();
             itemSOL.text = "SOL: " + inventoryManager.selectedItem.item.sol.ToString();
         }
+        // if its an equipment and NOT a weapon, find the relevant information
         else if (inventoryManager.selectedItem.item.type == ItemType.Equipment && inventoryManager.selectedItem.item.equipType != EquipmentType.Weapon)
         {
             Debug.Log("Equipment");
