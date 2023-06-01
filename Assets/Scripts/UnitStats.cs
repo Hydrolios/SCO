@@ -175,7 +175,7 @@ public class UnitStats : MonoBehaviour
         return currentHP <= 0;
     }
 
-    public bool useMP(int mp)
+    public bool useMP(int mp) // method for consuming mp to use skills
     {
         if(mp > currentMP)
         {
@@ -184,6 +184,18 @@ public class UnitStats : MonoBehaviour
         else
         {
             currentMP -= mp;
+            return true;
+        }
+    }
+    public bool useHP(int hp) // method for consuming hp to use skills
+    {
+        if (hp > currentHP)
+        {
+            return false;
+        }
+        else
+        {
+            currentHP -= hp;
             return true;
         }
     }

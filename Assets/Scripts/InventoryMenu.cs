@@ -132,7 +132,15 @@ public class InventoryMenu : MonoBehaviour
                 skillListObject.transform.SetParent(infoItemSkills, false);
 
                 Text skillNameText = skillListObject.GetComponent<Text>();
-                skillNameText.text = "Lvl " + inventoryManager.selectedItem.item.skillLevel[j] + " " + inventoryManager.selectedItem.item.skillName[j];
+                if (PlayerPrefs.GetInt("playerlevel") >= inventoryManager.selectedItem.item.skillLevel[j])
+                {
+                    skillNameText.text = "Lvl " + inventoryManager.selectedItem.item.skillLevel[j] + " " + inventoryManager.selectedItem.item.skillName[j];
+                }
+                else // hide name skills but show skill lvl if not unlocked yet (unlocked at stated player level)
+                {
+                    skillNameText.text = "Lvl " + inventoryManager.selectedItem.item.skillLevel[j] + " " + "???";
+                }
+               
             }
             Text itemname = infoItemName.GetComponent<Text>();
             Text itemHP = infoItemHP.GetComponent<Text>();

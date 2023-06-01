@@ -194,28 +194,90 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator WeaponSkillAttack()
     {
-        bool isDead = enemyUnit.DealDamage(playerUnit.attack, playerUnit.raged);
-        state = BattleState.ENEMYTURN;
-        enemyHUD.SetHP(enemyUnit.currentHP);
-        dialogueText.text = playerUnit.unitName + " uses " + PlayerPrefs.GetString("skillname") + " on " + enemyUnit.unitName + " and deals " + enemyUnit.damagedealt + " damage";
-        yield return new WaitForSeconds(0.8f);
-        playerSlashAnimation.SetActive(false);
-        yield return new WaitForSeconds(1.2f);
 
-        //Check if dead
-        if (isDead) //Ends Combat if true
+        if (PlayerPrefs.GetInt("hpcost", 0) > 0) // if there is a required hp usage attached to skill
         {
+            bool usable = playerUnit.useHP(PlayerPrefs.GetInt("hpcost", 0));
+            // not enough health to use the skill
+            if (!usable)
+            {
+                dialogueText.text = "You do not have enough HP to use this!";
+                yield return new WaitForSeconds(1.5f);
+                PlayerTurn();
+            }
+            else
+            {
+                playerHUD.SetHP(playerUnit.currentHP);
+                PlayerPrefs.DeleteKey("hpcost");
+                bool isDead = enemyUnit.DealDamage(playerUnit.attack, playerUnit.raged);
+                enemyHUD.SetHP(enemyUnit.currentHP);
+                dialogueText.text = playerUnit.unitName + " uses " + PlayerPrefs.GetString("skillname") + " on " + enemyUnit.unitName + " and deals " + enemyUnit.damagedealt + " damage";
+                turncounter++;
+                state = BattleState.ENEMYTURN;
 
-            state = BattleState.WIN;
-            StartCoroutine(ExitCombat());
+                yield return new WaitForSeconds(0.8f);
+                playerSlashAnimation.SetActive(false);
+                yield return new WaitForSeconds(1.2f);
 
+                //Check if dead
+                if (isDead) //Ends Combat if true
+                {
+
+                    state = BattleState.WIN;
+                    StartCoroutine(ExitCombat());
+
+
+                }
+                else //Enemy Turn
+                {
+
+                    StartCoroutine(EnemyTurn());
+                }
+            }
 
         }
-        else //Enemy Turn
+        if (PlayerPrefs.GetInt("mpcost", 0) > 0) // if there is a required mp usage attached to skill
         {
+            bool usable = playerUnit.useMP(PlayerPrefs.GetInt("mpcost", 0));
+            // not enough mana to use the skill
+            if (!usable)
+            {
+                dialogueText.text = "You do not have enough MP to use this!";
+                yield return new WaitForSeconds(1.5f);
+                PlayerTurn();
+            }
+            else
+            {
+                playerHUD.SetMP(playerUnit.currentMP);
+                PlayerPrefs.DeleteKey("mpcost");
+                bool isDead = enemyUnit.DealDamage(playerUnit.attack, playerUnit.raged);
+                enemyHUD.SetHP(enemyUnit.currentHP);
+                dialogueText.text = playerUnit.unitName + " uses " + PlayerPrefs.GetString("skillname") + " on " + enemyUnit.unitName + " and deals " + enemyUnit.damagedealt + " damage";
+                turncounter++;
+                state = BattleState.ENEMYTURN;
 
-            StartCoroutine(EnemyTurn());
+                yield return new WaitForSeconds(0.8f);
+                playerSlashAnimation.SetActive(false);
+                yield return new WaitForSeconds(1.2f);
+
+                //Check if dead
+                if (isDead) //Ends Combat if true
+                {
+
+                    state = BattleState.WIN;
+                    StartCoroutine(ExitCombat());
+
+
+                }
+                else //Enemy Turn
+                {
+
+                    StartCoroutine(EnemyTurn());
+                }
+            }
+
         }
+
     }
 
     public void UseItem(int ident) // uses the item selected
@@ -387,8 +449,6 @@ public class BattleManager : MonoBehaviour
         }
         
         playerHUD.SetHP(playerUnit.currentHP);
-        PlayerPrefs.SetInt("playerHPnow", playerUnit.currentHP);
-        PlayerPrefs.SetInt("playerMPnow", playerUnit.currentMP);
         //Debug.Log("player current HP: " + playerUnit.currentHP);
         dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + " and deals " + playerUnit.damagedealt + " damage";
         //checks if the buff duration is over
@@ -451,7 +511,9 @@ public class BattleManager : MonoBehaviour
 
         if (state == BattleState.WIN)
         {
-            for(int i = 0; i <= 18; i++) // re updates the count of all inventory items after the battle is over
+            PlayerPrefs.SetInt("playerHPnow", playerUnit.currentHP);
+            PlayerPrefs.SetInt("playerMPnow", playerUnit.currentMP);
+            for (int i = 0; i <= 18; i++) // re updates the count of all inventory items after the battle is over
             {
                 if(PlayerPrefs.HasKey("TempInventorySlotScene" + i + "ID"))
                 {

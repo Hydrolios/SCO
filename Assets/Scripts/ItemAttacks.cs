@@ -52,18 +52,18 @@ public class ItemAttacks : MonoBehaviour
                 Text buttonText = buttonGO.GetComponentInChildren<Text>();
                 int temp = i; // need this as int i from the loop is not usable in the call for elements
                 buttonText.text = weapon.skillName[i];
-                buttonGO.GetComponent<Button>().onClick.AddListener(() => UseSkill(weapon.skillName[temp], weapon.skillPower[temp], weapon.skillElement[temp]));
+                buttonGO.GetComponent<Button>().onClick.AddListener(() => UseSkill(weapon.skillName[temp], weapon.skillPower[temp], weapon.skillElement[temp], weapon.mpvalue[temp], weapon.hpvalue[temp]));
             }
             
         }
     }
 
-    public void UseSkill(string skillname, float power, string element)
+    public void UseSkill(string skillname, float power, string element, int mpcost, int hpcost)
     {
         if (battleManager.state == BattleState.PLAYERTURN)
         {
             PlayerSkills skill = GetComponentInChildren<PlayerSkills>();
-            skill.AttackSkill(skillname, element, power);
+            skill.AttackSkill(skillname, element, power, mpcost, hpcost);
             battleManager.WeaponSkill();
             Debug.Log("button for the skill was made");
         }

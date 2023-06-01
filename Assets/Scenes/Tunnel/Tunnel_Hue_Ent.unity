@@ -216,11 +216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
-      value: This area is not released yet.
+      value: I've been waiting for you,  I shall guide you through the tunnels
       objectReference: {fileID: 0}
     - target: {fileID: 1350686551215270666, guid: be3ed0751821de64887cd77319efb821, type: 3}
       propertyPath: dialogue.lines.Array.data[1]
-      value: Please wait for future updates!
+      value: Please follow me closely, the tunnel is quite old
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be3ed0751821de64887cd77319efb821, type: 3}

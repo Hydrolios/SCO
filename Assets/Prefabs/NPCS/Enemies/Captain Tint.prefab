@@ -148,8 +148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   unitName: C.Tint
+  enemyNames:
+  - Shade
+  - Captain Tint
   unitLevel: 8
-  attack: 10
+  attack: 6
   damagedealt: 0
   minDmg: 0
   maxDmg: 0
@@ -159,8 +162,11 @@ MonoBehaviour:
   currentMP: 0
   def: 0
   exp: 125
+  cash: 0
   rad: 0
   enx: 0
   sol: 0
   chr: 0
+  movetutorrage: 0
   raged: 0
+  blocking: 0

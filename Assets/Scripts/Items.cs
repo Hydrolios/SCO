@@ -19,6 +19,8 @@ public class Items : ScriptableObject
     public int enx;
     public int sol;
     public int chr;
+    public int mpcost;
+    public int hpcost;
     public int buycost;
     public int sellcost;
     public string desc;
@@ -31,6 +33,8 @@ public class Items : ScriptableObject
     public int[] skillLevel;
     public string[] skillElement;
     public float[] skillPower;
+    public int[] mpvalue;
+    public int[] hpvalue;
 
     [Header("Both")]
     public Sprite image;
