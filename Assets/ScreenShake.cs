@@ -19,7 +19,7 @@ public class ScreenShake : MonoBehaviour
 
     public void ShakeEffect()
     {
-        PlayerPrefs.SetInt("tunnel1Shake", 0);
+        //PlayerPrefs.DeleteKey("tunnel1Shake");
         if (!hasShaken && PlayerPrefs.GetInt("tunnel1Shake", 0) == 0 ) // makes it shake only once, re-entering the scene does not cause shake
         {
             Debug.Log("beginning shake");
@@ -30,7 +30,7 @@ public class ScreenShake : MonoBehaviour
 
     IEnumerator ShakeScreen()
     {
-        //PlayerPrefs.SetInt("tunnel1Shake", 1);
+        PlayerPrefs.SetInt("tunnel1Shake", 1);
         yield return new WaitForSeconds(0.25f);
         Debug.Log("shaking");
         float elapsed = 0f;

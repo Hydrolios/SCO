@@ -3324,9 +3324,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeAmount: 0.4
-  shakeDuration: 3
+  shakeDuration: 2
   playerref: {fileID: 2126561254}
   virtualCamera: {fileID: 0}
+  hasShaken: 0
 --- !u!61 &1752553476
 BoxCollider2D:
   m_ObjectHideFlags: 0
