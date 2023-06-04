@@ -67,7 +67,7 @@ public class BGMusic : MonoBehaviour
     private void PlayMusicForScene(string sceneName)
     {
 
-        switch (sceneName)
+        switch (sceneName) // Groups scenes which uses the same soundtrack
         {
             case "Menu":
                 PlayMusic(menuMusicStart, menuMusicLoop);
@@ -77,6 +77,7 @@ public class BGMusic : MonoBehaviour
             case "Tavern_HysteriaTut":
             case "THysteria_F2_Perm":
             case "Sarah_House":
+            case "Hues_Settlement":
             case "Town_Saleria":
             case "Town_SaleriaV2":
                 PlayMusic(tavern1MusicStart, tavern1MusicLoop);
@@ -86,7 +87,12 @@ public class BGMusic : MonoBehaviour
             case "RBDCombatGuard":
             case "RBDCombatGuardRage":
             case "RBDCombatShade":
+            case "C_TintCombat":
                 PlayMusic(battle1MusicStart, battle1MusicLoop);
+                break;
+            case "Tunnel_Hue_Ent":
+            case "Tunnel_Hue_Middle":
+                PlayMusic(dungeon1MusicStart, dungeon1MusicLoop);
                 break;
             default:
                 if (sceneName.Contains("RBD_"))
