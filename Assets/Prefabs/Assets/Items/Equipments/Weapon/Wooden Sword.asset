@@ -26,13 +26,23 @@ MonoBehaviour:
   enx: 2
   sol: 3
   chr: 0
+  mpcost: 0
+  hpcost: 0
   buycost: 25
   sellcost: 0
   desc: A wooden sword.  Looks pretty blunt.
   range: {x: 5, y: 4}
   stackable: 0
-  skillName: []
-  skillLevel: 
-  skillElement: []
-  skillPower: []
+  skillName:
+  - Cleave
+  - Lethal Strike
+  skillLevel: 0300000005000000
+  skillElement:
+  - Physical
+  - Physical
+  skillPower:
+  - 1.2
+  - 1.5
+  mpvalue: 0200000005000000
+  hpvalue: 0000000003000000
   image: {fileID: 9020653456445061952, guid: 1ef9d8135283f1f4ba0c286e9dc4885d, type: 3}

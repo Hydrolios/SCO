@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 608d9e0663e00134abc0047fde73658b, type: 3}
-  m_Name: Leather Hat
+  m_Name: Rusty Helmet
   m_EditorClassIdentifier: 
-  itemName: Leather Hat
+  itemName: Rusty Helmet
   type: 0
   actionType: 0
   equipType: 0
   consumeType: 2
-  id: 7
-  hp: 1
+  id: 8
+  hp: 2
   mp: 0
   def: 0
   att: 0
-  rad: 1
-  enx: 1
-  sol: 1
+  rad: 0
+  enx: 0
+  sol: 2
   chr: 0
   mpcost: 0
   hpcost: 0
-  buycost: 10
+  buycost: 15
   sellcost: 0
-  desc: A regular leather hat.  Strange fit.
+  desc: A metal helment collecting rust.  Haven't been used in combat for a decade.
   range: {x: 5, y: 4}
   stackable: 0
   skillName: []
@@ -39,4 +39,4 @@ MonoBehaviour:
   skillPower: []
   mpvalue: 
   hpvalue: 
-  image: {fileID: 932478115505313705, guid: 1ef9d8135283f1f4ba0c286e9dc4885d, type: 3}
+  image: {fileID: 21300000, guid: 5bab12a0717cad449b011036c170a7ff, type: 3}

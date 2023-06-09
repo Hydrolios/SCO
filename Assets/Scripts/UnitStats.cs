@@ -229,16 +229,24 @@ public class UnitStats : MonoBehaviour
     public int AttackRoll(int dmg) // future: takes in power of attack (like in pokemon) * base attack by power in percent * stat that influences
     {
 
-        if (PlayerPrefs.GetString("skillele") == "Physical" || PlayerPrefs.GetString("skillele") == "Solstice")
+        if (PlayerPrefs.GetString("skillele") == "Physical")
         {
             //Debug.Log("skill was physical");
-            minDmg = 0.85 + (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.01));
-            maxDmg = 1.15 + (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.01));
+            minDmg = 0.85 * (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.01));
+            maxDmg = 1.15 * (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.01));
             //Debug.Log("min dmg is " + minDmg);
             //Debug.Log("max dmg is " + maxDmg);
 
         }
-        
+        else if (PlayerPrefs.GetString("skillele") == "Solstice")
+        {
+            //Debug.Log("skill was solstice");
+            minDmg = 0.85 * (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.015));
+            maxDmg = 1.15 * (PlayerPrefs.GetFloat("skillpower") * dmg) * (1 + (PlayerPrefs.GetInt("playersol") * 0.015));
+            //Debug.Log("min dmg is " + minDmg);
+            //Debug.Log("max dmg is " + maxDmg);
+        }
+
         else
         {
             minDmg = 0.85 * dmg;
