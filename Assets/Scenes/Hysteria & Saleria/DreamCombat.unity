@@ -140,7 +140,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1855189510, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -276.29996
+      value: -276.29993
+      objectReference: {fileID: 0}
+    - target: {fileID: 258560252346476924, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7763759775960999280, guid: 78c4d8f2b716dcc46a9fb7a2c0e6c689, type: 3}
+    - target: {fileID: 702978000979535200, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 702978000979535200, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 702978000979535200, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.515
+      objectReference: {fileID: 0}
+    - target: {fileID: 702978000979535200, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.014
       objectReference: {fileID: 0}
     - target: {fileID: 6060777093110243079, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchorMax.x
@@ -182,9 +202,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AttacksListReturn
       objectReference: {fileID: 0}
+    - target: {fileID: 9106115792211981817, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9106115792505491496, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -276.29996
+      value: -276.29993
       objectReference: {fileID: 0}
     - target: {fileID: 9106115792718493920, guid: 8459f5f5a2e70814ca91577c610ac508, type: 3}
       propertyPath: m_Pivot.x

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelSys : MonoBehaviour
 {
+    //script responsible for handling how a player levels up
     public int level;
     public int exp;
     public int levelexp;

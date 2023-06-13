@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public enum BattleState { START, WIN, LOSE, PLAYERTURN, ENEMYTURN }
 public class BattleManager : MonoBehaviour
 {
+    // handles most of the interactions within a battle scene
+    /* involvemenet includes changing HUD, calling upon other scripts such as BattleINFO, PlayerSkills, UnitStats
+     * handles all animations and turn states
+     */
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
@@ -336,10 +340,10 @@ public class BattleManager : MonoBehaviour
         StartCoroutine(EnemyTurn());
 
     }
-    IEnumerator PlayerAttack() //basic attack
+    IEnumerator PlayerAttack() //basic attack for the player "slash"
     {
         turncounter++;
-        //Damage enemy
+        //checks if the enemy is dead from the attack
         bool isDead = enemyUnit.DealDamage(playerUnit.attack, playerUnit.raged);
 
         playerSlashAnimation.SetActive(true); // shows slash animation
@@ -437,9 +441,17 @@ public class BattleManager : MonoBehaviour
         PlayerPrefs.DeleteKey("skillele");
         PlayerPrefs.DeleteKey("skillpower");
         PlayerPrefs.DeleteKey("skillname");
-        bool isDead = playerUnit.EnemyDealDamage(enemyUnit.attack, playerUnit.blocking, enemyUnit.unitName, turncounter);
+        PlayerPrefs.DeleteKey("enemyhealed");
+        PlayerPrefs.DeleteKey("enemyhealamt");
+        //need to make consideration for enemy turns being able to heal themselves
+        // as it stands, enemy turn actions can only affect the player
+        bool isDead = playerUnit.EnemyDealDamage(enemyUnit.attack, playerUnit.blocking, enemyUnit.unitName, turncounter, enemyUnit.currentHP, enemyUnit.maxHP);
         //checks what animation to play
-        if (PlayerPrefs.GetInt("HeavyAttack", 0) == 1)
+        if(PlayerPrefs.GetInt("enemyhealed", 0) == 1)
+        {
+            enemyUnit.HealHP(PlayerPrefs.GetInt("enemyhealamt", 0));
+        }
+        else if (PlayerPrefs.GetInt("HeavyAttack", 0) == 1)
         {
             heavyAttackAnimation.SetActive(true);
         }
@@ -449,8 +461,17 @@ public class BattleManager : MonoBehaviour
         }
         
         playerHUD.SetHP(playerUnit.currentHP);
+        enemyHUD.SetHP(enemyUnit.currentHP); // for consideration of enemies being able to heal
         //Debug.Log("player current HP: " + playerUnit.currentHP);
-        dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + " and deals " + playerUnit.damagedealt + " damage";
+        if (PlayerPrefs.GetInt("enemyhealed", 0) == 1)
+        {
+            dialogueText.text = enemyUnit.unitName + " heals for " + PlayerPrefs.GetInt("enemyhealamt", 0);
+        }
+        else
+        {
+            dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + " and deals " + playerUnit.damagedealt + " damage";
+        }
+            
         //checks if the buff duration is over
         if (turncounter >= buffcounter && buffcounter != 0) 
         {

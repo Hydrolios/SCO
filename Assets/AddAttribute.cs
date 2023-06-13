@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AddAttribute : MonoBehaviour
 {
+    // script for assigning stat points in the stats UI
     public int points;
     public GameObject sol;
     public GameObject enx;

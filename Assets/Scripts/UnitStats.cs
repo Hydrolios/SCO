@@ -6,6 +6,8 @@ using UnityEngine;
 public class UnitStats : MonoBehaviour
 {
     // this script is mainly for dealing damage in combat
+    // most of the methods are for enemies as this script mainly handles the players HP/MP
+    // this also includes hp/mp related features for the player such as consumables or skill uses
 
     public bool isPlayer;
 
@@ -83,23 +85,25 @@ public class UnitStats : MonoBehaviour
         return currentHP <= 0;
     }
 
-    public bool EnemyDealDamage(int dmg, bool block, string name, int turncounter)
+    public bool EnemyDealDamage(int dmg, bool block, string name, int turncounter, int enemyhp, int enemymaxhp)
     {
         //Resets the value of all checks for special attacks
         PlayerPrefs.SetInt("HeavyAttack", 0);
-
-        for (int i = 0; i< enemyNames.Length; i++)
+        
+        for (int i = 0; i< enemyNames.Length; i++) 
         {
+
             if(name == enemyNames[i]) // execute special enemy AI depending on the enemy
             {
                 Debug.Log(name + " found at inquiry " + i);
                 string methodName = enemyNames[i].Replace(" ", "") + "DealDamage";
                 MethodInfo method = GetType().GetMethod(methodName);
-                method.Invoke(this, new object[] { dmg, block, turncounter });
+                method.Invoke(this, new object[] { dmg, block, turncounter, enemyhp, enemymaxhp });
                 return currentHP <= 0;
 
             }
         }
+        Debug.Log("name not found");
         // if name is not found, default attack
         DealDamageDefault(dmg, block);
         // returns if dead or not after damage dealt
@@ -107,10 +111,10 @@ public class UnitStats : MonoBehaviour
 
 
     }
-    public void ShadeDealDamage(int dmg, bool block, int turncounter)
+    public void ShadeDealDamage(int dmg, bool block, int turncounter, int currhp, int maxhp)
     {
         Debug.Log("turncounter is " + turncounter);
-        if(turncounter % 2 == 0) //turn is even, sett damagedealt to be powered
+        if(turncounter % 2 == 0) //turn is even, set damagedealt to be powered
         {
             Debug.Log("Powered attack");
             damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 2f);
@@ -141,6 +145,61 @@ public class UnitStats : MonoBehaviour
             if (turncounter % 2 == 0)
             {
                 PlayerPrefs.SetInt("HeavyAttack", 1);
+                currentHP -= damagedealt;
+                Debug.Log(damagedealt);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("HeavyAttack", 0);
+                damagedealt = AttackRoll(dmg);
+                currentHP -= damagedealt;
+                Debug.Log(damagedealt);
+            }
+        }
+        
+    }
+
+    public void CaptainTintDealDamage(int dmg, bool block, int turncounter, int currhp, int maxhp)
+    {
+        if(currhp < Mathf.RoundToInt(maxhp * 0.3f))
+        {
+            Debug.Log("HP is less than 30%, chance to heal is possible");
+            int chanceroll = Random.Range(0, 2);
+            if(chanceroll == 1)
+            {
+                
+                int healamt = Mathf.RoundToInt(Random.Range(maxhp * 0.1f, maxhp * 0.2f));
+                Debug.Log(healamt + " amount healed");
+                //currentHP += healamt;
+                Debug.Log("Captain Tint casts heal and healed");
+                PlayerPrefs.SetInt("enemyhealed", 1);
+                PlayerPrefs.SetInt("enemyhealamt", healamt);
+            }
+            else
+            {
+                if (turncounter % 2 == 0)
+                {
+                    Debug.Log("Heavy attack");
+                    PlayerPrefs.SetInt("HeavyAttack", 1);
+                    damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 2f);
+                    currentHP -= damagedealt;
+                    Debug.Log(damagedealt);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("HeavyAttack", 0);
+                    damagedealt = AttackRoll(dmg);
+                    currentHP -= damagedealt;
+                    Debug.Log(damagedealt);
+                }
+            }
+        }
+        else
+        {
+            if (turncounter % 3 == 0)
+            {
+                PlayerPrefs.SetInt("HeavyAttack", 1);
+                damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 2f);
                 currentHP -= damagedealt;
                 Debug.Log(damagedealt);
             }

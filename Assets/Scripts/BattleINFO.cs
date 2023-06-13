@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BattleINFO : MonoBehaviour
 {
+    //script responsible for handling HP/MP HUD in combat
     public Text nameText;
     public Text levelText;
     public Text hpText;

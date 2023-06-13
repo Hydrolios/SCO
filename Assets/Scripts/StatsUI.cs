@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StatsUI : MonoBehaviour
 {
+    // script for handling user stats with consideration of equipment 
     public static bool GameIsPaused = false;
     public GameObject player;
     public GameObject statUI;

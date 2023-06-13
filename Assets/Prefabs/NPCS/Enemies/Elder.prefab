@@ -148,6 +148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   unitName: Sage
+  enemyNames:
+  - Shade
+  - Captain Tint
   unitLevel: 10
   attack: 1
   damagedealt: 0
@@ -159,10 +162,11 @@ MonoBehaviour:
   currentMP: 0
   def: 0
   exp: 30
-  cash: 0
+  cash: 10
   rad: 0
   enx: 0
   sol: 0
   chr: 0
   movetutorrage: 0
   raged: 0
+  blocking: 0

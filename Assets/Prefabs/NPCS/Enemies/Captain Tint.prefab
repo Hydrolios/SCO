@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  unitName: C.Tint
+  unitName: Captain Tint
   enemyNames:
   - Shade
   - Captain Tint
@@ -162,7 +162,7 @@ MonoBehaviour:
   currentMP: 0
   def: 0
   exp: 125
-  cash: 0
+  cash: 75
   rad: 0
   enx: 0
   sol: 0
