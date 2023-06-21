@@ -146,15 +146,39 @@ public class DialogueManager : MonoBehaviour
     {
         isTyping = true;
         dialogueText.text = "";
-        foreach (var letter in line.ToCharArray())
+        /*string[] splitLines = line.Split('\n'); // Split the line at '\n'
+        foreach (var letter in line.ToCharArray()) // displays text one letter at a time
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
+        }*/
+        string[] splitLines = line.Split(new[] { "\\n" }, StringSplitOptions.None); // Split the line at "\n" and puts each part into an array
+
+        for (int i = 0; i < splitLines.Length; i++)
+        {
+            for (int j = 0; j < splitLines[i].Length; j++) // this loops prints out the text in the array element
+            {
+                if (splitLines[i][j] == '\\' && j + 1 < splitLines[i].Length && splitLines[i][j + 1] == 'n') // replaces and removes the \n
+                {
+                    dialogueText.text += "\n"; // Add a new line if "\\n" is detected
+                    j++; // Skip the 'n' character
+                }
+                else
+                {
+                    dialogueText.text += splitLines[i][j];
+                }
+
+                yield return new WaitForSeconds(1f / lettersPerSecond);
+            }
+
+            if (i < splitLines.Length - 1)
+            {
+                dialogueText.text += "\n"; // Add a new line after each split
+            }
         }
+
         isTyping = false;
         
     }
- 
-
 
 }
