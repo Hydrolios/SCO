@@ -24622,8 +24622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - 'East: Tavern Hysteria '
-    - 'West: Rainbow Dungeon & Hue''s Settlement'
+    - 'EAST : Tavern Hysteria \nWEST : Rainbow Dungeon & Hue''s Settlement'
   dialogue2:
     lines: []
   dialogue3:

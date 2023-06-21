@@ -122,4 +122,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hysteria & Saleria/Sarah_House.unity
     guid: 46247b5a65da6d547a0bf8dc5731c80c
+  - enabled: 1
+    path: Assets/Scenes/Hue's Settlement/Hues_Settlement_AftTint.unity
+    guid: 40ea377727365cd46a987a83e7fe68c7
   m_configObjects: {}

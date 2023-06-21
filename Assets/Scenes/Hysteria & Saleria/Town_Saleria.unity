@@ -6397,6 +6397,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -6411,6 +6413,7 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
@@ -6586,6 +6589,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -6600,6 +6605,7 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
@@ -10877,6 +10883,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -10891,6 +10899,7 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
@@ -30950,6 +30959,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -30964,6 +30975,7 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
@@ -32695,6 +32707,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -32709,6 +32723,7 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0
@@ -32861,8 +32876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - 'East: Tavern Hysteria '
-    - 'West: Rainbow Dungeon & Hue''s Settlement'
+    - 'EAST : Tavern Hysteria \nWEST : Rainbow Dungeon & Hue''s Settlement'
   dialogue2:
     lines: []
   dialogue3:
@@ -32870,6 +32884,8 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   mpbar: {fileID: 0}
   playerRef: {fileID: 423499660}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
   inventoryManager: {fileID: 0}
   itemList: {fileID: 0}
   item_id: 0
@@ -32884,6 +32900,7 @@ MonoBehaviour:
   elder: 0
   soldier: 0
   sleep: 0
+  chest: 0
   item: 0
   item_inf: 0
   item_battle: 0

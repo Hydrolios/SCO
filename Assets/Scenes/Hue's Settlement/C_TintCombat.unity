@@ -768,7 +768,7 @@ PrefabInstance:
       objectReference: {fileID: 4415711921626831681, guid: b606fc3e20790794eb6aa7c854ee7868, type: 3}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: sceneToLoad
-      value: Hues_Settlement
+      value: Hues_Settlement_AftTint
       objectReference: {fileID: 0}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: AttackListUI
@@ -780,11 +780,11 @@ PrefabInstance:
       objectReference: {fileID: 615179190}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: playerPosition.x
-      value: -2
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1151366177237767921, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: playerPosition.y
-      value: 10.5
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1151366177237767934, guid: 94ceea9af19a50242b1b895eb7b94b85, type: 3}
       propertyPath: m_RootOrder

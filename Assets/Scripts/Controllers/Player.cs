@@ -160,6 +160,14 @@ public class Player : MonoBehaviour
 
 
         }
+        else if (Input.GetKeyDown(KeyCode.F1))
+        {
+            Time.timeScale = 3f;
+        }
+        else if (Input.GetKeyDown(KeyCode.F2))
+        {
+            Time.timeScale = 1f;
+        }
         else if (Input.anyKey) //used to adjust size of interactable radius in case player opens a UI next to another interactable, this is to prevent overlap
         {
             interactRad = PlayerPrefs.GetFloat("interact_range");
