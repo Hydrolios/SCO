@@ -69,7 +69,7 @@ public class UnitStats : MonoBehaviour
 
         if (buffed)
         {
-            damagedealt = AttackRoll(dmg) * 2;
+            damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 1.5f);
             currentHP -= damagedealt;
             Debug.Log(damagedealt);
         }

@@ -563,7 +563,7 @@ public class BattleManager : MonoBehaviour
             {
                 dialogueText.text = "YOU DEFEATED ME!!!!!! I WILL TEACH YOU 'RAGE'";
                 yield return new WaitForSeconds(2.5f);
-                dialogueText.text = "USE IT TO DOUBLE YOUR ATTACK FOR YOUR NEXT 3 TURNS!";
+                dialogueText.text = "USE IT TO POWER UP YOUR ATTACKS FOR YOUR NEXT 3 TURNS!";
                 yield return new WaitForSeconds(2.5f);
                 bool learnedrage = true;
                 PlayerPrefs.SetInt("learnedrage", (learnedrage ? 1 : 0));
