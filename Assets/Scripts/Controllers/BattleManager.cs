@@ -559,7 +559,12 @@ public class BattleManager : MonoBehaviour
                 PlayerPrefs.SetInt("shadeKilled", (eventChecker.shadeKilled ? 1 : 0));
                 
             }
-           if (enemyUnit.movetutorrage) // set the variable of rage to true so user can use it and it will show
+            if (enemyUnit.unitName == "Captaint Tint")
+            {
+                eventChecker.fastTravelunlock = true;
+                PlayerPrefs.SetInt("fastTravelUnlocked", (eventChecker.fastTravelunlock ? 1 : 0));
+            }
+            if (enemyUnit.movetutorrage) // set the variable of rage to true so user can use it and it will show
             {
                 dialogueText.text = "YOU DEFEATED ME!!!!!! I WILL TEACH YOU 'RAGE'";
                 yield return new WaitForSeconds(2.5f);

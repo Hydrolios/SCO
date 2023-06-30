@@ -8,6 +8,7 @@ public class EventCheck : MonoBehaviour
     // this script is for managing event updates during scenes to allow for different dialogues or new routes
     public bool shadeKilled;
     public bool rbdreport;
+    public bool fastTravelunlock;
     private void OnEnable() //for handling scene changes
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -20,6 +21,7 @@ public class EventCheck : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        fastTravelunlock = PlayerPrefs.GetInt("fastTravelUnlocked") != 0;
         rbdreport = PlayerPrefs.GetInt("rbdreport") != 0;
         shadeKilled = PlayerPrefs.GetInt("shadeKilled") != 0;
     }

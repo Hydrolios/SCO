@@ -25,6 +25,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject player;
     public Vector2 playerposition;
 
+    public FastTravel ftMenu;
+
     public static DialogueManager Instance { get; private set; }
 
     private void Awake()
@@ -105,7 +107,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     if (battle) //check if its a battle to save previous position and scene otherwise not needed
                     {
-                       
+
                         int activeScene = SceneManager.GetActiveScene().buildIndex;
                         PlayerPrefs.SetInt("PreBattleScene", activeScene);
                         PlayerPrefs.SetFloat("PBx", player.transform.position.x);
@@ -130,11 +132,10 @@ public class DialogueManager : MonoBehaviour
                      * to close the ui, we use the function called 
                      */
                 }
-                else if(expGiver) //used for testing
+                else if (PlayerPrefs.GetInt("ftNPC") != 0)  // pop up window for fast travel window
                 {
-                    Debug.Log("Player level " + levelSys.level + ", Player exp " + levelSys.exp + ", Player exp needed " + levelSys.levelexp);
-                    levelSys.AddExp(50);
-                    Debug.Log("Player level " + levelSys.level + ", Player exp " + levelSys.exp + ", Player exp needed " + levelSys.levelexp);
+                    ftMenu.Selection();
+                    
                 }
             }
         }

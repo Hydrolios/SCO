@@ -33,7 +33,7 @@ public class InventoryMenu : MonoBehaviour
                 Resume();
                 //Debug.Log("Inventory Close");
             }
-            else if (playerRef.openedUIInven == false)
+            else if (playerRef.openedUIInven == false && Time.timeScale != 0f)
             {
                 playerRef.openedUIInven = true;
                 Pause();

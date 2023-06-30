@@ -34,7 +34,7 @@ public class StatsUI : MonoBehaviour
                 Resume();
                 //Debug.Log("Stat window Close");
             }
-            else if (playerRef.openedUIStats == false)
+            else if (playerRef.openedUIStats == false && Time.timeScale != 0f)
             {
                 
                 playerRef.openedUIStats = true;

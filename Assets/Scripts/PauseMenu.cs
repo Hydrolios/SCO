@@ -35,7 +35,7 @@ public class PauseMenu : MonoBehaviour
                 Resume();
                 Debug.Log("Pause Close");
             }
-            else if (playerRef.openedUIPause == false)
+            else if (playerRef.openedUIPause == false && !PlayerPrefs.HasKey("ftNPC"))
             {
                 playerRef.openedUIPause = true;
                 Pause();
@@ -51,7 +51,7 @@ public class PauseMenu : MonoBehaviour
                 Resume();
                 Debug.Log("Pause Close");
             }
-            else if (playerRef.openedUIPause == false)
+            else if (playerRef.openedUIPause == false && !PlayerPrefs.HasKey("ftNPC"))
             {
                 playerRef.openedUIPause = true;
                 Pause();

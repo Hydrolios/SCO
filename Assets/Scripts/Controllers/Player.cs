@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public ManaBar manaBar;
 
+    //public FastTravel SelectionDebug; testing stuff
+
     void Start()
     {
         PlayerPrefs.SetString("versionText", "Alpha V.0.11.5");
@@ -66,6 +68,7 @@ public class Player : MonoBehaviour
             transform.position = new Vector2(-2.5f, -1.5f);
             newGameCheck = false;
             PlayerPrefs.SetInt("newgame", (newGameCheck ? 1 : 0));
+            PlayerPrefs.SetInt("TownSaleria_unlocked", 1);
             currentHealth = healthPool;
             currentMana = manaPool;
         }
@@ -155,6 +158,8 @@ public class Player : MonoBehaviour
             Debug.Log("Debug Log:");
             Debug.Log(PlayerPrefs.GetInt("shadeKilled", 0));
             Debug.Log(PlayerPrefs.GetInt("shadeSave", 0));
+            PlayerPrefs.SetInt("fastTravelUnlocked", 1);
+            //SelectionDebug.Selection();
 
             //PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") +5);
 
