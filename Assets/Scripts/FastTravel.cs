@@ -41,6 +41,7 @@ public class FastTravel : MonoBehaviour
         }
         Time.timeScale = 0f;
         SelectionMenu.SetActive(true);
+        PlayerPrefs.SetFloat("interact_range", 0f);
 
 
     }

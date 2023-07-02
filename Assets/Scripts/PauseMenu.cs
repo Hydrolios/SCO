@@ -45,6 +45,7 @@ public class PauseMenu : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && (playerRef.fadeINrestriction == true) && (playerRef.openedDialog == false) && (playerRef.openedUIInven == false) && (playerRef.openedUIGO == false) && (playerRef.openedUIShop == false) && (playerRef.openedUIStats == false))
         {
+            Debug.Log(PlayerPrefs.HasKey("ftNPC"));
             if (GameIsPaused && (playerRef.openedUIPause == true))
             {
                 playerRef.openedUIPause = false;

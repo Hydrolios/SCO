@@ -8,7 +8,24 @@ public class AreaNameChange : MonoBehaviour
 {
     public GameObject areaname;
     public Player player;
-   
+
+    private void Start()
+    {
+        TextMeshProUGUI areanametxt = areaname.GetComponent<TextMeshProUGUI>();
+        float playerY = player.transform.position.y;
+        if (playerY > 14.5)
+        {
+            Debug.Log("started in north side");
+            areanametxt.text = "Hue's Settlement";
+            
+        }
+        else
+        {
+            Debug.Log("started in south side");
+            areanametxt.text = "Entrance to Hue's Settlement";
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
 

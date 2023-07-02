@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 1643963443}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
-      value: You found a Wooden Sword
+      value: You found a Leather Pants
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252971, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: m_RootOrder
@@ -16212,6 +16212,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 414270654736566284, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 414270654736566284, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 414270654736566284, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 414270654736566284, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 414270654736566284, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 315
+      objectReference: {fileID: 0}
+    - target: {fileID: 414270654736566284, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -392.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 954191196065060645, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 954191196065060645, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 954191196065060645, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 954191196065060645, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 954191196065060645, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 315
+      objectReference: {fileID: 0}
+    - target: {fileID: 954191196065060645, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -362.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327580325687378072, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2522379320062975099, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: playerRef
       value: 
@@ -16312,6 +16364,10 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1584537391}
+    - target: {fileID: 3132219216702342092, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3276448102631167451, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.6039216
@@ -16324,6 +16380,50 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.6039216
       objectReference: {fileID: 0}
+    - target: {fileID: 4168953736452828649, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168953736452828649, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168953736452828649, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808749518670335965, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808749518670335965, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248645509159191716, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248645509159191716, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248645509159191716, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248645509159191716, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248645509159191716, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 525
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248645509159191716, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -362.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7184617063294008023, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.6039216
@@ -16336,7 +16436,33 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.6039216
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7578868692019861808, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578868692019861808, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578868692019861808, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578868692019861808, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578868692019861808, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578868692019861808, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -362.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1327580325687378072, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+    - {fileID: 4168953736452828649, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
 --- !u!1 &692213308 stripped
 GameObject:
@@ -19223,7 +19349,7 @@ PrefabInstance:
       objectReference: {fileID: 1643963443}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
-      value: You found a Wooden Sword
+      value: You found a Leather Cuirass
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252971, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: m_RootOrder
@@ -19311,6 +19437,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1584537392}
+    - target: {fileID: 3288446545312379368, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4346009573836738423, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
