@@ -159,6 +159,7 @@ public class Player : MonoBehaviour
             Debug.Log(PlayerPrefs.GetInt("shadeKilled", 0));
             Debug.Log(PlayerPrefs.GetInt("shadeSave", 0));
             PlayerPrefs.SetInt("fastTravelUnlocked", 1);
+            PlayerPrefs.SetInt("Sunstead_unlocked", 0);
             //SelectionDebug.Selection();
 
             //PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") +5);

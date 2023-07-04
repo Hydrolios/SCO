@@ -16361,9 +16361,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1584537392}
     - target: {fileID: 3057053990975724968, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: fadeOut
+      value: 
+      objectReference: {fileID: 397371098}
+    - target: {fileID: 3057053990975724968, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1584537391}
+    - target: {fileID: 3057053990975724968, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: playerPosition.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3132219216702342092, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_IsActive
       value: 0

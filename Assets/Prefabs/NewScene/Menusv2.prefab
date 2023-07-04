@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 6968730630444838618}
   - component: {fileID: 7184617063294008023}
   m_Layer: 5
-  m_Name: Location1
+  m_Name: TownSaleria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6968730630444838618}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3057053990975724968}
+        m_TargetAssemblyTypeName: FastTravel, Assembly-CSharp
+        m_MethodName: FTSaleriaOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2522379320570810241
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,8 +415,15 @@ MonoBehaviour:
   - {fileID: 3276448102631167451}
   - {fileID: 2447337227318777472}
   - {fileID: 2090117707148911657}
+  fadeOut: {fileID: 0}
   player: {fileID: 0}
   playerRef: {fileID: 0}
+  playerPosition:
+  - {x: 418.5, y: 292.5}
+  - {x: -3.5, y: 26}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  playerStorage: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
 --- !u!114 &8340625726928223051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,7 +461,7 @@ GameObject:
   - component: {fileID: 3523856638830743917}
   - component: {fileID: 2447337227318777472}
   m_Layer: 5
-  m_Name: Location3
+  m_Name: Sunstead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,7 +703,7 @@ GameObject:
   - component: {fileID: 53714370039052305}
   - component: {fileID: 3276448102631167451}
   m_Layer: 5
-  m_Name: Location2
+  m_Name: HuesSettlement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -791,7 +810,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 53714370039052305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3057053990975724968}
+        m_TargetAssemblyTypeName: FastTravel, Assembly-CSharp
+        m_MethodName: FTSettlementOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6069432633202760756
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,7 +835,7 @@ GameObject:
   - component: {fileID: 9082829663813174781}
   - component: {fileID: 2780943389134165811}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HuesSettlement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,7 +901,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Hues Settlement
 --- !u!1 &6162865221632095584
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +980,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Sunstead
 --- !u!1 &8862167520162576415
 GameObject:
   m_ObjectHideFlags: 0
