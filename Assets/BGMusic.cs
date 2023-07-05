@@ -11,6 +11,8 @@ public class BGMusic : MonoBehaviour
     public bool sceneChanged = false;
     public AudioClip tavern1MusicStart;
     public AudioClip tavern1MusicLoop; // Take some rest - xDeviruchi
+    public AudioClip tavern2MusicStart;
+    public AudioClip tavern2MusicLoop; // Pixel Perfect - Lesiakower
     public AudioClip battle1MusicStart;
     public AudioClip battle1MusicLoop; // Decisive Battle - xDeviruchi
     public AudioClip battle2MusicStart;
@@ -77,10 +79,13 @@ public class BGMusic : MonoBehaviour
             case "Tavern_HysteriaTut":
             case "THysteria_F2_Perm":
             case "Sarah_House":
-            case "Hues_Settlement":
             case "Town_Saleria":
             case "Town_SaleriaV2":
                 PlayMusic(tavern1MusicStart, tavern1MusicLoop);
+                break;
+            case "Hues_Settlement":
+            case "Hues_Settlement_AftTint":
+                PlayMusic(tavern2MusicStart, tavern2MusicLoop);
                 break;
             case "TutBattle_THysteria":
             case "DreamCombat":

@@ -563,6 +563,7 @@ public class BattleManager : MonoBehaviour
             {
                 eventChecker.fastTravelunlock = true;
                 PlayerPrefs.SetInt("fastTravelUnlocked", (eventChecker.fastTravelunlock ? 1 : 0));
+                PlayerPrefs.SetInt("HuesSettlement_unlocked", 1);
             }
             if (enemyUnit.movetutorrage) // set the variable of rage to true so user can use it and it will show
             {

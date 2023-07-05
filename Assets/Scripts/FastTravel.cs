@@ -100,8 +100,10 @@ public class FastTravel : MonoBehaviour
 
     IEnumerator FTSaleria()
     {
-        Debug.Log("started Coroutine method");
-        playerRef.StartCoroutine(playerRef.FadeIN());
+        Vector2 moveWindow = SelectionMenu.transform.position;
+        moveWindow.x = 1000f;
+        SelectionMenu.transform.position = moveWindow;
+        fadeOut.SetActive(true);
         playerRef.StopSpeed();
         yield return new WaitForSeconds(1f);
         string sceneToLoad = "Town_SaleriaV2";
@@ -110,7 +112,10 @@ public class FastTravel : MonoBehaviour
     }
     IEnumerator FTSettlement()
     {
-        playerRef.StartCoroutine(playerRef.FadeIN());
+        Vector2 moveWindow = SelectionMenu.transform.position;
+        moveWindow.x = 1000f;
+        SelectionMenu.transform.position = moveWindow;
+        fadeOut.SetActive(true);
         playerRef.StopSpeed();
         yield return new WaitForSeconds(1f);
         string sceneToLoad = "Hues_Settlement_AftTint";

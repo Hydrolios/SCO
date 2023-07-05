@@ -144,6 +144,8 @@ MonoBehaviour:
   sceneChanged: 0
   tavern1MusicStart: {fileID: 8300000, guid: 79f8652c1204cfa43b74ffa8902ed34a, type: 3}
   tavern1MusicLoop: {fileID: 8300000, guid: 79f8652c1204cfa43b74ffa8902ed34a, type: 3}
+  tavern2MusicStart: {fileID: 8300000, guid: cbc1b4466202abf46a81bf3f6b7acddf, type: 3}
+  tavern2MusicLoop: {fileID: 8300000, guid: cbc1b4466202abf46a81bf3f6b7acddf, type: 3}
   battle1MusicStart: {fileID: 8300000, guid: 0e909834fa79b0e49b8df6249f381d20, type: 3}
   battle1MusicLoop: {fileID: 8300000, guid: 0e909834fa79b0e49b8df6249f381d20, type: 3}
   battle2MusicStart: {fileID: 8300000, guid: 5b7d04cd43d7f1e4b9e2507d4f755976, type: 3}

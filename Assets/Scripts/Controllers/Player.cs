@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetString("versionText", "Alpha V.0.11.5");
+        PlayerPrefs.SetString("versionText", "Alpha V.0.12.0");
         Debug.Log("Player executes");
         ResumeSpeed();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -158,8 +158,9 @@ public class Player : MonoBehaviour
             Debug.Log("Debug Log:");
             Debug.Log(PlayerPrefs.GetInt("shadeKilled", 0));
             Debug.Log(PlayerPrefs.GetInt("shadeSave", 0));
-            PlayerPrefs.SetInt("fastTravelUnlocked", 1);
-            PlayerPrefs.SetInt("Sunstead_unlocked", 0);
+            PlayerPrefs.SetInt("HuesSettlement_unlocked", 1);
+            //PlayerPrefs.SetInt("fastTravelUnlocked", 1);
+            //PlayerPrefs.SetInt("Sunstead_unlocked", 0);
             //SelectionDebug.Selection();
 
             //PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") +5);

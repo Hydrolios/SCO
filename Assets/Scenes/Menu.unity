@@ -2073,9 +2073,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 5d74ed7da9799f740af8cdbb79e3a4d5, type: 3}
     - target: {fileID: 3744531271552354734, guid: 33c71d468ebe89443bbd5bec2f4888ad, type: 3}
+      propertyPath: tavern2MusicLoop
+      value: 
+      objectReference: {fileID: 8300000, guid: cbc1b4466202abf46a81bf3f6b7acddf, type: 3}
+    - target: {fileID: 3744531271552354734, guid: 33c71d468ebe89443bbd5bec2f4888ad, type: 3}
       propertyPath: battle2MusicStart
       value: 
       objectReference: {fileID: 8300000, guid: 5b7d04cd43d7f1e4b9e2507d4f755976, type: 3}
+    - target: {fileID: 3744531271552354734, guid: 33c71d468ebe89443bbd5bec2f4888ad, type: 3}
+      propertyPath: tavern2MusicStart
+      value: 
+      objectReference: {fileID: 8300000, guid: cbc1b4466202abf46a81bf3f6b7acddf, type: 3}
     - target: {fileID: 4577400850114222108, guid: 33c71d468ebe89443bbd5bec2f4888ad, type: 3}
       propertyPath: m_Name
       value: Music
