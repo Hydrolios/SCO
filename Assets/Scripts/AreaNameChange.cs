@@ -34,12 +34,12 @@ public class AreaNameChange : MonoBehaviour
             TextMeshProUGUI areanametxt = areaname.GetComponent<TextMeshProUGUI>();
             float playerY = player.transform.position.y;
             // Update the HUD text or perform any other desired actions
-            if (playerY > 14.5)
+            if (playerY < 14.5)
             {
                 Debug.Log("coming from north side");
                 areanametxt.text = "Entrance to Hue's Settlement";
             }
-            else
+            else if (playerY > 14.5)
             {
                 Debug.Log("coming from south side");
                 areanametxt.text = "Hue's Settlement";

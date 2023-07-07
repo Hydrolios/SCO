@@ -125,4 +125,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hue's Settlement/Hues_Settlement_AftTint.unity
     guid: 40ea377727365cd46a987a83e7fe68c7
+  - enabled: 1
+    path: Assets/Scenes/Hue's Settlement/Alabasters_Armory.unity
+    guid: 069a73eb2ee8f27499483dc4c6898dba
   m_configObjects: {}
