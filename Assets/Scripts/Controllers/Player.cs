@@ -160,6 +160,7 @@ public class Player : MonoBehaviour
             Debug.Log(PlayerPrefs.GetInt("shadeSave", 0));
             PlayerPrefs.SetInt("HuesSettlement_unlocked", 1);
             //PlayerPrefs.SetInt("fastTravelUnlocked", 1);
+            //PlayerPrefs.SetInt("fastTravelUnlocked", 1);
             //PlayerPrefs.SetInt("Sunstead_unlocked", 0);
             //SelectionDebug.Selection();
 
