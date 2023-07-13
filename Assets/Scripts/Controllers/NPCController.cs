@@ -39,6 +39,7 @@ public class NPCController : MonoBehaviour, Interactable
     public bool item_battle;
     public bool battle;
     public bool fasttravel;
+    public bool quest;
     public bool sceneChangeReq; // check if a scene change is required 
     public Vector2 playerPosition;
     public VectorValue playerStorage;

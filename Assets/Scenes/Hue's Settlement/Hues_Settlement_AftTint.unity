@@ -498,6 +498,7 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -4730,6 +4731,18 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1584537391}
+    - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
+      propertyPath: sceneToLoad
+      value: Hues_Residence
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
+      propertyPath: playerPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
+      propertyPath: playerPosition.y
+      value: -3.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5691177606743681784, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4999,6 +5012,7 @@ Transform:
   - {fileID: 307824145}
   - {fileID: 1226093514}
   - {fileID: 1851797501}
+  - {fileID: 748119019}
   m_Father: {fileID: 1700911145}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16650,6 +16664,113 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3378b586cb0480041a33a1fdf90fa9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &748119018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748119019}
+  - component: {fileID: 748119021}
+  - component: {fileID: 748119020}
+  m_Layer: 10
+  m_Name: QuestBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748119019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748119018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.98, y: 24.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 630082888}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &748119020
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748119018}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.017310858, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4154601, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &748119021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748119018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df59e29c0a2e8874e8277ea0046a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - Nothing too interesting posted...
+  dialogue2:
+    lines: []
+  dialogue3:
+    lines: []
+  hpbar: {fileID: 0}
+  mpbar: {fileID: 0}
+  playerRef: {fileID: 1584537391}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  itemList: {fileID: 0}
+  item_id: 0
+  chest_id: 0
+  npc_id: 0
+  sceneToLoad: 
+  repeatDiag: 0
+  diagV2: 0
+  shopKeeper: 0
+  expgiver: 0
+  rbdreport: 0
+  elder: 0
+  soldier: 0
+  sleep: 0
+  chest: 0
+  item: 0
+  item_inf: 0
+  item_battle: 0
+  battle: 0
+  fasttravel: 0
+  quest: 0
+  sceneChangeReq: 0
+  playerPosition: {x: 0, y: 0}
+  playerStorage: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!114 &794131160 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1736662261340016161, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
@@ -16779,11 +16900,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7829684146157259304, guid: 9f77a769e521cea4191cf9ded311a8c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.5
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 7829684146157259304, guid: 9f77a769e521cea4191cf9ded311a8c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.5
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 7829684146157259304, guid: 9f77a769e521cea4191cf9ded311a8c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18280,11 +18401,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7004932257930275355, guid: 8df08990527044a4d80b2bbd2a1356de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.5
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 7004932257930275355, guid: 8df08990527044a4d80b2bbd2a1356de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.5
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 7004932257930275355, guid: 8df08990527044a4d80b2bbd2a1356de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18803,11 +18924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6046456739436440387, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.5
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 6046456739436440387, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.5
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 6046456739436440387, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19788,6 +19909,7 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -26547,6 +26669,7 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
@@ -26728,6 +26851,7 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 1
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -31006,6 +31130,7 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
