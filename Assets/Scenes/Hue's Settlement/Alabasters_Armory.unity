@@ -1066,7 +1066,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 3983661106469047707, guid: bec9cab4d5506ff49b1b29e61bc2274f, type: 3}
+  m_Sprite: {fileID: 3746867117194021781, guid: 3e43ed3d2fdf62f4ba7bb7b6f34404ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1147,6 +1147,7 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
@@ -1843,6 +1844,7 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}

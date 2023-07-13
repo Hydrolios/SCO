@@ -137,4 +137,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hue's Settlement/Hues_Residence.unity
     guid: 685fddd5dd9b3834fa344abe0cbffcbc
+  - enabled: 1
+    path: Assets/Scenes/Hue's Settlement/Hues_Stables.unity
+    guid: b6742f3681965d6449ba8b46867b7b60
   m_configObjects: {}

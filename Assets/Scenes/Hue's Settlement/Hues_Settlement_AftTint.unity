@@ -4833,6 +4833,18 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 1584537391}
+    - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
+      propertyPath: sceneToLoad
+      value: Hues_Stables
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
+      propertyPath: playerPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064598615258777169, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
+      propertyPath: playerPosition.y
+      value: -2.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5691177606743681784, guid: b73c49e4362354f4ea2e36a9336c2bc2, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -16904,7 +16916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7829684146157259304, guid: 9f77a769e521cea4191cf9ded311a8c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.5
+      value: 23.25
       objectReference: {fileID: 0}
     - target: {fileID: 7829684146157259304, guid: 9f77a769e521cea4191cf9ded311a8c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18405,7 +18417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7004932257930275355, guid: 8df08990527044a4d80b2bbd2a1356de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.5
+      value: 23.25
       objectReference: {fileID: 0}
     - target: {fileID: 7004932257930275355, guid: 8df08990527044a4d80b2bbd2a1356de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18928,7 +18940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6046456739436440387, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.5
+      value: 23.25
       objectReference: {fileID: 0}
     - target: {fileID: 6046456739436440387, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
       propertyPath: m_LocalPosition.z

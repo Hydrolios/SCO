@@ -85,6 +85,12 @@ public class BGMusic : MonoBehaviour
                 break;
             case "Hues_Settlement":
             case "Hues_Settlement_AftTint":
+            case "Alabasters_Armory":
+            case "Ashes_Alchemy":
+            case "Hues_Hearth":
+            case "Hues_Residence":
+            case "Hues_Stables":
+            case "Scarlets_Residence":
                 PlayMusic(tavern2MusicStart, tavern2MusicLoop);
                 break;
             case "TutBattle_THysteria":

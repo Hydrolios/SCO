@@ -1617,6 +1617,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -8, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -7, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -9, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -1733,6 +1753,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f1aaa0d8a1c9156488b7389991d4cfd6, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 633357e379dcfa94e820031dff54031e, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 2690547bc4783594b9b2a3d795289bde, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 1aea331acccaf0646b26174f83fe3b4b, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: -3235296365834392451, guid: bec9cab4d5506ff49b1b29e61bc2274f, type: 3}
@@ -1748,8 +1772,12 @@ Tilemap:
     m_Data: {fileID: 1416239061969981680, guid: f13b0bfa5aca47a40b6b0724ecff35b3, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 6471472212254446453, guid: 75bf2ec7e7f799045a87ebf72fc7be05, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 9121805384790658422, guid: bec9cab4d5506ff49b1b29e61bc2274f, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 9085428586354082629, guid: bec9cab4d5506ff49b1b29e61bc2274f, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 13
+  - m_RefCount: 15
     m_Data:
       e00: 1
       e01: 0
@@ -1768,7 +1796,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 13
+  - m_RefCount: 15
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
