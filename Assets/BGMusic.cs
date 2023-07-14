@@ -73,6 +73,7 @@ public class BGMusic : MonoBehaviour
         {
             case "Menu":
                 PlayMusic(menuMusicStart, menuMusicLoop);
+                audioSource.volume = 0.025f;
                 break;
             case "Tavern_Hysteria":
             case "Tavern_Hysteria_F2":
@@ -82,6 +83,7 @@ public class BGMusic : MonoBehaviour
             case "Town_Saleria":
             case "Town_SaleriaV2":
                 PlayMusic(tavern1MusicStart, tavern1MusicLoop);
+                audioSource.volume = 0.025f;
                 break;
             case "Hues_Settlement":
             case "Hues_Settlement_AftTint":
@@ -92,6 +94,7 @@ public class BGMusic : MonoBehaviour
             case "Hues_Stables":
             case "Scarlets_Residence":
                 PlayMusic(tavern2MusicStart, tavern2MusicLoop);
+                audioSource.volume = 0.035f;
                 break;
             case "TutBattle_THysteria":
             case "DreamCombat":
@@ -100,15 +103,18 @@ public class BGMusic : MonoBehaviour
             case "RBDCombatShade":
             case "C_TintCombat":
                 PlayMusic(battle1MusicStart, battle1MusicLoop);
+                audioSource.volume = 0.025f;
                 break;
             case "Tunnel_Hue_Ent":
             case "Tunnel_Hue_Middle":
                 PlayMusic(dungeon1MusicStart, dungeon1MusicLoop);
+                audioSource.volume = 0.025f;
                 break;
             default:
                 if (sceneName.Contains("RBD_"))
                 {
                     PlayMusic(dungeon1MusicStart, dungeon1MusicLoop);
+                    audioSource.volume = 0.025f;
                 }
                 else
                 {

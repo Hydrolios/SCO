@@ -148,7 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
-  unitName: Kuller
+  unitName: Spectrum
+  enemyNames:
+  - Shade
+  - Captain Tint
   unitLevel: 1
   attack: 6
   damagedealt: 0
@@ -160,11 +163,14 @@ MonoBehaviour:
   currentMP: 10
   def: 5
   exp: 0
+  cash: 0
   rad: 5
   enx: 5
   sol: 5
   chr: 5
+  movetutorrage: 0
   raged: 0
+  blocking: 0
 --- !u!1 &5781220071780925869
 GameObject:
   m_ObjectHideFlags: 0

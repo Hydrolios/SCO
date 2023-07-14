@@ -125,7 +125,7 @@ public class UnitStats : MonoBehaviour
             if (turncounter % 2 == 0) //turn is even
             {
                 PlayerPrefs.SetInt("HeavyAttack", 1);
-                //turn is even so powered attack but block is active so dmg is still reduced
+                //turncount is even so powered attack but block is active so dmg is still reduced
                 damagedealt = Mathf.RoundToInt(damagedealt * 0.2f);
                 currentHP -= damagedealt;
                 Debug.Log(damagedealt);
@@ -161,7 +161,8 @@ public class UnitStats : MonoBehaviour
 
     public void CaptainTintDealDamage(int dmg, bool block, int turncounter, int currhp, int maxhp)
     {
-        if(currhp < Mathf.RoundToInt(maxhp * 0.3f))
+
+        if(currhp < Mathf.RoundToInt(maxhp * 0.3f)) // while Tint is less than 30% hp, there is a chance he can heal
         {
             Debug.Log("HP is less than 30%, chance to heal is possible");
             int chanceroll = Random.Range(0, 2);
@@ -174,6 +175,69 @@ public class UnitStats : MonoBehaviour
                 Debug.Log("Captain Tint casts heal and healed");
                 PlayerPrefs.SetInt("enemyhealed", 1);
                 PlayerPrefs.SetInt("enemyhealamt", healamt);
+            }
+            else
+            {
+                if (block)
+                {
+                    if (turncounter % 2 == 0)
+                    {
+                        Debug.Log("Heavy attack but blocked");
+                        PlayerPrefs.SetInt("HeavyAttack", 1);
+                        damagedealt = Mathf.RoundToInt((AttackRoll(dmg) * 2f) * 0.2f);
+                        currentHP -= damagedealt;
+                        Debug.Log(damagedealt);
+                    }
+                    else
+                    {
+                        Debug.Log("light attack but blocked");
+                        PlayerPrefs.SetInt("HeavyAttack", 0);
+                        damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 0.2f);
+                        currentHP -= damagedealt;
+                        Debug.Log(damagedealt);
+                    }
+                }
+                else
+                {
+                    if (turncounter % 2 == 0)
+                    {
+                        Debug.Log("Heavy attack");
+                        PlayerPrefs.SetInt("HeavyAttack", 1);
+                        damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 2f);
+                        currentHP -= damagedealt;
+                        Debug.Log(damagedealt);
+                    }
+                    else
+                    {
+                        PlayerPrefs.SetInt("HeavyAttack", 0);
+                        damagedealt = AttackRoll(dmg);
+                        currentHP -= damagedealt;
+                        Debug.Log(damagedealt);
+                    }
+                }
+
+            }
+        }
+        else
+        {
+            if (block)
+            {
+                if (turncounter % 2 == 0)
+                {
+                    Debug.Log("Heavy attack but blocked");
+                    PlayerPrefs.SetInt("HeavyAttack", 1);
+                    damagedealt = Mathf.RoundToInt((AttackRoll(dmg) * 2f) * 0.2f);
+                    currentHP -= damagedealt;
+                    Debug.Log(damagedealt);
+                }
+                else
+                {
+                    Debug.Log("light attack but blocked");
+                    PlayerPrefs.SetInt("HeavyAttack", 0);
+                    damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 0.2f);
+                    currentHP -= damagedealt;
+                    Debug.Log(damagedealt);
+                }
             }
             else
             {
@@ -192,23 +256,6 @@ public class UnitStats : MonoBehaviour
                     currentHP -= damagedealt;
                     Debug.Log(damagedealt);
                 }
-            }
-        }
-        else
-        {
-            if (turncounter % 3 == 0)
-            {
-                PlayerPrefs.SetInt("HeavyAttack", 1);
-                damagedealt = Mathf.RoundToInt(AttackRoll(dmg) * 2f);
-                currentHP -= damagedealt;
-                Debug.Log(damagedealt);
-            }
-            else
-            {
-                PlayerPrefs.SetInt("HeavyAttack", 0);
-                damagedealt = AttackRoll(dmg);
-                currentHP -= damagedealt;
-                Debug.Log(damagedealt);
             }
         }
         

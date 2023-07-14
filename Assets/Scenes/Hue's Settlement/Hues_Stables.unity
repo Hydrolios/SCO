@@ -262,6 +262,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8439199502319111315, guid: 42847b85401c62c4399f54bedfce485c, type: 3}
+      propertyPath: hpbar
+      value: 
+      objectReference: {fileID: 163730966}
+    - target: {fileID: 8439199502319111315, guid: 42847b85401c62c4399f54bedfce485c, type: 3}
+      propertyPath: mpbar
+      value: 
+      objectReference: {fileID: 230113397}
+    - target: {fileID: 8439199502319111315, guid: 42847b85401c62c4399f54bedfce485c, type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 769976513}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42847b85401c62c4399f54bedfce485c, type: 3}
 --- !u!4 &431797274 stripped

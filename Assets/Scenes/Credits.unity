@@ -299,6 +299,8 @@ MonoBehaviour:
 
 
 
+
+
     Special
     Thanks'
 --- !u!222 &83026831
@@ -366,7 +368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1261e8eb5aa0e6940b74ef0025e729ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d61a22c35d03cf549a67022c8dfd0910, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1220,8 +1222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140.99998, y: 470.91406}
-  m_SizeDelta: {x: 298.19, y: 54.2709}
+  m_AnchoredPosition: {x: 140.99998, y: 489}
+  m_SizeDelta: {x: 298.19, y: 66.6029}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929714593
 MonoBehaviour:
@@ -1256,9 +1258,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Adventures Of Kuller
-
-'
+  m_Text: Spectrum's Color Odyssey
 --- !u!222 &1929714594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1360,8 +1360,12 @@ MonoBehaviour:
     xDeviruchi
 
 
+    Lesiakower - Pixel Perfect
 
-    The Goobers'
+
+
+    Gooby
+    Squad'
 --- !u!222 &1986305238
 CanvasRenderer:
   m_ObjectHideFlags: 0

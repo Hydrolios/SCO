@@ -11908,7 +11908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - Kuller, I have a task for you.
+    - Spectrum, I have a task for you.
     - You have been here for a while and helped many.
     - I wish to give you the Rainbow Sword in the Rainbow Dungeon WEST of here.
     - Retrieve it and report back to me.
@@ -11941,9 +11941,12 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 1
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
+  ftMenu: {fileID: 0}
 --- !u!1 &2055433020
 GameObject:
   m_ObjectHideFlags: 0

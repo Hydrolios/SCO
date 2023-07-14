@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2778888998155838339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -956,6 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveText: {fileID: 4276942738233445793}
+  noSaveText: {fileID: 0}
   noloadText: {fileID: 1114259145768891982}
   player: {fileID: 6046456739436440409, guid: a03a07fe226a23248b7bab279a37d4ac, type: 3}
   pauseMenuUI: {fileID: 2116560346643722128}
@@ -1032,7 +1033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c1d26a29b30291c449490b2cfbba8088, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31deb8179c62b2042a1c7f73d4aae9a4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

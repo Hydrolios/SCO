@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetString("versionText", "Alpha V.0.12.0");
+        PlayerPrefs.SetString("versionText", "Alpha V.0.12.023");
         Debug.Log("Player executes");
         ResumeSpeed();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -156,9 +156,10 @@ public class Player : MonoBehaviour
         {
             //ItemList itemList = FindObjectOfType<ItemList>();
             Debug.Log("Debug Log:");
-            Debug.Log(PlayerPrefs.GetInt("shadeKilled", 0));
-            Debug.Log(PlayerPrefs.GetInt("shadeSave", 0));
-            PlayerPrefs.SetInt("HuesSettlement_unlocked", 1);
+            //Debug.Log(PlayerPrefs.GetInt("shadeKilled", 0));
+            //Debug.Log(PlayerPrefs.GetInt("shadeSave", 0));
+            //PlayerPrefs.SetInt("HuesSettlement_unlocked", 1);
+            Debug.Log("Testing New file");
             //PlayerPrefs.SetInt("fastTravelUnlocked", 1);
             //PlayerPrefs.SetInt("fastTravelUnlocked", 1);
             //PlayerPrefs.SetInt("Sunstead_unlocked", 0);

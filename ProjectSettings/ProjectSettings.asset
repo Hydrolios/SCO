@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Lios Games
-  productName: Adventure of Kuller
+  productName: Spectrum's Color Odyssey
   defaultCursor: {fileID: 2800000, guid: 65d5ceee73afa994f940ae2b73cc5d7b, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -131,7 +131,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0
+  bundleVersion: 0.12.023
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -265,7 +265,7 @@ PlayerSettings:
   - m_BuildTarget: Standalone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: d61a22c35d03cf549a67022c8dfd0910, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 0
@@ -285,7 +285,7 @@ PlayerSettings:
       m_Height: 128
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1261e8eb5aa0e6940b74ef0025e729ac, type: 3}
+      m_Icon: {fileID: 2800000, guid: d61a22c35d03cf549a67022c8dfd0910, type: 3}
       m_Width: 64
       m_Height: 64
       m_Kind: 0
@@ -307,7 +307,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1261e8eb5aa0e6940b74ef0025e729ac, type: 3}
+      m_Icon: {fileID: 2800000, guid: d61a22c35d03cf549a67022c8dfd0910, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

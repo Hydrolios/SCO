@@ -198,9 +198,52 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator WeaponSkillAttack()
     {
-
-        if (PlayerPrefs.GetInt("hpcost", 0) > 0) // if there is a required hp usage attached to skill
+        if(PlayerPrefs.GetInt("hpcost", 0) > 0 && PlayerPrefs.GetInt("mpcost", 0) > 0) // if there is an required HP and MP usage
         {
+            Debug.Log("hp & mp cost method");
+            bool usable = playerUnit.useHP(PlayerPrefs.GetInt("hpcost", 0)) && playerUnit.useMP(PlayerPrefs.GetInt("mpcost", 0));
+            if (!usable)
+            {
+                dialogueText.text = "You do not have enough HP or MP to use this!";
+                yield return new WaitForSeconds(1.5f);
+                PlayerTurn();
+            }
+            else
+            {
+                playerHUD.SetHP(playerUnit.currentHP);
+                playerHUD.SetMP(playerUnit.currentMP);
+                PlayerPrefs.DeleteKey("mpcost");
+                PlayerPrefs.DeleteKey("hpcost");
+                bool isDead = enemyUnit.DealDamage(playerUnit.attack, playerUnit.raged);
+                enemyHUD.SetHP(enemyUnit.currentHP);
+                dialogueText.text = playerUnit.unitName + " uses " + PlayerPrefs.GetString("skillname") + " on " + enemyUnit.unitName + " and deals " + enemyUnit.damagedealt + " damage";
+                turncounter++;
+                state = BattleState.ENEMYTURN;
+
+                yield return new WaitForSeconds(0.8f);
+                playerSlashAnimation.SetActive(false);
+                yield return new WaitForSeconds(1.2f);
+
+                //Check if dead
+                if (isDead) //Ends Combat if true
+                {
+
+                    state = BattleState.WIN;
+                    StartCoroutine(ExitCombat());
+
+
+                }
+                else //Enemy Turn
+                {
+
+                    StartCoroutine(EnemyTurn());
+                }
+            }
+        }
+
+        else if (PlayerPrefs.GetInt("hpcost", 0) > 0) // if there is a required hp usage attached to skill
+        {
+            Debug.Log("hp cost method");
             bool usable = playerUnit.useHP(PlayerPrefs.GetInt("hpcost", 0));
             // not enough health to use the skill
             if (!usable)
@@ -240,8 +283,9 @@ public class BattleManager : MonoBehaviour
             }
 
         }
-        if (PlayerPrefs.GetInt("mpcost", 0) > 0) // if there is a required mp usage attached to skill
+        else if (PlayerPrefs.GetInt("mpcost", 0) > 0) // if there is a required mp usage attached to skill
         {
+            Debug.Log("mp cost method");
             bool usable = playerUnit.useMP(PlayerPrefs.GetInt("mpcost", 0));
             // not enough mana to use the skill
             if (!usable)
@@ -514,21 +558,7 @@ public class BattleManager : MonoBehaviour
             }
 
         }
-        /*
-        else if (state == BattleState.WIN && tutorial)
-        {
-            dialogueText.text = "Pyramid God: You defeated me...";
-            yield return new WaitForSeconds(1.5f);
-            dialogueText.text = "But it only gets harder for you here on out!";
-            yield return new WaitForSeconds(2f);
-            playerStorage.initialValue = playerPosition;
-            PlayerPrefs.SetInt("playerHPMax", 10);
-            PlayerPrefs.SetInt("playerHPnow", 10);
-            PlayerPrefs.SetInt("playerMPMax", 10);
-            PlayerPrefs.SetInt("playerMPnow", 10);
-            SceneManager.LoadScene(sceneToLoad);
-        }
-        */
+
 
         if (state == BattleState.WIN)
         {
@@ -555,12 +585,14 @@ public class BattleManager : MonoBehaviour
             
             if (enemyUnit.unitName == "Shade")
             {
+                Debug.Log("Shade Defeated!");
                 eventChecker.shadeKilled = true;
                 PlayerPrefs.SetInt("shadeKilled", (eventChecker.shadeKilled ? 1 : 0));
                 
             }
-            if (enemyUnit.unitName == "Captaint Tint")
+            if (enemyUnit.unitName == "Captain Tint")
             {
+                Debug.Log("Captain Tint Defeated!");
                 eventChecker.fastTravelunlock = true;
                 PlayerPrefs.SetInt("fastTravelUnlocked", (eventChecker.fastTravelunlock ? 1 : 0));
                 PlayerPrefs.SetInt("HuesSettlement_unlocked", 1);
