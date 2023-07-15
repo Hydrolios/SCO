@@ -46,7 +46,7 @@ public class UnitStats : MonoBehaviour
     {
         if (isPlayer)
         {
-            unitName = "Kuller";
+            unitName = "Spectrum";
             unitLevel = PlayerPrefs.GetInt("playerlevel");
             attack = PlayerPrefs.GetInt("playerattack");
             maxHP = PlayerPrefs.GetInt("playerHPMax");

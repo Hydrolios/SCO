@@ -30,6 +30,7 @@ public class NPCController : MonoBehaviour, Interactable
     public bool shopKeeper;
     public bool expgiver;
     public bool rbdreport;
+    public bool npc_hue;
     public bool elder;
     public bool soldier;
     public bool sleep;
@@ -79,6 +80,10 @@ public class NPCController : MonoBehaviour, Interactable
         {
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.SaveInventoryScene();
+        }
+        if(npc_hue)
+        {
+            PlayerPrefs.SetInt("Sunstead_Pt1", 1);
         }
 
 

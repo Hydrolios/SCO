@@ -16,6 +16,7 @@ public class StartGame : MonoBehaviour
         playerRef.textReq = true;
         Time.timeScale = 1f;
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetString("versionText", "Alpha V.0.12.023");
         PlayerPrefs.SetInt("newgame", playerRef.newGameCheck ? 1 : 0);
         PlayerPrefs.SetInt("spawnText", playerRef.textReq ? 1 : 0);
         SceneManager.LoadScene("DreamCombat");

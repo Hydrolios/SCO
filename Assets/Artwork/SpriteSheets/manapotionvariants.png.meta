@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 1ef9d8135283f1f4ba0c286e9dc4885d
+guid: 2c2d5961eecb5154590ccfdc01003b84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4866472382579881605
-    second: LeatherSetSprite_0
+      213: 1417996117892153168
+    second: manapotionvariants_0
   - first:
-      213: -3672909804873515901
-    second: LeatherSetSprite_1
+      213: -7165295456759844824
+    second: manapotionvariants_1
   - first:
-      213: 932478115505313705
-    second: LeatherSetSprite_2
+      213: 3493290319974875446
+    second: manapotionvariants_2
   - first:
-      213: 9020653456445061952
-    second: LeatherSetSprite_3
+      213: 8122653862409757395
+    second: manapotionvariants_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LeatherSetSprite_0
+      name: manapotionvariants_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5863ce829de298340800000000000000
-      internalID: 4866472382579881605
+      spriteID: 05f38d3d4fbbda310800000000000000
+      internalID: 1417996117892153168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeatherSetSprite_1
+      name: manapotionvariants_1
       rect:
         serializedVersion: 2
         x: 64
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38cf67c0ef3370dc0800000000000000
-      internalID: -3672909804873515901
+      spriteID: 820fb15deb1cf8c90800000000000000
+      internalID: -7165295456759844824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeatherSetSprite_2
+      name: manapotionvariants_2
       rect:
         serializedVersion: 2
         x: 0
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a71583d7e3d0fc00800000000000000
-      internalID: 932478115505313705
+      spriteID: 631c96ba909aa7030800000000000000
+      internalID: 3493290319974875446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeatherSetSprite_3
+      name: manapotionvariants_3
       rect:
         serializedVersion: 2
         x: 64
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04bbe41768ccf2d70800000000000000
-      internalID: 9020653456445061952
+      spriteID: 3d26366f6a679b070800000000000000
+      internalID: 8122653862409757395
       vertices: []
       indices: 
       edges: []

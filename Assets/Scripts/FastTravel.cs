@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class FastTravel : MonoBehaviour
 {
     public GameObject SelectionMenu;
+    public GameObject TitleUI;
     public Button[] locationButtons; // Array to hold location buttons
     public GameObject fadeOut;
     public static bool GameIsPaused = false;
@@ -20,6 +21,7 @@ public class FastTravel : MonoBehaviour
     public void Selection() // turn on the UI
     {
         SelectionMenu.SetActive(true);
+        TitleUI.SetActive(true);
         TravelButton();
 
     }
@@ -48,6 +50,7 @@ public class FastTravel : MonoBehaviour
 
         Time.timeScale = 0f;
         SelectionMenu.SetActive(true);
+        TitleUI.SetActive(true);
         PlayerPrefs.SetFloat("interact_range", 0f);
         switch (SceneManager.GetActiveScene().name) // remove the current area from the list of fast travel options
         {
@@ -82,6 +85,7 @@ public class FastTravel : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         PlayerPrefs.DeleteKey("ftNPC");
+        TitleUI.SetActive(false);
         //SelectionMenu.SetActive(false);
         PlayerPrefs.SetFloat("interact_range", 0.6f);
         StartCoroutine(FTSaleria());
@@ -93,6 +97,7 @@ public class FastTravel : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         PlayerPrefs.DeleteKey("ftNPC");
+        TitleUI.SetActive(false);
         //SelectionMenu.SetActive(false);
         PlayerPrefs.SetFloat("interact_range", 0.6f);
         StartCoroutine(FTSettlement());
@@ -129,6 +134,7 @@ public class FastTravel : MonoBehaviour
     {
         PlayerPrefs.SetFloat("interact_range", 0.6f);
         SelectionMenu.SetActive(false);
+        TitleUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         PlayerPrefs.DeleteKey("ftNPC");

@@ -82,7 +82,7 @@ public class BattleManager : MonoBehaviour
 
         if (playerUnit.isPlayer)
         {
-            playerUnit.unitName = "Kuller";
+            playerUnit.unitName = "Spectrum";
             playerUnit.unitLevel = PlayerPrefs.GetInt("playerlevel");
             playerUnit.attack = PlayerPrefs.GetInt("playerattack");
             playerUnit.maxHP = PlayerPrefs.GetInt("playerHPMax");

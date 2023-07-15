@@ -26,9 +26,17 @@ MonoBehaviour:
   enx: 0
   sol: 0
   chr: 0
+  mpcost: 0
+  hpcost: 0
   buycost: 10
   sellcost: 5
   desc: A regular mana potion.  Recovers 10 MP.
   range: {x: 5, y: 4}
   stackable: 1
-  image: {fileID: 21300000, guid: 3f384f334b1b2f246be66bd2f4a14399, type: 3}
+  skillName: []
+  skillLevel: 
+  skillElement: []
+  skillPower: []
+  mpvalue: 
+  hpvalue: 
+  image: {fileID: 1417996117892153168, guid: 2c2d5961eecb5154590ccfdc01003b84, type: 3}

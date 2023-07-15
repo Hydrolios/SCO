@@ -110,7 +110,7 @@ MonoBehaviour:
   xPos: 0
   yPos: 0
   interactRad: 0
-  newGameCheck: 0
+  newGameCheck: 1
   loadGame: 0
   sceneTransitioned: 0
   openedUIInven: 0
@@ -118,10 +118,13 @@ MonoBehaviour:
   openedUIGO: 0
   openedUIShop: 0
   openedUIStats: 0
-  textReq: 0
+  openedDialog: 0
+  fadeINrestriction: 0
+  textReq: 1
   currentHealth: 0
   currentMana: 0
   level: 0
+  money: 0
   exp: 0
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}

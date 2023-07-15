@@ -263,6 +263,7 @@ MonoBehaviour:
       We believe they may be responsible for taking the sword.
     - 'We found traces of them in Sunstead, head over there and find Scarlet. '
     - Take this first, it will aid you in your way there, just head north from here.
+    - You obtained an Ember Sword!
   dialogue2:
     lines:
     - Get on now, head north to Sunstead and find Scarlet.
@@ -275,7 +276,7 @@ MonoBehaviour:
   openedChestSprite: {fileID: 6766470399705026240, guid: 3e43ed3d2fdf62f4ba7bb7b6f34404ac, type: 3}
   inventoryManager: {fileID: 750814702}
   itemList: {fileID: 1801239914}
-  item_id: 12
+  item_id: 11
   chest_id: 13
   npc_id: 0
   sceneToLoad: 
@@ -2303,19 +2304,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: item_id
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: chest_id
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: itemList
+      value: 
+      objectReference: {fileID: 1801239914}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 769976513}
     - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 750814702}
+    - target: {fileID: 9202215614624252969, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
-      value: You found an Ember Sword!
+      value: You found a HP+ Potion
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252970, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: m_SortingOrder

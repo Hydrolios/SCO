@@ -152,7 +152,7 @@ MonoBehaviour:
   - Shade
   - Captain Tint
   unitLevel: 8
-  attack: 5
+  attack: 2
   damagedealt: 0
   minDmg: 0
   maxDmg: 0

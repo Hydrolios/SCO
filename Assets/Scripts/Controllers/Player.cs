@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetString("versionText", "Alpha V.0.12.023");
+        
         Debug.Log("Player executes");
         ResumeSpeed();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -114,6 +114,8 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("learnedblock", PlayerPrefs.GetInt("saveBlock", 0));
             PlayerPrefs.SetInt("learnedrage", PlayerPrefs.GetInt("saveRage", 0));
             PlayerPrefs.SetInt("shadeKilled", PlayerPrefs.GetInt("shadeSave", 0));
+            PlayerPrefs.SetInt("fastTravelUnlocked", PlayerPrefs.GetInt("FTsave", 0)); // defeated hue and unlocked fast travel
+            PlayerPrefs.SetInt("Sunstead_Pt1", PlayerPrefs.GetInt("sunsteadPt1", 0)); // spoken to Hue to advance to sunstead
             PlayerPrefs.SetInt("load", (loadGame ? 1 : 0));
             healthBar.SetHealth();
             manaBar.SetHealth();

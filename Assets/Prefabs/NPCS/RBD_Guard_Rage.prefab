@@ -177,6 +177,7 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}

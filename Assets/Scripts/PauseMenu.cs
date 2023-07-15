@@ -122,8 +122,10 @@ public class PauseMenu : MonoBehaviour
             PlayerPrefs.SetInt("chestIDState" + i, PlayerPrefs.GetInt("ChestOpenedID" + i, 0));
         }
         PlayerPrefs.SetInt("saveBlock", PlayerPrefs.GetInt("learnedblock", 0));
-        PlayerPrefs.SetInt("saveRage", PlayerPrefs.GetInt("learnedrage", 0));
-        PlayerPrefs.SetInt("shadeSave", PlayerPrefs.GetInt("shadeKilled", 0));
+        PlayerPrefs.SetInt("saveRage", PlayerPrefs.GetInt("learnedrage", 0)); 
+        PlayerPrefs.SetInt("shadeSave", PlayerPrefs.GetInt("shadeKilled", 0)); // defeated shade so can report to sage
+        PlayerPrefs.SetInt("FTsave", PlayerPrefs.GetInt("fastTravelUnlocked", 0)); // defeated hue and unlocked fast travel
+        PlayerPrefs.SetInt("sunsteadPt1", PlayerPrefs.GetInt("Sunstead_Pt1", 0)); // spoken to Hue to advance to sunstead
         PlayerPrefs.Save();
 
     }

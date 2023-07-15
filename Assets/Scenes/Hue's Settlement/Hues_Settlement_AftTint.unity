@@ -16534,6 +16534,10 @@ PrefabInstance:
       propertyPath: m_OverrideSorting
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5017977775255171193, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6248645509159191716, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -16570,6 +16574,34 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.6039216
       objectReference: {fileID: 0}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e8a3f62db18b5fa4899c2f8bce2d29e6, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 55a4424e566d4c8499a59200f0f2963d, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 883b8e7e775caf442b0277f078b557ba, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 770a4210b1898da42bc8b42ec481ffce, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: b1403b028cd4a6048929776ae6ff9b9a, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ae3f2e719040c443a3f0ed2ad6eb16a, type: 2}
     - target: {fileID: 7578868692019861808, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

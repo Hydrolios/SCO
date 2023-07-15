@@ -10,33 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 608d9e0663e00134abc0047fde73658b, type: 3}
-  m_Name: Rusty Helmet
+  m_Name: MP+ Potion
   m_EditorClassIdentifier: 
-  itemName: Rusty Helmet
-  type: 0
-  actionType: 0
-  equipType: 0
-  consumeType: 2
-  id: 8
-  hp: 2
-  mp: 0
+  itemName: MP+ Potion
+  type: 1
+  actionType: 1
+  equipType: 4
+  consumeType: 1
+  id: 13
+  hp: 0
+  mp: 20
   def: 0
   att: 0
   rad: 0
   enx: 0
-  sol: 2
+  sol: 0
   chr: 0
   mpcost: 0
   hpcost: 0
-  buycost: 15
-  sellcost: 0
-  desc: A metal helment collecting rust.  Haven't been used in combat for a decade.
+  buycost: 25
+  sellcost: 10
+  desc: A mana potion infused with yellow aura.  Recovers 20 MP.
   range: {x: 5, y: 4}
-  stackable: 0
+  stackable: 1
   skillName: []
   skillLevel: 
   skillElement: []
   skillPower: []
   mpvalue: 
   hpvalue: 
-  image: {fileID: -3754190186349775722, guid: 71662d28c7057dd4a8e7e6eafaedbed9, type: 3}
+  image: {fileID: -7165295456759844824, guid: 2c2d5961eecb5154590ccfdc01003b84, type: 3}

@@ -127,7 +127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3334700564863145370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.209, y: 1.4, z: 0}
+  m_LocalPosition: {x: -3.709, y: 1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7118829996615901032}
@@ -148,7 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  unitName: Kuller
+  unitName: Spectrum
+  enemyNames:
+  - Shade
+  - Captain Tint
   unitLevel: 60
   attack: 150
   damagedealt: 0
@@ -160,12 +163,14 @@ MonoBehaviour:
   currentMP: 100
   def: 0
   exp: 0
+  cash: 0
   rad: 0
   enx: 0
   sol: 0
   chr: 0
   movetutorrage: 0
   raged: 0
+  blocking: 0
 --- !u!1001 &6378536548251455059
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 1ef9d8135283f1f4ba0c286e9dc4885d
+guid: 8919f19d8f3923047a7f38adec35c450
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4866472382579881605
-    second: LeatherSetSprite_0
+      213: -4167294849251665078
+    second: Healthpotionvariants_0
   - first:
-      213: -3672909804873515901
-    second: LeatherSetSprite_1
+      213: -2922830092970648647
+    second: Healthpotionvariants_1
   - first:
-      213: 932478115505313705
-    second: LeatherSetSprite_2
+      213: 2875044578214024172
+    second: Healthpotionvariants_2
   - first:
-      213: 9020653456445061952
-    second: LeatherSetSprite_3
+      213: -7106043837982368277
+    second: Healthpotionvariants_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LeatherSetSprite_0
+      name: Healthpotionvariants_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5863ce829de298340800000000000000
-      internalID: 4866472382579881605
+      spriteID: a4b1a04f96bca26c0800000000000000
+      internalID: -4167294849251665078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeatherSetSprite_1
+      name: Healthpotionvariants_1
       rect:
         serializedVersion: 2
         x: 64
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38cf67c0ef3370dc0800000000000000
-      internalID: -3672909804873515901
+      spriteID: 9bb99a924850077d0800000000000000
+      internalID: -2922830092970648647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeatherSetSprite_2
+      name: Healthpotionvariants_2
       rect:
         serializedVersion: 2
         x: 0
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a71583d7e3d0fc00800000000000000
-      internalID: 932478115505313705
+      spriteID: ce31cddafc536e720800000000000000
+      internalID: 2875044578214024172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeatherSetSprite_3
+      name: Healthpotionvariants_3
       rect:
         serializedVersion: 2
         x: 64
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04bbe41768ccf2d70800000000000000
-      internalID: 9020653456445061952
+      spriteID: bed15be57c2426d90800000000000000
+      internalID: -7106043837982368277
       vertices: []
       indices: 
       edges: []
