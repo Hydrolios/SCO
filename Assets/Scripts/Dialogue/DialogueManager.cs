@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeDialogue(dialogue.Lines[0]));
 
     }
-    public IEnumerator ShowDialogueV2(Dialogue dialogue, bool dream) // simplified check for more niche uses which doesn't require much
+    public IEnumerator ShowDialogueV2(Dialogue dialogue) // simplified check for more niche uses which doesn't require much
     {
         uiChecker.openedDialog = true;
         uiChecker.StopSpeed();

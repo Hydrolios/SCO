@@ -285,6 +285,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 1
   elder: 0
   soldier: 0
   sleep: 0

@@ -126,7 +126,7 @@ public class Player : MonoBehaviour
         }
         if(textReq) // text for loading into a scene
         {
-            StartCoroutine(DialogueManager.Instance.ShowDialogueV2(dialogue, textReq));
+            StartCoroutine(DialogueManager.Instance.ShowDialogueV2(dialogue));
             textReq = false;
             fadeINrestriction = true;
             PlayerPrefs.SetInt("spawnText", (loadGame ? 1 : 0));

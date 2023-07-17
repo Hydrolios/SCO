@@ -10924,9 +10924,9 @@ MonoBehaviour:
     lines:
     - You're back! Did you retrieve the Rainbow Sword?
     - ...No? There was an intruder and a note you say?
-    - Hue's Settlement you say... alright.
-    - You should head over there and speak to Captain Tint.  Take the tunnel West
-      of here.
+    - '"Meet me at Sunstead" you say... alright.'
+    - You should make way to Hue's Settlement and speak to Commander Hue.  Take the
+      tunnel West of here.  He will have more information and help you get to Sunstead.
   dialogue3:
     lines:
     - Why are you still here? Get on already and find Captain Tint, he'll help us
@@ -10947,6 +10947,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 1
   soldier: 0
   sleep: 0
@@ -10956,6 +10957,7 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}

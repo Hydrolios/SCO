@@ -5086,7 +5086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: dialogue.lines.Array.data[2]
-      value: '"Meet me at Hue''s Settlement"'
+      value: '"Meet me at Sunstead"'
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: dialogue.lines.Array.data[3]
