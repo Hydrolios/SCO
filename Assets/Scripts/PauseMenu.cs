@@ -138,8 +138,8 @@ public class PauseMenu : MonoBehaviour
             playerRef.openedUIPause = false;
             GameIsPaused = false;
             playerRef.loadGame = true;
-            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
-            inventoryManager.LoadInventory();
+            //InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+            //inventoryManager.LoadInventory();
             Debug.Log("LoadedGame");
             PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("Savedplayerattack"));
             PlayerPrefs.SetInt("playersol", PlayerPrefs.GetInt("Savedplayersol"));

@@ -161,7 +161,7 @@ public class Player : MonoBehaviour
             //Debug.Log(PlayerPrefs.GetInt("shadeKilled", 0));
             //Debug.Log(PlayerPrefs.GetInt("shadeSave", 0));
             //PlayerPrefs.SetInt("HuesSettlement_unlocked", 1);
-            Debug.Log("Testing New file");
+            PlayerPrefs.SetInt("currentcash", 500);
             //PlayerPrefs.SetInt("fastTravelUnlocked", 1);
             //PlayerPrefs.SetInt("fastTravelUnlocked", 1);
             //PlayerPrefs.SetInt("Sunstead_unlocked", 0);
@@ -171,11 +171,11 @@ public class Player : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.F1))
+        else if (Input.GetKeyDown(KeyCode.LeftBracket))
         {
             Time.timeScale = 3f;
         }
-        else if (Input.GetKeyDown(KeyCode.F2))
+        else if (Input.GetKeyDown(KeyCode.RightBracket))
         {
             Time.timeScale = 1f;
         }

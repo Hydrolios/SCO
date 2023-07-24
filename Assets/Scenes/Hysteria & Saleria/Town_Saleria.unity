@@ -6410,6 +6410,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -6418,9 +6419,13 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 0
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!1001 &779014738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6602,6 +6607,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -6610,9 +6616,13 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 0
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!61 &970370452
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10896,6 +10906,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -10904,9 +10915,13 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 0
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!4 &1589853154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8697304888839829826, guid: 5a3024aa1163dc544896509435787c46, type: 3}
@@ -30972,6 +30987,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -30980,9 +30996,13 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 0
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!61 &1666085303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32720,6 +32740,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -32728,9 +32749,13 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 0
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!61 &2001811717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32897,6 +32922,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -32905,9 +32931,13 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 0
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!61 &2020177147
 BoxCollider2D:
   m_ObjectHideFlags: 0

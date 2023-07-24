@@ -45,6 +45,7 @@ public class NPCController : MonoBehaviour, Interactable
     public Vector2 playerPosition;
     public VectorValue playerStorage;
 
+    public EventCheck eventManager;
     public FastTravel ftMenu;
 
     public void Start()
@@ -95,9 +96,11 @@ public class NPCController : MonoBehaviour, Interactable
             }
             else if (PlayerPrefs.GetInt("shadeKilled") != 0) //dialogue for coming back to elder
             {
-                StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue2, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
                 rbdreport = true;
                 PlayerPrefs.SetInt("rbdreport", rbdreport ? 1 : 0);
+                eventManager.rbdreport = true;
+                StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue2, sceneToLoad, sceneChangeReq, shopKeeper, expgiver));
+                
             }
             else
             {

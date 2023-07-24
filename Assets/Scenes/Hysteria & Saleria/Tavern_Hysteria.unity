@@ -10961,6 +10961,7 @@ MonoBehaviour:
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 1431161970}
   ftMenu: {fileID: 0}
 --- !u!1001 &1816340657
 PrefabInstance:

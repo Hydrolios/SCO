@@ -28,7 +28,11 @@ public class Encounter : MonoBehaviour
         //Debug.Log("DPos: " + designatedPos);
         //Debug.Log("DScene: " + designatedScene);
         //Debug.Log("CScene: " + SceneManager.GetActiveScene().name);
-        triggered.SetActive(false); //notification above NPC to display if they have been triggered by player entering line of sight
+        //notification above NPC to display if they have been triggered by player entering line of sight
+        triggered.SetActive(false); 
+
+        // destroys copies of the game object in case I mess up and have duplicates
+        // each npc should have their own unique ID
         for (int i = 0; i < Object.FindObjectsOfType<Encounter>().Length; i++)
         {
             if(Object.FindObjectsOfType<Encounter>()[i] != this)
@@ -93,6 +97,7 @@ public class Encounter : MonoBehaviour
 
     public void Defeated(Vector2 moveaway) // move away the npcs that have been defeated
     {
+        Debug.Log("defeated npc");
         transform.position = moveaway;
         designatedPos = moveaway;
         triggered.SetActive(false);

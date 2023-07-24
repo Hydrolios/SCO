@@ -191,6 +191,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -204,6 +205,7 @@ MonoBehaviour:
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!212 &55144036
 SpriteRenderer:
@@ -350,6 +352,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -363,6 +366,7 @@ MonoBehaviour:
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!212 &86288298
 SpriteRenderer:
@@ -610,9 +614,10 @@ MonoBehaviour:
   sceneToLoad: 
   repeatDiag: 0
   diagV2: 0
-  shopKeeper: 0
+  shopKeeper: 1
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -626,6 +631,7 @@ MonoBehaviour:
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!1001 &750814701
 PrefabInstance:
@@ -1474,6 +1480,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2522379319781290092, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2522379320062975099, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: playerRef
       value: 
@@ -1566,6 +1576,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2522379320782320432, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_text
+      value: Ash's Alchemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 770a4210b1898da42bc8b42ec481ffce, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b1403b028cd4a6048929776ae6ff9b9a, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: ae7ccc286d5be254d87981ca1b909bb0, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ae3f2e719040c443a3f0ed2ad6eb16a, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: ae7ccc286d5be254d87981ca1b909bb0, type: 2}
     - target: {fileID: 8948947815594486357, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -1576,6 +1614,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+--- !u!1 &1223970348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2522379321382864436, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+  m_PrefabInstance: {fileID: 1223970347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1227883906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2674,6 +2717,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769976514}
+    - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
+      propertyPath: shopUI
+      value: 
+      objectReference: {fileID: 1223970348}
     - target: {fileID: 8976509958335625627, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
       propertyPath: uiChecker
       value: 

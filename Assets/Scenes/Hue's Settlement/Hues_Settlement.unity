@@ -341,6 +341,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 1
@@ -354,6 +355,7 @@ MonoBehaviour:
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!114 &212576683 stripped
 MonoBehaviour:
@@ -9801,7 +9803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2522379319781290092, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2522379319781290092, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -9934,6 +9936,10 @@ PrefabInstance:
     - target: {fileID: 2522379320570810245, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522379320782320432, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: m_text
+      value: Knights Armory
       objectReference: {fileID: 0}
     - target: {fileID: 2522379321212588746, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
       propertyPath: m_IsActive
@@ -16865,6 +16871,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -16878,6 +16885,7 @@ MonoBehaviour:
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!212 &1851797503
 SpriteRenderer:
@@ -20798,6 +20806,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 1
@@ -20811,4 +20820,5 @@ MonoBehaviour:
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}

@@ -106,7 +106,7 @@ public class FastTravel : MonoBehaviour
     IEnumerator FTSaleria()
     {
         Vector2 moveWindow = SelectionMenu.transform.position;
-        moveWindow.x = 1000f;
+        moveWindow.x = 2000f;
         SelectionMenu.transform.position = moveWindow;
         fadeOut.SetActive(true);
         playerRef.StopSpeed();
@@ -118,7 +118,7 @@ public class FastTravel : MonoBehaviour
     IEnumerator FTSettlement()
     {
         Vector2 moveWindow = SelectionMenu.transform.position;
-        moveWindow.x = 1000f;
+        moveWindow.x = 2000f;
         SelectionMenu.transform.position = moveWindow;
         fadeOut.SetActive(true);
         playerRef.StopSpeed();

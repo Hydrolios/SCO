@@ -152,7 +152,7 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         }    
         else if (item.consumeType == ConsumableType.MP)
         {
-            player.HealDamage(item.mp);
+            player.HealMana(item.mp);
         }    
         
     }

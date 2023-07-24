@@ -42,7 +42,7 @@ public class ShopUI : MonoBehaviour
         {
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
             inventoryManager.AddItem(buyItem);
-
+            Debug.Log("bought item");
             //subtract price from players cur cash then update
             PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") - buyItem.buycost);
             cash.text = "$" + PlayerPrefs.GetInt("currentcash");

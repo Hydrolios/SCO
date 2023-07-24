@@ -140,4 +140,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hue's Settlement/Hues_Stables.unity
     guid: b6742f3681965d6449ba8b46867b7b60
+  - enabled: 1
+    path: Assets/Scenes/Hue's Settlement/Mocha_Residence.unity
+    guid: 37fdd720835f86343ab0f776746ebeb9
+  - enabled: 1
+    path: Assets/Scenes/Hue's Settlement/Celadon_Forest.unity
+    guid: fe5c21c8d11a3a740a5be419acc17d1c
   m_configObjects: {}
