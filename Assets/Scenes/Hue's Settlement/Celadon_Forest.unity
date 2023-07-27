@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396734, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -281,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252971, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252971, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -401,6 +401,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+      propertyPath: item_id_low
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+      propertyPath: sceneToLoad
+      value: Celadon_Combat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+      propertyPath: item_id_high
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
       propertyPath: designatedPos.x
       value: -2.5
       objectReference: {fileID: 0}
@@ -412,6 +424,10 @@ PrefabInstance:
       propertyPath: designatedScene
       value: Celadon_Forest
       objectReference: {fileID: 0}
+    - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: You there! Only the strong can approach Sunstead.  Battle me!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
 --- !u!1001 &293722593
@@ -421,6 +437,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_low
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: sceneToLoad
+      value: Celadon_Combat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_high
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: designatedPos.x
       value: -5.5
@@ -432,6 +460,10 @@ PrefabInstance:
     - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: designatedScene
       value: Celadon_Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: Traveller! Battle me, guarding this forest is a bit mundane.
       objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170812, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: m_RootOrder
@@ -483,6 +515,165 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+--- !u!1001 &416490287
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894979, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_Name
+      value: RBDGuard_L 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894979, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: item_id_low
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: sceneToLoad
+      value: Celadon_Combat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: item_id_high
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedPos.y
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: designatedScene
+      value: Celadon_Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: Traveller! Battle me, guarding this forest is a bit mundane.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+--- !u!1001 &488784400
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 809452861}
+    m_Modifications:
+    - target: {fileID: 2909686603482956034, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 769976513}
+    - target: {fileID: 2909686603482956034, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: There are lots of hidden loot around the world.  Explore and have fun!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956035, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_Name
+      value: Tip_Sign (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.038989186
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+--- !u!4 &488784401 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+  m_PrefabInstance: {fileID: 488784400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &525964250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -539,6 +730,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+      propertyPath: item_id_low
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+      propertyPath: sceneToLoad
+      value: Celadon_Combat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+      propertyPath: item_id_high
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
       propertyPath: designatedPos.x
       value: 17.5
       objectReference: {fileID: 0}
@@ -550,8 +753,330 @@ PrefabInstance:
       propertyPath: designatedScene
       value: Celadon_Forest
       objectReference: {fileID: 0}
+    - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+      propertyPath: dialogue.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970643534102368132, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: You there! Only the strong can approach Sunstead.  Battle me!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c105402ebb6d474dbdb6b49b1292810, type: 3}
+--- !u!1001 &584389759
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 809452861}
+    m_Modifications:
+    - target: {fileID: 2909686603482956034, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 769976513}
+    - target: {fileID: 2909686603482956034, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: 'NORTH: Sunstead \nSOUTH: Hue''s Settlement, Town Saleria'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956035, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_Name
+      value: Tip_Sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 30.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.038989186
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909686603482956093, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6857481220912532091, guid: 3da9859f320d82d4eb59af22bbb78e99, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+--- !u!4 &584389760 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2909686603482956092, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
+  m_PrefabInstance: {fileID: 584389759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &592555426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592555427}
+  - component: {fileID: 592555429}
+  - component: {fileID: 592555428}
+  m_Layer: 10
+  m_Name: HiddenTrees
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &592555427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592555426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 809452861}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!483693784 &592555428
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592555426}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 606852355
+  m_SortingLayer: 1
+  m_SortingOrder: 10
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &592555429
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592555426}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!1001 &634838216
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 809452861}
+    m_Modifications:
+    - target: {fileID: 4865344911741097220, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_Name
+      value: Tent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097220, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+--- !u!4 &634838217 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+  m_PrefabInstance: {fileID: 634838216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &634838218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4865344911741097220, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+  m_PrefabInstance: {fileID: 634838216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &634838219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634838218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df59e29c0a2e8874e8277ea0046a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - Time to get some rest.
+  dialogue2:
+    lines: []
+  dialogue3:
+    lines: []
+  hpbar: {fileID: 163730966}
+  mpbar: {fileID: 230113397}
+  playerRef: {fileID: 769976513}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  itemList: {fileID: 0}
+  item_id: 0
+  chest_id: 0
+  npc_id: 0
+  sceneToLoad: 
+  repeatDiag: 0
+  diagV2: 0
+  shopKeeper: 0
+  expgiver: 0
+  rbdreport: 0
+  npc_hue: 0
+  elder: 0
+  soldier: 0
+  sleep: 1
+  chest: 0
+  item: 0
+  item_inf: 0
+  item_battle: 0
+  battle: 0
+  fasttravel: 0
+  quest: 0
+  sceneChangeReq: 0
+  playerPosition: {x: 0, y: 0}
+  playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!1001 &750814701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -852,12 +1377,182 @@ Transform:
   m_Children:
   - {fileID: 2112062366}
   - {fileID: 1662203566}
+  - {fileID: 592555427}
   - {fileID: 59366965}
   - {fileID: 1537999946}
   - {fileID: 173180651}
+  - {fileID: 584389760}
+  - {fileID: 488784401}
+  - {fileID: 1699146418}
+  - {fileID: 1757809088}
+  - {fileID: 1153535813}
+  - {fileID: 634838217}
+  - {fileID: 1787068243}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1153535812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153535813}
+  - component: {fileID: 1153535816}
+  - component: {fileID: 1153535815}
+  - component: {fileID: 1153535814}
+  m_Layer: 10
+  m_Name: ForestNPC2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1153535813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153535812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.5, y: 30.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 809452861}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1153535814
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153535812}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0003126, y: 1.0003126}
+    newSize: {x: 1.0003126, y: 1.0003126}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0003126, y: 1.0003126}
+  m_EdgeRadius: 0
+--- !u!114 &1153535815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153535812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df59e29c0a2e8874e8277ea0046a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - Up ahead is Sunstead.  Where the power of Solstice is worshipped.  The city
+      of the strong.
+  dialogue2:
+    lines: []
+  dialogue3:
+    lines: []
+  hpbar: {fileID: 0}
+  mpbar: {fileID: 0}
+  playerRef: {fileID: 769976513}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  itemList: {fileID: 0}
+  item_id: 0
+  chest_id: 0
+  npc_id: 0
+  sceneToLoad: 
+  repeatDiag: 0
+  diagV2: 0
+  shopKeeper: 0
+  expgiver: 0
+  rbdreport: 0
+  npc_hue: 0
+  elder: 0
+  soldier: 0
+  sleep: 0
+  chest: 0
+  item: 0
+  item_inf: 0
+  item_battle: 0
+  battle: 0
+  fasttravel: 0
+  quest: 0
+  sceneChangeReq: 0
+  playerPosition: {x: 0, y: 0}
+  playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
+--- !u!212 &1153535816
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153535812}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: -4086826512366116647, guid: 3da9859f320d82d4eb59af22bbb78e99, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.0003126, y: 1.0003126}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1177726738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1714,7 +2409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252971, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9202215614624252971, guid: dbea954eba2366b47814ff4a3cc8773a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1775,6 +2470,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_low
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: sceneToLoad
+      value: Celadon_Combat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: item_id_high
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: designatedPos.x
       value: 17.5
       objectReference: {fileID: 0}
@@ -1785,6 +2492,10 @@ PrefabInstance:
     - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: designatedScene
       value: Celadon_Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790489953066170811, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: You there! Only the strong can approach Sunstead.  Battle me!
       objectReference: {fileID: 0}
     - target: {fileID: 1790489953066170812, guid: dde44287eafefaa4daf571eb794a2b15, type: 3}
       propertyPath: m_RootOrder
@@ -14079,6 +14790,452 @@ PolygonCollider2D:
       - {x: 19.590446, y: -4.596113}
       - {x: 26.145178, y: 6.400247}
       - {x: 27.361776, y: 37.220848}
+--- !u!1 &1699146417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1699146418}
+  - component: {fileID: 1699146421}
+  - component: {fileID: 1699146420}
+  - component: {fileID: 1699146419}
+  m_Layer: 10
+  m_Name: Celadon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1699146418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699146417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16, y: 12.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 809452861}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1699146419
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699146417}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0003126, y: 1.0003126}
+    newSize: {x: 1.0003126, y: 1.0003126}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0003126, y: 1.0003126}
+  m_EdgeRadius: 0
+--- !u!114 &1699146420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699146417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df59e29c0a2e8874e8277ea0046a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - I'm Celadon, you've found my burial.  This spot was my favourite place to stargaze
+      with my beloved Coral.  I hope she is doing well.
+  dialogue2:
+    lines: []
+  dialogue3:
+    lines: []
+  hpbar: {fileID: 0}
+  mpbar: {fileID: 0}
+  playerRef: {fileID: 769976513}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  itemList: {fileID: 0}
+  item_id: 0
+  chest_id: 0
+  npc_id: 0
+  sceneToLoad: 
+  repeatDiag: 0
+  diagV2: 0
+  shopKeeper: 0
+  expgiver: 0
+  rbdreport: 0
+  npc_hue: 0
+  elder: 0
+  soldier: 0
+  sleep: 0
+  chest: 0
+  item: 0
+  item_inf: 0
+  item_battle: 0
+  battle: 0
+  fasttravel: 0
+  quest: 0
+  sceneChangeReq: 0
+  playerPosition: {x: 0, y: 0}
+  playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
+--- !u!212 &1699146421
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699146417}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 7930477698119019885, guid: 3da9859f320d82d4eb59af22bbb78e99, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.0003126, y: 1.0003126}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1757809087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1757809088}
+  - component: {fileID: 1757809091}
+  - component: {fileID: 1757809090}
+  - component: {fileID: 1757809089}
+  m_Layer: 10
+  m_Name: ForestNPC1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1757809088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757809087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.5, y: 24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 809452861}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1757809089
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757809087}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0003126, y: 1.0003126}
+    newSize: {x: 1.0003126, y: 1.0003126}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0003126, y: 1.0003126}
+  m_EdgeRadius: 0
+--- !u!114 &1757809090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757809087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df59e29c0a2e8874e8277ea0046a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - This forest is named after Celadon, a legendary knight from Sunstead.  I hear
+      he was buried somewhere in here, alongside a powerful item he used.
+  dialogue2:
+    lines: []
+  dialogue3:
+    lines: []
+  hpbar: {fileID: 0}
+  mpbar: {fileID: 0}
+  playerRef: {fileID: 769976513}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  itemList: {fileID: 0}
+  item_id: 0
+  chest_id: 0
+  npc_id: 0
+  sceneToLoad: 
+  repeatDiag: 0
+  diagV2: 0
+  shopKeeper: 0
+  expgiver: 0
+  rbdreport: 0
+  npc_hue: 0
+  elder: 0
+  soldier: 0
+  sleep: 0
+  chest: 0
+  item: 0
+  item_inf: 0
+  item_battle: 0
+  battle: 0
+  fasttravel: 0
+  quest: 0
+  sceneChangeReq: 0
+  playerPosition: {x: 0, y: 0}
+  playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
+--- !u!212 &1757809091
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757809087}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: -5842000893187334840, guid: 3da9859f320d82d4eb59af22bbb78e99, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.0003126, y: 1.0003126}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1001 &1787068242
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 809452861}
+    m_Modifications:
+    - target: {fileID: 4865344911741097220, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_Name
+      value: Tent (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097220, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+--- !u!4 &1787068243 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4865344911741097221, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+  m_PrefabInstance: {fileID: 1787068242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1787068244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4865344911741097220, guid: 3108629e9f116814aafebea48ff57df5, type: 3}
+  m_PrefabInstance: {fileID: 1787068242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1787068245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787068244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df59e29c0a2e8874e8277ea0046a79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - Time to get some rest.
+  dialogue2:
+    lines: []
+  dialogue3:
+    lines: []
+  hpbar: {fileID: 163730966}
+  mpbar: {fileID: 230113397}
+  playerRef: {fileID: 769976513}
+  closedChestSprite: {fileID: 0}
+  openedChestSprite: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  itemList: {fileID: 0}
+  item_id: 0
+  chest_id: 0
+  npc_id: 0
+  sceneToLoad: 
+  repeatDiag: 0
+  diagV2: 0
+  shopKeeper: 0
+  expgiver: 0
+  rbdreport: 0
+  npc_hue: 0
+  elder: 0
+  soldier: 0
+  sleep: 1
+  chest: 0
+  item: 0
+  item_inf: 0
+  item_battle: 0
+  battle: 0
+  fasttravel: 0
+  quest: 0
+  sceneChangeReq: 0
+  playerPosition: {x: 0, y: 0}
+  playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!1001 &1801239913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14317,75 +15474,6 @@ PrefabInstance:
       objectReference: {fileID: 2039474744}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 978e037b22ebdb242a361bdf8da42379, type: 3}
---- !u!1001 &2026008368
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894978, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894979, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: m_Name
-      value: RBDGuard_L 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: designatedPos.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: designatedPos.y
-      value: 5.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
-      propertyPath: designatedScene
-      value: Celadon_Forest
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2944bbf98ef780748887a169805821a2, type: 3}
 --- !u!1001 &2039474743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33993,12 +35081,28 @@ PrefabInstance:
       value: RBDGuard_DOWN 18
       objectReference: {fileID: 0}
     - target: {fileID: 541673294223692125, guid: 37a77bc94a5048f4b837a26d50c2f774, type: 3}
+      propertyPath: item_id_low
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 541673294223692125, guid: 37a77bc94a5048f4b837a26d50c2f774, type: 3}
+      propertyPath: sceneToLoad
+      value: Celadon_Combat
+      objectReference: {fileID: 0}
+    - target: {fileID: 541673294223692125, guid: 37a77bc94a5048f4b837a26d50c2f774, type: 3}
+      propertyPath: item_id_high
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 541673294223692125, guid: 37a77bc94a5048f4b837a26d50c2f774, type: 3}
       propertyPath: designatedPos.y
       value: 30.5
       objectReference: {fileID: 0}
     - target: {fileID: 541673294223692125, guid: 37a77bc94a5048f4b837a26d50c2f774, type: 3}
       propertyPath: designatedScene
       value: Celadon_Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 541673294223692125, guid: 37a77bc94a5048f4b837a26d50c2f774, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: You there! Only the strong can approach Sunstead.  Battle me!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a77bc94a5048f4b837a26d50c2f774, type: 3}

@@ -1597,9 +1597,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7004932257082467301, guid: 8df08990527044a4d80b2bbd2a1356de, type: 3}
       propertyPath: m_text
-      value: 'Scene Template
-
-'
+      value: Sunstead
       objectReference: {fileID: 0}
     - target: {fileID: 7004932257082467303, guid: 8df08990527044a4d80b2bbd2a1356de, type: 3}
       propertyPath: m_Name

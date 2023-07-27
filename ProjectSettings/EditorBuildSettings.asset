@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 09d98736855cf6343bf3fb5a68787352
   - enabled: 1
-    path: Assets/Scenes/Hysteria & Saleria/Tavern_Hysteria.unity
+    path: Assets/Scenes/Saleria/Tavern_Hysteria.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Hysteria & Saleria/Town_Saleria.unity
+    path: Assets/Scenes/Saleria/Town_Saleria.unity
     guid: 14199a5bf32234f4292e0cad721538f7
   - enabled: 1
     path: Assets/Scenes/RainbowDung/RBD_Entrance.unity
@@ -78,19 +78,19 @@ EditorBuildSettings:
     path: Assets/Scenes/RainbowDung/RBD_2_G.unity
     guid: cdc4a60bb5e463e45a9ab9ddabd4be55
   - enabled: 1
-    path: Assets/Scenes/Hysteria & Saleria/Tavern_Hysteria_F2.unity
+    path: Assets/Scenes/Saleria/Tavern_Hysteria_F2.unity
     guid: 367d27e7b752c2540a5b7838a77bc202
   - enabled: 1
-    path: Assets/Scenes/Hysteria & Saleria/Tavern_HysteriaTut.unity
+    path: Assets/Scenes/Saleria/Tavern_HysteriaTut.unity
     guid: 7acbf663836c19c4f81165b4202cab25
   - enabled: 1
-    path: Assets/Scenes/Hysteria & Saleria/THysteria_F2_Perm.unity
+    path: Assets/Scenes/Saleria/THysteria_F2_Perm.unity
     guid: 823bdc89add92fa439a0238bc09b4eb5
   - enabled: 1
-    path: Assets/Scenes/Hysteria & Saleria/TutBattle_THysteria.unity
+    path: Assets/Scenes/Saleria/TutBattle_THysteria.unity
     guid: 058fc3c16a62b58489ed62a375969d63
   - enabled: 1
-    path: Assets/Scenes/Hysteria & Saleria/DreamCombat.unity
+    path: Assets/Scenes/Saleria/DreamCombat.unity
     guid: 444661a1ef96004429792fbc09769927
   - enabled: 1
     path: Assets/Scenes/TestingArea.unity
@@ -99,7 +99,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Tunnel/Tunnel_Hue_Ent.unity
     guid: 16a3ebff6b6a81b40aa035cdee71c088
   - enabled: 1
-    path: Assets/Scenes/Hysteria & Saleria/Town_SaleriaV2.unity
+    path: Assets/Scenes/Saleria/Town_SaleriaV2.unity
     guid: 5b7f797c714a3a4469452c204d6c1938
   - enabled: 1
     path: Assets/Scenes/Tunnel/Tunnel_Hue_Middle.unity
@@ -120,7 +120,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 39618a6e49732f041ad16aa9a0f29bac
   - enabled: 1
-    path: Assets/Scenes/Hysteria & Saleria/Sarah_House.unity
+    path: Assets/Scenes/Saleria/Sarah_House.unity
     guid: 46247b5a65da6d547a0bf8dc5731c80c
   - enabled: 1
     path: Assets/Scenes/Hue's Settlement/Hues_Settlement_AftTint.unity
@@ -146,4 +146,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hue's Settlement/Celadon_Forest.unity
     guid: fe5c21c8d11a3a740a5be419acc17d1c
+  - enabled: 1
+    path: Assets/Scenes/Hue's Settlement/Celadon_Combat.unity
+    guid: 14a90a042964a1040902ea4cbded9d6e
   m_configObjects: {}
