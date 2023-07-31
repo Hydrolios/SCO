@@ -149,4 +149,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hue's Settlement/Celadon_Combat.unity
     guid: 14a90a042964a1040902ea4cbded9d6e
+  - enabled: 1
+    path: Assets/Scenes/Sunstead/Sunstead.unity
+    guid: 1278d1d850ce8574580d4503c39d95b6
   m_configObjects: {}
