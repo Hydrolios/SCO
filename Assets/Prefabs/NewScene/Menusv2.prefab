@@ -422,7 +422,7 @@ MonoBehaviour:
   playerPosition:
   - {x: 418.5, y: 292.5}
   - {x: -3.5, y: 26}
-  - {x: 0, y: 0}
+  - {x: 0, y: 10}
   - {x: 0, y: 0}
   playerStorage: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
 --- !u!114 &8340625726928223051
@@ -569,7 +569,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3523856638830743917}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3057053990975724968}
+        m_TargetAssemblyTypeName: FastTravel, Assembly-CSharp
+        m_MethodName: FTSunsteadOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4664682188810691588
 GameObject:
   m_ObjectHideFlags: 0

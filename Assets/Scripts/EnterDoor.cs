@@ -25,6 +25,11 @@ public class EnterDoor : MonoBehaviour
             fadeOut.SetActive(true);
             StartCoroutine(FadeOutWait());
 
+            if(sceneToLoad == "Sunstead")
+            {
+                PlayerPrefs.SetInt("Sunstead_unlocked", 1);
+            }
+
             
 
         }

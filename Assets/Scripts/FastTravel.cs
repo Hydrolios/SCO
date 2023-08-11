@@ -62,6 +62,10 @@ public class FastTravel : MonoBehaviour
                 locationButtons[1].gameObject.SetActive(false);
                 Debug.Log("removed settlement");
                 break;
+            case "Sunstead":
+                locationButtons[2].gameObject.SetActive(false);
+                Debug.Log("removed sunstead");
+                break;
         }
 
     }
@@ -103,6 +107,17 @@ public class FastTravel : MonoBehaviour
         StartCoroutine(FTSettlement());
     }
 
+    public void FTSunsteadOnClick()
+    {
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        PlayerPrefs.DeleteKey("ftNPC");
+        TitleUI.SetActive(false);
+        //SelectionMenu.SetActive(false);
+        PlayerPrefs.SetFloat("interact_range", 0.6f);
+        StartCoroutine(FTSunstead());
+    }
+
     IEnumerator FTSaleria()
     {
         Vector2 moveWindow = SelectionMenu.transform.position;
@@ -125,6 +140,19 @@ public class FastTravel : MonoBehaviour
         yield return new WaitForSeconds(1f);
         string sceneToLoad = "Hues_Settlement_AftTint";
         playerStorage.initialValue = playerPosition[1];
+        SceneManager.LoadScene(sceneToLoad);
+    }
+
+    IEnumerator FTSunstead()
+    {
+        Vector2 moveWindow = SelectionMenu.transform.position;
+        moveWindow.x = 2000f;
+        SelectionMenu.transform.position = moveWindow;
+        fadeOut.SetActive(true);
+        playerRef.StopSpeed();
+        yield return new WaitForSeconds(1f);
+        string sceneToLoad = "Sunstead";
+        playerStorage.initialValue = playerPosition[2];
         SceneManager.LoadScene(sceneToLoad);
     }
 
