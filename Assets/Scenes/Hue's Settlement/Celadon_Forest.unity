@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: item_id
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3175135359148396723, guid: 801ab937ae96c614db195da95e14cdf9, type: 3}
       propertyPath: chest_id

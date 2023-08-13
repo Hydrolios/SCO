@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608d9e0663e00134abc0047fde73658b, type: 3}
+  m_Name: Celadon Helmet
+  m_EditorClassIdentifier: 
+  itemName: Celadon Helmet
+  type: 0
+  actionType: 0
+  equipType: 0
+  consumeType: 2
+  id: 14
+  hp: 8
+  mp: 5
+  def: 5
+  att: 2
+  rad: 5
+  enx: 0
+  sol: 5
+  chr: 0
+  mpcost: 0
+  hpcost: 0
+  buycost: 0
+  sellcost: 0
+  desc: The helmet worn by the legendary soldier, Celadon.  You can feel the lingering
+    power in it, blessed by Solstice himself.
+  range: {x: 5, y: 4}
+  stackable: 1
+  skillName: []
+  skillLevel: 
+  skillElement: []
+  skillPower: []
+  mpvalue: 
+  hpvalue: 
+  image: {fileID: 2430078501086657255, guid: 9eba8de2b6e98054da0c4b6531d59768, type: 3}
