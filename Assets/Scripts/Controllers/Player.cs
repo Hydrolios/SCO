@@ -265,12 +265,14 @@ public class Player : MonoBehaviour
 
     void Interact() //Function to interact with things
     {
+        Debug.Log("interact triggering");
         var facingDir = new Vector3(animator.GetFloat("Horizontal"), animator.GetFloat("Vertical"));
         var interactPos = transform.position + facingDir;
 
         var collider = Physics2D.OverlapCircle(interactPos, interactRad, interactableLayer);
         if (collider != null) //checks if hitboxes are overlapping to see if player is in range to interact with said thing
         {
+            Debug.Log("something is here");
             collider.GetComponent<Interactable>()?.Interact();
         }
     }

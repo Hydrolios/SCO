@@ -164,4 +164,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sunstead/Burgundy_Residence.unity
     guid: 344041df8819def4bbfab2322dcfb9db
+  - enabled: 1
+    path: Assets/Scenes/Sunstead/Sunstead_F2.unity
+    guid: a3e0f4dd0605501418479a91ef7e0eda
+  - enabled: 1
+    path: Assets/Scenes/Sunstead/SunsteadCombat.unity
+    guid: b61a1823db14aca42887fccc5a0f5b9b
   m_configObjects: {}

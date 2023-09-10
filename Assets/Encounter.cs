@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Encounter : MonoBehaviour
+public class Encounter : MonoBehaviour, Interactable
 {
     [SerializeField] Dialogue dialogue;
 
@@ -12,12 +12,12 @@ public class Encounter : MonoBehaviour
     public static bool defeated;
     public int item_id_low;
     public int item_id_high;
-    
+    public Player playerRef;
     public string objectID;
     public string designatedScene;
     public Vector2 designatedPos;
 
-    private void Awake()
+    private void Awake() // unique NPC id used to keep track of who to hide
     {
         objectID = name + transform.position.ToString();
     }
@@ -95,7 +95,29 @@ public class Encounter : MonoBehaviour
         }
     }
 
-    public void Defeated(Vector2 moveaway) // move away the npcs that have been defeated
+    public void Interact()
+    {
+        playerRef.StopSpeed();
+        InventoryManager inventoryManager = FindObjectOfType<InventoryManager>(); // gets the inventoryManager in the scene
+        inventoryManager.SaveInventoryScene();
+        defeated = false;
+        triggered.SetActive(true);
+        float itemChance = 0.5f;
+        float random = Random.value;
+        if (random < itemChance) //random chance to get items or not
+        {
+            PlayerPrefs.DeleteKey("BattleReward");
+        }
+        else if (item_id_low > -1)
+        {
+            int item_id = Random.Range(item_id_low, item_id_high); //will be used to decide item reward, list will be sorted by tiers eventually
+            PlayerPrefs.SetInt("BattleReward", item_id);
+        }
+
+        StartCoroutine(DialogueManager.Instance.ShowDialogueV3(dialogue, sceneToLoad, true));
+    }
+
+        public void Defeated(Vector2 moveaway) // move away the npcs that have been defeated
     {
         Debug.Log("defeated npc");
         transform.position = moveaway;

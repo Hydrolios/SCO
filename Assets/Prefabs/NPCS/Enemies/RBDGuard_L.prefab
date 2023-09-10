@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4024083911822894980}
   - component: {fileID: 4024083911822894981}
   - component: {fileID: 4091633021024042885}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RBDGuard_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,6 +211,8 @@ MonoBehaviour:
     - Halt! As a guard, I can not let you proceed any further!
   triggered: {fileID: 4024083910572204217}
   sceneToLoad: RBDCombatGuard
+  item_id_low: 0
+  item_id_high: 0
   objectID: 
   designatedScene: 
   designatedPos: {x: 0, y: 0}

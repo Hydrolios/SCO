@@ -2867,6 +2867,10 @@ PrefabInstance:
       value: RBDGuard_L_G2
       objectReference: {fileID: 0}
     - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 1726067270}
+    - target: {fileID: 4024083911822894981, guid: 2944bbf98ef780748887a169805821a2, type: 3}
       propertyPath: item_id_low
       value: 1
       objectReference: {fileID: 0}
