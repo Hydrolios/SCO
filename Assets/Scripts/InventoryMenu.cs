@@ -15,6 +15,7 @@ public class InventoryMenu : MonoBehaviour
     public GameObject equipmentinfomenu;
     public GameObject consumableinfomenu;
     public GameObject armorinfomenu;
+    public GameObject discardmenu;
     public Player playerRef; //player reference
 
 
@@ -48,6 +49,7 @@ public class InventoryMenu : MonoBehaviour
                 armorinfomenu.SetActive(false);
                 consumableinfomenu.SetActive(false);
                 itemInfoUI.SetActive(false);
+                discardmenu.SetActive(false);
             }
             else
             {
@@ -73,7 +75,7 @@ public class InventoryMenu : MonoBehaviour
         itemInfoUI.SetActive(false);
     }
 
-    public void OpenInfo()
+    public void OpenInfo() // opens up the item equipment information window
     {
         InventoryItem inventoryItem = FindObjectOfType<InventoryItem>();
         inventoryItem.equipMenu.transform.position = new Vector2(1500, 0);

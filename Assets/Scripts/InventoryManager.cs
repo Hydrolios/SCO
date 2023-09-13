@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot shirtEquip;
     public InventorySlot pantsEquip;
     public InventorySlot wepEquip;
+    public InventoryMenu discardui;
     public GameObject inventoryItemPrefab;
     public ItemList itemList;
     public InventorySlot selectedSlot;
@@ -104,37 +105,7 @@ public class InventoryManager : MonoBehaviour
             }
 
         }
-        /*
-        //need to remember to include the individual saving of the equipment slots, hatEquip...wepEquip
-        InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
-        if (hatItem != null)
-        {
-            //Debug.Log("A");
-            PlayerPrefs.SetInt("InventorySlotA", hatItem.item.id);
-        }
 
-        InventoryItem shirtItem = shirtEquip.GetComponentInChildren<InventoryItem>();
-        if (shirtItem != null)
-        {
-            //Debug.Log("B");
-            PlayerPrefs.SetInt("InventorySlotB", shirtItem.item.id);
-        }
-
-        InventoryItem pantsItem = pantsEquip.GetComponentInChildren<InventoryItem>();
-        if (pantsItem != null)
-        {
-            //Debug.Log("C");
-            PlayerPrefs.SetInt("InventorySlotC", pantsItem.item.id);
-        }
-
-        InventoryItem weaponItem = wepEquip.GetComponentInChildren<InventoryItem>();
-        if (weaponItem != null)
-        {
-            Debug.Log("D");
-            PlayerPrefs.SetInt("InventorySlotD", weaponItem.item.id);
-            Debug.Log(PlayerPrefs.GetInt("InventorySlotD"));
-        }
-        */
     }
 
     public void DeleteInv() // for testing functionality of cleaning out the inventory
@@ -244,35 +215,6 @@ public class InventoryManager : MonoBehaviour
 
         }
 
-        /*
-        InventoryItem hatItem = hatEquip.GetComponentInChildren<InventoryItem>();
-        if (hatItem != null)
-        {
-            //Debug.Log("A");
-            PlayerPrefs.SetInt("InventorySlotA", hatItem.item.id);
-        }
-
-        InventoryItem shirtItem = shirtEquip.GetComponentInChildren<InventoryItem>();
-        if (shirtItem != null)
-        {
-            //Debug.Log("B");
-            PlayerPrefs.SetInt("InventorySlotB", shirtItem.item.id);
-        }
-
-        InventoryItem pantsItem = pantsEquip.GetComponentInChildren<InventoryItem>();
-        if (pantsItem != null)
-        {
-            //Debug.Log("C");
-            PlayerPrefs.SetInt("InventorySlotC", pantsItem.item.id);
-        }
-
-        InventoryItem weaponItem = wepEquip.GetComponentInChildren<InventoryItem>();
-        if (weaponItem != null)
-        {
-            //Debug.Log("D");
-            PlayerPrefs.SetInt("InventorySlotD", weaponItem.item.id);
-        }
-        */
         
     }
 
@@ -318,10 +260,15 @@ public class InventoryManager : MonoBehaviour
 
     }
 
+    public void DiscardItemPopup() // when clicking discard, opens up the discard confirmation window
+    {
+        selectedItem.DiscardItemUI();
+
+    }
     public void DiscardItem() // Discards one item
     {
         selectedItem.count--;
-        if(selectedItem.count <=0)
+        if (selectedItem.count <= 0)
         {
             Destroy(selectedItem.gameObject);
         }
@@ -330,6 +277,13 @@ public class InventoryManager : MonoBehaviour
             selectedItem.RefreshCount();
         }
         selectedItem.ItemUsed();
+        selectedItem.HideDiscardItemUI();
+
+    }
+
+    public void DontDiscardItem() // closes discard window
+    {
+        selectedItem.HideDiscardItemUI();
 
     }
     public void ConsumeItem() // uses one item

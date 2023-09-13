@@ -13,6 +13,7 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
     public GameObject useMenu;
     public GameObject equipMenu;
     public GameObject unequip;
+    public GameObject discard;
 
     public float startTime;
     public float waitTime;
@@ -23,6 +24,7 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
 
     void Start()  // On start, find the menu required for item interactions
     {
+        discard = GameObject.Find("DiscardMenu");
         useMenu = GameObject.Find("ConsumableMenu");
         equipMenu = GameObject.Find("EquipMenu");
         unequip = GameObject.Find("UnequipMenu");
@@ -44,6 +46,7 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
             useMenu.transform.position = new Vector2(1500, 0);
             equipMenu.transform.position = new Vector2(1500, 0);
             unequip.transform.position = new Vector2(1500, 0);
+            discard.transform.position = new Vector2(1500, 0);
         }
     }
 
@@ -116,6 +119,15 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         useMenu.transform.position = new Vector2(1500, 0);
         unequip.transform.position = new Vector2(1500, 0);
 
+    }
+
+    public void DiscardItemUI() // method to show the discard menu after clicking discard
+    {
+        discard.transform.position = new Vector2(Input.mousePosition.x + 60, Input.mousePosition.y);
+    }
+    public void HideDiscardItemUI() // method to hide the discard menu after clicking discard
+    {
+        discard.transform.position = new Vector2(1500, 0);
     }
     public void ItemUsed() // method to immediately hide menu after using/equiping/discarding an item
     {
