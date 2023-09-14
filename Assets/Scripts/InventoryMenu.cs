@@ -18,7 +18,32 @@ public class InventoryMenu : MonoBehaviour
     public GameObject discardmenu;
     public Player playerRef; //player reference
 
+    public Button discardButtonPopup1;
+    public Button discardButtonPopup2;
+    public GameObject inventoryManager;
+    public InventoryItem item;
 
+    void Start()
+    {
+        //finds the inventory manager in scene
+        inventoryManager = GameObject.Find("InventoryManager");
+
+        //check if the button and inventory manager exists
+        if (inventoryManager != null && discardButtonPopup1 != null && discardButtonPopup2 != null)
+        {
+            // Find the DiscardItemPopup method in the InventoryManager script and attach it to the button click event.
+            InventoryManager inventoryManagerScript = inventoryManager.GetComponent<InventoryManager>();
+            if (inventoryManagerScript != null)
+            {
+                discardButtonPopup1.onClick.AddListener(() => inventoryManagerScript.DiscardItemPopup());
+                discardButtonPopup2.onClick.AddListener(() => inventoryManagerScript.DiscardItemPopup());
+            }
+            else
+            {
+                Debug.LogError("InventoryManager script not found on the InventoryManager GameObject.");
+            }
+        }
+    }
     private void Update() // this script is mainly for managing the opening/closing of the Inventory UI
     {
         
@@ -50,10 +75,14 @@ public class InventoryMenu : MonoBehaviour
                 consumableinfomenu.SetActive(false);
                 itemInfoUI.SetActive(false);
                 discardmenu.SetActive(false);
+                
             }
             else
             {
                 playerRef.openedUIInven = false;
+                InventoryManager inventoryManagerScript = inventoryManager.GetComponent<InventoryManager>();
+                item = inventoryManagerScript.GetInvenItem();
+                item.ItemUsed();
                 Resume();
                 //Debug.Log("Inventory Close");
             }

@@ -1426,6 +1426,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -1435,9 +1436,11 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 1
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!61 &572735254
 BoxCollider2D:
@@ -3228,6 +3231,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -3237,9 +3241,11 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!212 &924935210
 SpriteRenderer:
@@ -3375,6 +3381,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -3384,9 +3391,11 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!61 &944328831
 BoxCollider2D:
@@ -25283,6 +25292,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -25292,9 +25302,11 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!61 &1190376779
 BoxCollider2D:
@@ -29922,6 +29934,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2625667083932845617, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625667083932845617, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1529404183}
@@ -30132,6 +30148,10 @@ PrefabInstance:
     - target: {fileID: 7578996984526597454, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175917216793901132, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9175917216793901132, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -31133,6 +31153,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -31142,9 +31163,11 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!1001 &1617583735
 PrefabInstance:
@@ -32693,6 +32716,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -32702,9 +32726,11 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!61 &1666085303
 BoxCollider2D:
@@ -33292,6 +33318,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -33301,9 +33328,11 @@ MonoBehaviour:
   item_battle: 0
   battle: 0
   fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}
 --- !u!61 &2001811717
 BoxCollider2D:

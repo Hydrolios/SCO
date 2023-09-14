@@ -883,19 +883,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4500803411167696132}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ItemDiscard, Assembly-CSharp
-        m_MethodName: Discard
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1263773504159166981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1312,7 @@ GameObject:
   - component: {fileID: 3303860885511019802}
   - component: {fileID: 5015226613115518926}
   - component: {fileID: 482763152550140550}
+  - component: {fileID: 3330443734917792556}
   m_Layer: 5
   m_Name: DiscardMenu
   m_TagString: Untagged
@@ -1392,6 +1381,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3330443734917792556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845101847644015175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec2b727b9c80b44b8a414d3d86e148c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  discardButton: {fileID: 9163260905355150147}
+  closeDiscardButton: {fileID: 1694104537943729703}
+  inventoryManager: {fileID: 0}
 --- !u!1 &1863476456076256860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4596,6 +4600,9 @@ MonoBehaviour:
   armorinfomenu: {fileID: 2489671189849266727}
   discardmenu: {fileID: 1845101847644015175}
   playerRef: {fileID: 0}
+  discardButtonPopup1: {fileID: 4770817103083549568}
+  discardButtonPopup2: {fileID: 1806522593671630333}
+  inventoryManager: {fileID: 0}
 --- !u!1 &6519805058844128020
 GameObject:
   m_ObjectHideFlags: 0

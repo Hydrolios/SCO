@@ -1052,6 +1052,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -1060,9 +1061,13 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 0
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!1001 &613613269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4462,6 +4467,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -4470,9 +4476,13 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 0
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 11400000, guid: e114a640f3e31bd4b9ca4d8e40fc84ba, type: 2}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!1 &1528602761
 GameObject:
   m_ObjectHideFlags: 0
@@ -4526,6 +4536,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -4534,9 +4545,13 @@ MonoBehaviour:
   item_inf: 0
   item_battle: 0
   battle: 0
+  fasttravel: 0
+  quest: 0
   sceneChangeReq: 0
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
+  ftMenu: {fileID: 0}
 --- !u!61 &1528602763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4584,6 +4599,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2625667083932845617, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2625667083932845617, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4788,6 +4807,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1253318727}
+    - target: {fileID: 9175917216793901132, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9175917216793901132, guid: ab24fb23e8ed3d24cb317c6e3ba49a90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

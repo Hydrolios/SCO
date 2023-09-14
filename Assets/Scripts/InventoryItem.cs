@@ -134,6 +134,7 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         equipMenu.transform.position = new Vector2(1500, 0);
         useMenu.transform.position = new Vector2(1500, 0);
         unequip.transform.position = new Vector2(1500, 0);
+        discard.transform.position = new Vector2(1500, 0);
 
     }
     public void InitializeItem(Items newItem) 

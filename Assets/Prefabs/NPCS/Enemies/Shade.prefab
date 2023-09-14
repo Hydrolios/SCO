@@ -161,7 +161,7 @@ MonoBehaviour:
   maxMP: 0
   currentMP: 0
   def: 0
-  exp: 50
+  exp: 100
   cash: 35
   rad: 0
   enx: 0

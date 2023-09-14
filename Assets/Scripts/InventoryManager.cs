@@ -43,6 +43,10 @@ public class InventoryManager : MonoBehaviour
 
 
     }
+    public InventoryItem GetInvenItem()
+    {
+        return selectedItem;
+    }
     public bool AddItem(Items item) // Adds an item to the inventory but checks for a place to insert the item
     {
         //Debug.Log("in process of adding the item");
