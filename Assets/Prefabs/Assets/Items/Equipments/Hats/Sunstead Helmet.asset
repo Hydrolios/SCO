@@ -10,34 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 608d9e0663e00134abc0047fde73658b, type: 3}
-  m_Name: Celadon Helmet
+  m_Name: Sunstead Helmet
   m_EditorClassIdentifier: 
-  itemName: Celadon Helmet
+  itemName: Sunstead Helmet
   type: 0
   actionType: 0
   equipType: 0
   consumeType: 2
-  id: 14
-  hp: 12
+  id: 15
+  hp: 8
   mp: 5
   def: 5
-  att: 3
-  rad: 8
+  att: 2
+  rad: 4
   enx: 0
-  sol: 8
+  sol: 4
   chr: 0
   mpcost: 0
   hpcost: 0
-  buycost: 0
+  buycost: 35
   sellcost: 0
-  desc: The helmet worn by the legendary soldier, Celadon.  You can feel the lingering
-    power in it, blessed by Solstice himself.
+  desc: Armor worn by guards raised and trained in Sunstead.  It is made of the toughest
+    metal and radiates an aura of power.
   range: {x: 5, y: 4}
-  stackable: 1
+  stackable: 0
   skillName: []
   skillLevel: 
   skillElement: []
   skillPower: []
   mpvalue: 
   hpvalue: 
-  image: {fileID: 2430078501086657255, guid: 9eba8de2b6e98054da0c4b6531d59768, type: 3}
+  image: {fileID: 4397085617571290713, guid: 9eba8de2b6e98054da0c4b6531d59768, type: 3}

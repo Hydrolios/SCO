@@ -18,14 +18,16 @@ MonoBehaviour:
   equipType: 0
   consumeType: 2
   id: 3
-  hp: 2
-  mp: 1
+  hp: 5
+  mp: 2
   def: 0
-  att: 0
-  rad: 0
-  enx: 0
-  sol: 0
+  att: 1
+  rad: 1
+  enx: 1
+  sol: 1
   chr: 1
+  mpcost: 0
+  hpcost: 0
   buycost: 0
   sellcost: 0
   desc: A pair of cat ears.  This seems to replicate the ears of a cat.  I guess
@@ -36,4 +38,6 @@ MonoBehaviour:
   skillLevel: 
   skillElement: []
   skillPower: []
+  mpvalue: 
+  hpvalue: 
   image: {fileID: 21300000, guid: af1a1fae8e1398847948b69ee92b3d0f, type: 3}

@@ -18600,6 +18600,26 @@ PrefabInstance:
       propertyPath: playerRef
       value: 
       objectReference: {fileID: 769976513}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 74b8eb8f69a7d1448bad834bdc19b647, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: cda0f0138b2b7174a9dd6bb081810845, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e5ddd13ef1c6954eb051cf72bc4c2b9, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: b1403b028cd4a6048929776ae6ff9b9a, type: 2}
+    - target: {fileID: 7278865268865300877, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
+      propertyPath: items.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ae3f2e719040c443a3f0ed2ad6eb16a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76c4f52924563de41b6be29f2e8a981a, type: 3}
 --- !u!114 &1409423126 stripped
@@ -19710,7 +19730,9 @@ PrefabInstance:
       objectReference: {fileID: 769976513}
     - target: {fileID: 2909686603482956034, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
       propertyPath: dialogue.lines.Array.data[0]
-      value: 
+      value: 'NORTH : Midsummers End, Harbor \nEAST : Blazes Elixir, Scarlet Manor
+        \n SOUTH : Celadon Forest, Hues Settlement \nWEST : Salmon Slumber Inn, Burgundy
+        Residence'
       objectReference: {fileID: 0}
     - target: {fileID: 2909686603482956035, guid: 5ff2fc751d823d047b767b400b4c2b57, type: 3}
       propertyPath: m_Name

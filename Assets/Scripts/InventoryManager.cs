@@ -40,8 +40,6 @@ public class InventoryManager : MonoBehaviour
         selectedSlot = slot.GetComponent<InventorySlot>();
         selectedItem = selectedSlot.GetComponentInChildren<InventoryItem>();
         Debug.Log(selectedItem.item);
-
-
     }
     public InventoryItem GetInvenItem()
     {

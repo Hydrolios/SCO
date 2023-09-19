@@ -166,7 +166,8 @@ public class Player : MonoBehaviour
             //PlayerPrefs.SetInt("fastTravelUnlocked", 1);
             //PlayerPrefs.SetInt("Sunstead_unlocked", 0);
             //SelectionDebug.Selection();
-
+            PlayerPrefs.SetInt("ChestOpenedID" + 19, 0);
+            PlayerPrefs.SetInt("ChestOpenedID" + 18, 0);
             //PlayerPrefs.SetInt("currentcash", PlayerPrefs.GetInt("currentcash") +5);
 
 
