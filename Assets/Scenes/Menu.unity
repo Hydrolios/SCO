@@ -1613,6 +1613,12 @@ MonoBehaviour:
     Esc
     - Menu
 
+    TEMPORARY
+
+    [ - Speed up game
+
+    ] - Reset to default speed
+
 '
 --- !u!222 &1065411009
 CanvasRenderer:

@@ -4597,12 +4597,14 @@ MonoBehaviour:
   itemInfoUI: {fileID: 4772195215360330963}
   equipmentinfomenu: {fileID: 90291825261927948}
   consumableinfomenu: {fileID: 7973593314940719139}
+  unequipMenu: {fileID: 436757878820335597}
   armorinfomenu: {fileID: 2489671189849266727}
   discardmenu: {fileID: 1845101847644015175}
   playerRef: {fileID: 0}
   discardButtonPopup1: {fileID: 4770817103083549568}
   discardButtonPopup2: {fileID: 1806522593671630333}
   inventoryManager: {fileID: 0}
+  item: {fileID: 0}
 --- !u!1 &6519805058844128020
 GameObject:
   m_ObjectHideFlags: 0

@@ -168,6 +168,7 @@ MonoBehaviour:
   shopKeeper: 0
   expgiver: 0
   rbdreport: 0
+  npc_hue: 0
   elder: 0
   soldier: 0
   sleep: 0
@@ -181,4 +182,5 @@ MonoBehaviour:
   sceneChangeReq: 1
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  eventManager: {fileID: 0}
   ftMenu: {fileID: 0}

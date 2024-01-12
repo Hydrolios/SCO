@@ -14,6 +14,7 @@ public class InventoryMenu : MonoBehaviour
     public GameObject itemInfoUI;
     public GameObject equipmentinfomenu;
     public GameObject consumableinfomenu;
+    public GameObject unequipMenu;
     public GameObject armorinfomenu;
     public GameObject discardmenu;
     public Player playerRef; //player reference
@@ -74,15 +75,17 @@ public class InventoryMenu : MonoBehaviour
                 armorinfomenu.SetActive(false);
                 consumableinfomenu.SetActive(false);
                 itemInfoUI.SetActive(false);
-                discardmenu.SetActive(false);
+                discardmenu.transform.position = new Vector2(1500, 0);
+                unequipMenu.SetActive(false);
                 
             }
             else
             {
                 playerRef.openedUIInven = false;
-                InventoryManager inventoryManagerScript = inventoryManager.GetComponent<InventoryManager>();
-                item = inventoryManagerScript.GetInvenItem();
-                item.ItemUsed();
+                discardmenu.transform.position = new Vector2(1500, 0);
+                useMenu.transform.position = new Vector2(1500, 0);
+                equipMenu.transform.position = new Vector2(1500, 0);
+                unequipMenu.transform.position = new Vector2(1500, 0);
                 Resume();
                 //Debug.Log("Inventory Close");
             }

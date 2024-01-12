@@ -75,7 +75,7 @@ public class BGMusic : MonoBehaviour
                 PlayMusic(menuMusicStart, menuMusicLoop);
                 audioSource.volume = 0.025f;
                 break;
-            case "Tavern_Hysteria":
+            case "Tavern_Hysteria": // Town Saleria
             case "Tavern_Hysteria_F2":
             case "Tavern_HysteriaTut":
             case "THysteria_F2_Perm":
@@ -85,14 +85,20 @@ public class BGMusic : MonoBehaviour
                 PlayMusic(tavern1MusicStart, tavern1MusicLoop);
                 audioSource.volume = 0.025f;
                 break;
-            case "Hues_Settlement":
+            case "Hues_Settlement": // Hues Settlement
             case "Hues_Settlement_AftTint":
             case "Alabasters_Armory":
             case "Ashes_Alchemy":
             case "Hues_Hearth":
             case "Hues_Residence":
-            case "Hues_Stables":
-            case "Scarlets_Residence":
+            case "Hues_Stables": 
+            case "Sunstead": // Sunstead 
+            case "Sunstead_Harbor":
+            case "Sunstead_F2":
+            case "Burgundy_Residence":
+            case "Blaze_Elixirs":
+            case "Salmon_Slumber":
+            case "Scarlet_Manor":
                 PlayMusic(tavern2MusicStart, tavern2MusicLoop);
                 audioSource.volume = 0.035f;
                 break;
@@ -101,6 +107,8 @@ public class BGMusic : MonoBehaviour
             case "RBDCombatGuard":
             case "RBDCombatGuardRage":
             case "RBDCombatShade":
+            case "SunsteadCombat":
+            case "Celadon_Combat":
             case "C_TintCombat":
                 PlayMusic(battle1MusicStart, battle1MusicLoop);
                 audioSource.volume = 0.025f;
