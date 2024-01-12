@@ -24,10 +24,10 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt("exptolevel", 25);
         PlayerPrefs.SetInt("exp", 0);
         PlayerPrefs.SetInt("currentcash", 0);
-        PlayerPrefs.SetInt("playerHPMax", 10);
-        PlayerPrefs.SetInt("playerHPnow", 10);
-        PlayerPrefs.SetInt("playerMPMax", 10);
-        PlayerPrefs.SetInt("playerMPnow", 10);
+        PlayerPrefs.SetInt("playerHPMax", 30);
+        PlayerPrefs.SetInt("playerHPnow", 30);
+        PlayerPrefs.SetInt("playerMPMax", 15);
+        PlayerPrefs.SetInt("playerMPnow", 15);
         PlayerPrefs.SetInt("playerattack", 6);
         PlayerPrefs.SetFloat("interact_range", 0.6f);
         PlayerPrefs.SetInt("playersol", 5);

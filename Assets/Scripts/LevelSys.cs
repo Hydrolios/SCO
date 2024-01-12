@@ -31,10 +31,10 @@ public class LevelSys : MonoBehaviour
             exp -= levelexp;
             levelexp = Mathf.RoundToInt(levelexp + (15 * level));
             PlayerPrefs.SetInt("playerattack", PlayerPrefs.GetInt("playerattack") + 1); //want to make a complex formula for future
-            PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + 3); //want to make a complex formula for future
+            PlayerPrefs.SetInt("playerHPMax", PlayerPrefs.GetInt("playerHPMax") + 5); //want to make a complex formula for future
             PlayerPrefs.SetInt("playerMPMax", PlayerPrefs.GetInt("playerMPMax") + 2);
             PlayerPrefs.SetInt("skillpts", PlayerPrefs.GetInt("skillpts") + 2);
-            PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + 3);
+            PlayerPrefs.SetInt("playerHPnow", PlayerPrefs.GetInt("playerHPnow") + 5);
             PlayerPrefs.SetInt("playerMPnow", PlayerPrefs.GetInt("playerMPnow") + 2);
             
         }

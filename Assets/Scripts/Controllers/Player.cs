@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C)) //debugger key for console
+        if (Input.GetKeyDown(KeyCode.C)) //debugging key for console
         {
             //ItemList itemList = FindObjectOfType<ItemList>();
             Debug.Log("Debug Log:");
