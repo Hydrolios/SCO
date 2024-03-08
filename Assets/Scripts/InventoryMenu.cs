@@ -8,15 +8,19 @@ public class InventoryMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject player;
     public GameObject skillListPrefab;
+
     public GameObject InventoryMenuUI;
+    public GameObject itemInfoUI;
+    public GameObject storageUI;
+
     public GameObject useMenu;
     public GameObject equipMenu;
-    public GameObject itemInfoUI;
+    public GameObject unequipMenu;
     public GameObject equipmentinfomenu;
     public GameObject consumableinfomenu;
-    public GameObject unequipMenu;
     public GameObject armorinfomenu;
     public GameObject discardmenu;
+
     public Player playerRef; //player reference
 
     public Button discardButtonPopup1;
@@ -95,7 +99,9 @@ public class InventoryMenu : MonoBehaviour
     }
     public void Resume()
     {
-        PlayerPrefs.SetFloat("interact_range", 0.6f);
+        // user interaction range, to remove the ability to interact with things if beside it
+        PlayerPrefs.SetFloat("interact_range", 0.6f); 
+
         playerRef.openedUIInven = false;
         InventoryMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -105,6 +111,16 @@ public class InventoryMenu : MonoBehaviour
     public void CloseInfo()
     {
         itemInfoUI.SetActive(false);
+    }
+
+    public void OpenStorage()
+    {
+        storageUI.SetActive(true);
+    }
+
+    public void CloseStorage()
+    {
+        storageUI.SetActive(false);
     }
 
     public void OpenInfo() // opens up the item equipment information window

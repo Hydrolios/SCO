@@ -57,6 +57,8 @@ public class InventoryItem : MonoBehaviour, IPointerExitHandler
         InventoryItem itemInSlot = GetComponentInChildren<InventoryItem>(); // gets the component thats a child of the gameObject clicked
         Items item = itemInSlot.item; // this is the item in the designated inventory slot
         InventorySlot slot = GetComponentInParent<InventorySlot>();
+
+
         if (slot == inventoryManager.hatEquip || slot == inventoryManager.shirtEquip || slot == inventoryManager.pantsEquip || slot == inventoryManager.wepEquip) //checks if the selected slot is one of the equipment slots
         {
             itemText = unequip.GetComponentInChildren<Text>();

@@ -102,7 +102,7 @@ public class BGMusic : MonoBehaviour
                 PlayMusic(tavern2MusicStart, tavern2MusicLoop);
                 audioSource.volume = 0.035f;
                 break;
-            case "TutBattle_THysteria":
+            case "TutBattle_THysteria": // Combat
             case "DreamCombat":
             case "RBDCombatGuard":
             case "RBDCombatGuardRage":
@@ -113,7 +113,7 @@ public class BGMusic : MonoBehaviour
                 PlayMusic(battle1MusicStart, battle1MusicLoop);
                 audioSource.volume = 0.025f;
                 break;
-            case "Tunnel_Hue_Ent":
+            case "Tunnel_Hue_Ent": // Tunnel
             case "Tunnel_Hue_Middle":
                 PlayMusic(dungeon1MusicStart, dungeon1MusicLoop);
                 audioSource.volume = 0.025f;
